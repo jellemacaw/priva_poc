@@ -1,0 +1,9 @@
+.btn-primary {
+  width: 501px;
+}
+@element ".btn-primary" and (min-width: 5px) {
+  .btn-primary {
+    background: gold;
+    border-color: gold;
+  }
+}
