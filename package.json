@@ -7,7 +7,7 @@
     "start": "node ./node_modules/sourcejs/app.js"
   },
   "dependencies": {
-    "sourcejs": "^0.5.6",
+    "sourcejs": "^0.6.0-nightly.6",
     "eqcss":"1.1.0"
   }
 }
