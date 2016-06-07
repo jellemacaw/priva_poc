@@ -1,6 +1,6 @@
 ﻿<link rel="stylesheet" href="css/example.css" />
 
-# Colors Spec
+# Color Spec
 
 The following color palette is defined for this site.
 
@@ -9,55 +9,55 @@ The following color palette is defined for this site.
 ```example
 <div class="example-swatches">
   <div class="example-swatch-primary">
-    <span>$color--primary</span>
+    <span>$color--primary<br></span>
   </div>
   <div class="example-swatch-secondary">
-    <span>$color--secondary</span>
+    <span>$color--secondary<br></span>
   </div>
 </div>
 
 <div class="example-swatches">
   <div class="example-swatch-accent01">
-    <span>$color--accent-01</span>
+    <span>$color--accent-01<br></span>
   </div>
   <div class="example-swatch-accent02">
-    <span>$color--accent-02</span>
+    <span>$color--accent-02<br></span>
   </div>
   <div class="example-swatch-accent03">
-    <span>$color--accent-03</span>
+    <span>$color--accent-03<br></span>
   </div>
   <div class="example-swatch-accent04">
-    <span>$color--accent-04</span>
+    <span>$color--accent-04<br></span>
   </div>
   <div class="example-swatch-accent05">
-    <span>$color--accent-05</span>
+    <span>$color--accent-05<br></span>
   </div>
   <div class="example-swatch-support">
-    <span>$color--support</span>
+    <span>$color--support<br></span>
   </div>
 </div>
 
-<div class="example-swatches">
+<div class="example-swatches example-swatches--transparancy">
   <div class="example-swatch-primary-op80">
-    <span>$color--primary--op80</span>
+    <span>$color--primary--op80<br></span>
   </div>
   <div class="example-swatch-primary-op70">
-    <span>$color--primary--op70</span>
+    <span>$color--primary--op70<br></span>
   </div>
   <div class="example-swatch-primary-op50">
-    <span>$color--primary--op50</span>
+    <span>$color--primary--op50<br></span>
   </div>
   <div class="example-swatch-primary-op30">
-    <span>$color--primary--op30</span>
+    <span>$color--primary--op30<br></span>
   </div>
   <div class="example-swatch-primary-op20">
-    <span>$color--primary--op20</span>
+    <span>$color--primary--op20<br></span>
   </div>
   <div class="example-swatch-primary-op05">
-    <span>$color--primary--op05</span>
+    <span>$color--primary--op05<br></span>
   </div>
   <div class="example-swatch-primary-light">
-    <span>$color--primary--light</span>
+    <span>$color--primary--light<br></span>
   </div>
 </div>
 ```
