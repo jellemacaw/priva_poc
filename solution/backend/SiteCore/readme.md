@@ -1,4 +1,4 @@
-# SiteCore Architecture explaination
+# Sitecore Architecture explaination
 
 ## TODO
 
