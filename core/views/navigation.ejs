@@ -6,6 +6,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="source-page-role" content="navigation">
 	<title><%= info.title %></title>
 	<meta name="author" content="<%= info.author %>">
 	<% if (info.keywords !== '') {%>
@@ -26,8 +27,8 @@
 
 	<%- head %>
 </head>
-<body class="source_page __spec">
-	<div class="source_container">
+<body class="source_page __navigation">
+    <div class="source_container">
 		<%- header %>
 		<div class="source_main source_col-main" role="main"><%- content %></div>
 		<%- footer %>

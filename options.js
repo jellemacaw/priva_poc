@@ -12,11 +12,6 @@ module.exports = {
   // Page rendering configuration (redefinable from context options)
   rendering: {
     // Define views for rendering SourceJS pages (array order define priority)
-    views: {
-      spec: [
-      '$(user)/core/views/spec_global.ejs',
-      ],
-    },
   },
 
   // Client-side options (redefinable from context options)
