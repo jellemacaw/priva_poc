@@ -1,5 +1,4 @@
 ﻿<link rel="stylesheet" href="css/eqcss.css">
-<script src="../../../node_modules/eqcss/EQCSS.min.js"></script>
 
 # Element Queries Spec
 
@@ -8,10 +7,11 @@ You can use element queries to manipulate elements. Much like Media Queries but 
 See [Media Queries website](http://elementqueries.com/) for full documentation.
 
 ## Basic usage
-Include script in head
+Include script in head.
 ```
-<script src="../../../node_modules/eqcss/EQCSS.min.js"></script>
+<script src="EQCSS.min.js"></script>
 ```
+<sup>(For development purposes this styleguide has the javascript library included in the main template.)</sup>
 
 HTML Element
 ```
