@@ -1,0 +1,106 @@
+/*
+* example css for documentation of colors
+*/
+/*
+ * themed colors based on color names as defined in frontify styleguide
+*/
+/*
+ * color names as defined in frontify styleguide
+*/
+.example-swatches {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+[class*="example-swatch-"] {
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 150px;
+  height: 75px;
+  border-radius: 1.5em;
+  margin: 1em 1em 4em;
+}
+
+[class*="example-swatch-"] span {
+  position: absolute;
+  bottom: -3.5em;
+  left: 0;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: .5em;
+  font-size: 12px;
+  color: #000;
+}
+
+.example-swatch-primary {
+  background: #254A5D;
+}
+
+.example-swatch-secondary {
+  background: #00B5CE;
+}
+
+.example-swatch-accent01 {
+  background: #9D4777;
+}
+
+.example-swatch-accent02 {
+  background: #77BC1F;
+}
+
+.example-swatch-accent03 {
+  background: #1E988A;
+}
+
+.example-swatch-accent04 {
+  background: #FF4338;
+}
+
+.example-swatch-accent05 {
+  background: #F9423A;
+}
+
+.example-swatch-support {
+  background: #484747;
+}
+
+.example-swatch-primary-op80 {
+  background: rgba(37, 74, 93, 0.8);
+}
+
+.example-swatch-primary-op70 {
+  background: rgba(37, 74, 93, 0.7);
+}
+
+.example-swatch-primary-op50 {
+  background: rgba(37, 74, 93, 0.5);
+}
+
+.example-swatch-primary-op30 {
+  background: rgba(37, 74, 93, 0.3);
+}
+
+.example-swatch-primary-op20 {
+  background: rgba(37, 74, 93, 0.2);
+}
+
+.example-swatch-primary-op05 {
+  background: rgba(37, 74, 93, 0.05);
+}
+
+.example-swatch-primary-light {
+  background: #66808E;
+}

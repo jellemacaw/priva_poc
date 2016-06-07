@@ -1,0 +1,33 @@
+/*
+ * color names as defined in frontify styleguide
+*/
+
+// Primary + Secondary
+
+$color--blue-dianne:       #254A5D;
+$color--pacific-blue:      #00B5CE;
+
+// Accent Colors
+
+$color--cannon-pink:       #9D4777;
+$color--lima-1:            #77BC1F;
+$color--genoa:             #1E988A;
+$color--red-orange:        #FF4338;
+$color--alizarin-crimson:  #F9423A;
+
+// Supporting colors
+
+$color--mineshaft:         #484747;
+$color--black:             #000;
+$color--white:             #fff;
+
+// Primary Brand color - and transparancies
+
+$color--blue-dianne--op80:       transparentize($color--blue-dianne,.2);
+$color--blue-dianne--op70:       transparentize($color--blue-dianne,.3);
+$color--blue-dianne--op50:       transparentize($color--blue-dianne,.5);
+$color--blue-dianne--op30:       transparentize($color--blue-dianne,.7);
+$color--blue-dianne--op20:       transparentize($color--blue-dianne,.8);
+$color--blue-dianne--op05:       transparentize($color--blue-dianne,.95);
+$color--blue-dianne--op80:       transparentize($color--blue-dianne,.2);
+$color--gothic:                  #66808E;

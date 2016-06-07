@@ -1,0 +1,32 @@
+/*
+ * themed colors based on color names as defined in frontify styleguide
+*/
+
+@import "color-names";
+
+// Primary + Secondary
+
+$color--primary:        $color--blue-dianne;
+$color--secondary:      $color--pacific-blue;
+
+// Accent Colors
+
+$color--accent-01:      $color--cannon-pink;
+$color--accent-02:      $color--lima-1;
+$color--accent-03:      $color--genoa;
+$color--accent-04:      $color--red-orange;
+$color--accent-05:      $color--alizarin-crimson;
+
+// Supporting colors
+
+$color--support:        $color--mineshaft;
+
+// Primary Brand color - and transparancies
+
+$color--primary--op80:  $color--blue-dianne--op80;
+$color--primary--op70:  $color--blue-dianne--op70;
+$color--primary--op50:  $color--blue-dianne--op50;
+$color--primary--op30:  $color--blue-dianne--op30;
+$color--primary--op20:  $color--blue-dianne--op20;
+$color--primary--op05:  $color--blue-dianne--op05;
+$color--primary--light: $color--gothic;
