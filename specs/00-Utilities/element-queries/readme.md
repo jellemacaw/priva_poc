@@ -4,7 +4,7 @@
 
 You can use element queries to manipulate elements. Much like Media Queries but scoped to elements like paragraphs, headings, links or just classes(.) and ids (#).
 
-See [Media Queries website](http://elementqueries.com/) for full documentation.
+See [Element Queries website](http://elementqueries.com/) for full documentation.
 
 ## Basic usage
 Include script in head.
