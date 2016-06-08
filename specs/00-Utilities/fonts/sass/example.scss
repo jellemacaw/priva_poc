@@ -1,7 +1,7 @@
 /*
 * example css for documentation of custom fonts via Google Fonts
 */
-@import "../../bootstrap/sass/bootstrap-custom-variables";
+@import "../../bootstrap/sass/bootstrap-custom/bootstrap-custom-variables";
 
 .source_section__open .source_example {
   border: 0;
@@ -31,16 +31,21 @@
 }
 
 .example-font-OS {
-  &::before { content: "Open Sans Normal"; }
+  &::before { content: "Open Sans Normal (use 'font-weight: 400')"; }
 }
 
 .example-font-OSl {
   font-weight: 300;
-  &::before { content: "Open Sans Light (use 'font-weight: 300' or 'font-weight: lighter')"; }
+  &::before { content: "Open Sans Light (=default font-weight)"; }
+}
+
+.example-font-OSsb {
+  font-weight: 600;
+  &::before { content: "Open Sans Semi Bold"; }
 }
 
 .example-font-OSb {
-  font-weight: bold;
+  font-weight: 700;
   &::before { content: "Open Sans Bold"; }
 }
 

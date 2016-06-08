@@ -6,8 +6,21 @@
 // Custom color palette
 // which we link here to Bootstrap color vars
 // --------------------------------------------------
-@import "../../colors/sass/color-theme";
+@import "../../../colors/sass/color-theme";
 
+//
+// Additional custom variable definitions
+// not part of original Bootstrap
+// --------------------------------------------------
+
+// Priva uses a Light font variant as a basis:
+$font-weight-base:  300;
+
+
+
+/*
+ * Bootstrap variable definitions
+*/
 
 $bootstrap-sass-asset-helper: false !default;
 //
@@ -43,9 +56,9 @@ $body-bg:               #fff !default;
 $text-color:            $brand-primary !default;
 
 //** Global textual link color.
-$link-color:            $brand-primary !default;
+$link-color:            $color--secondary !default;
 //** Link hover color set via `darken()` function.
-$link-hover-color:      lighten($link-color, 15%) !default;
+$link-hover-color:      darken($link-color, 15%) !default;
 //** Link hover decoration.
 $link-hover-decoration: underline !default;
 
@@ -60,26 +73,26 @@ $font-family-serif:       'Roboto Slab', Rockwell, 'Courier Bold', Courier, Geor
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
 
-$font-size-base:          14px !default;
+$font-size-base:          14px !default; // Priva
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 
 $font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
-$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h2:            floor(($font-size-base * 1.5714)) !default; // ~22px Priva
 $font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
 $font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-h5:            $font-size-base !default;
 $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
 
 //** Unit-less `line-height` for use in components like buttons.
-$line-height-base:        1.428571429 !default; // 20/14
+$line-height-base:        1.5714286 !default; // 22/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~22px
 
 //** By default, this inherits from the `<body>`.
 $headings-font-family:    inherit !default;
-$headings-font-weight:    500 !default;
-$headings-line-height:    1.1 !default;
+$headings-font-weight:    600 !default;
+$headings-line-height:    1.13333 !default;
 $headings-color:          inherit !default;
 
 
@@ -103,11 +116,11 @@ $icon-font-svg-id:        "glyphicons_halflingsregular" !default;
 //
 //## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
 
-$padding-base-vertical:     6px !default;
-$padding-base-horizontal:   12px !default;
+$padding-base-vertical:     25px !default;
+$padding-base-horizontal:   25px !default;
 
-$padding-large-vertical:    10px !default;
-$padding-large-horizontal:  16px !default;
+$padding-large-vertical:    60px !default;
+$padding-large-horizontal:  60px !default;
 
 $padding-small-vertical:    5px !default;
 $padding-small-horizontal:  10px !default;
@@ -758,16 +771,16 @@ $panel-danger-heading-bg:     $state-danger-bg !default;
 //##
 
 //** Padding around the thumbnail image
-$thumbnail-padding:           4px !default;
+$thumbnail-padding:           .5em !default;
 //** Thumbnail background color
-$thumbnail-bg:                $body-bg !default;
+$thumbnail-bg:                $color--support !default;
 //** Thumbnail border color
-$thumbnail-border:            #ddd !default;
+$thumbnail-border:            $color--support !default;
 //** Thumbnail border radius
-$thumbnail-border-radius:     $border-radius-base !default;
+$thumbnail-border-radius:     0 !default;
 
 //** Custom text color for thumbnail captions
-$thumbnail-caption-color:     $text-color !default;
+$thumbnail-caption-color:     #fff !default;
 //** Padding around the thumbnail caption
 $thumbnail-caption-padding:   9px !default;
 

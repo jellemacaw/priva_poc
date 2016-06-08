@@ -10,6 +10,9 @@
 /*
  * color names as defined in frontify styleguide
 */
+/*
+ * Bootstrap variable definitions
+*/
 .source_section__open .source_example {
   border: 0;
   padding: 0;
@@ -38,7 +41,7 @@
 }
 
 .example-font-OS::before {
-  content: "Open Sans Normal";
+  content: "Open Sans Normal (use 'font-weight: 400')";
 }
 
 .example-font-OSl {
@@ -46,11 +49,19 @@
 }
 
 .example-font-OSl::before {
-  content: "Open Sans Light (use 'font-weight: 300' or 'font-weight: lighter')";
+  content: "Open Sans Light (=default font-weight)";
+}
+
+.example-font-OSsb {
+  font-weight: 600;
+}
+
+.example-font-OSsb::before {
+  content: "Open Sans Semi Bold";
 }
 
 .example-font-OSb {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .example-font-OSb::before {

@@ -1,0 +1,22 @@
+@import "../../../00-utilities/bootstrap/sass/bootstrap-custom/bootstrap-custom-variables";
+
+.body-content {
+  padding: $padding-base-vertical 0;
+
+  h3, h4 {
+    font-size: $font-size-h5;
+    font-weight: 600;
+    margin-bottom: 0;
+    line-height: $line-height-base;
+  }
+}
+
+@media screen and (min-width: $screen-xs-min) {
+  .body-content {
+    padding: $padding-large-vertical $padding-large-horizontal;
+  }
+}
+
+.body-content__inner {
+  max-width: 40em;
+}

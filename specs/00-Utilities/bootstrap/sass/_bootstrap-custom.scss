@@ -12,7 +12,7 @@
 // so, we're not using this one:
 //@import "assets/stylesheets/bootstrap/variables";
 // but this one:
-@import "bootstrap-custom-variables";
+@import "bootstrap-custom/bootstrap-custom-variables";
 
 
 
@@ -30,7 +30,9 @@
 
 // Core CSS
 @import "assets/stylesheets/bootstrap/scaffolding";
+  @import "bootstrap-custom/scaffolding-custom";
 @import "assets/stylesheets/bootstrap/type";
+  @import "bootstrap-custom/type-custom";
 @import "assets/stylesheets/bootstrap/code";
 @import "assets/stylesheets/bootstrap/grid";
 @import "assets/stylesheets/bootstrap/tables";

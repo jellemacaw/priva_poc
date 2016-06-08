@@ -1,0 +1,19 @@
+//
+// Custom scaffolding additions and overrides
+// --------------------------------------------------
+
+
+// Body reset
+
+body {
+  font-weight: $font-weight-base;
+}
+
+figcaption {
+  font-family: $font-family-serif;
+  font-style: italic;
+  font-size: 12px;
+  color: #fff;
+  background: $thumbnail-bg;
+  padding: $thumbnail-caption-padding $padding-base-horizontal;
+}
