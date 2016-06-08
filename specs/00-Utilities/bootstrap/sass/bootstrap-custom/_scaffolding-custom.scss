@@ -9,6 +9,14 @@ body {
   font-weight: $font-weight-base;
 }
 
+figure {
+  margin: $padding-large-vertical 0;
+
+  img {
+    width: 100%;
+  }
+}
+
 figcaption {
   font-family: $font-family-serif;
   font-style: italic;

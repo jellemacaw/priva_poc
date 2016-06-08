@@ -5,4 +5,35 @@
 h1, h2, h3, h4,
 .h1, .h2, .h3, .h4 {
   margin-bottom: 1em;
+
+  &:first-child  {
+    margin-top: 0;
+  }
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+// Unordered and Ordered lists
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding-left: 1em;
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+}
+
+ul {
+  list-style-type: none;
+
+  li::before {
+    content: "\00b7";
+    font-weight: bolder;
+    position: absolute;
+    margin-left: -.75em;
+  }
 }

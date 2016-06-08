@@ -22,6 +22,7 @@
   font-weight: 600;
   margin-bottom: 0;
   line-height: 1.57143;
+  color: #484747;
 }
 
 @media screen and (min-width: 480px) {
@@ -32,6 +33,10 @@
 
 .body-content__inner {
   max-width: 40em;
+}
+
+.body-content__inner > :last-child {
+  margin-bottom: 0;
 }
 
 .source_section__open .source_example {

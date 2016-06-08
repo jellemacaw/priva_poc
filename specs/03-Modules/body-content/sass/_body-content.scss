@@ -8,6 +8,7 @@
     font-weight: 600;
     margin-bottom: 0;
     line-height: $line-height-base;
+    color: $text-color;
   }
 }
 
@@ -19,4 +20,12 @@
 
 .body-content__inner {
   max-width: 40em;
+
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
 }
