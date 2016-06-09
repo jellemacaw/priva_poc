@@ -1,0 +1,13 @@
+//All JS and CSS are global scope!
+.example {
+	.row {
+		div[class*='col-md'] {
+			border:1px solid grey;
+		}
+	}
+	&.container-fluid {
+		.row {
+
+		}
+	}
+}
