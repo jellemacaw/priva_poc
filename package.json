@@ -4,10 +4,18 @@
   "description": "Here you can add your specific Source dependencies for extending app.js or adding custom server plugins",
   "scripts": {
     "build-source": "cd ./node_modules/sourcejs && npm run build",
-    "start": "node ./node_modules/sourcejs/app.js"
+    "start": "concurrently \"node ./node_modules/sourcejs/app.js\" \"gulp watch\" "
   },
   "dependencies": {
-    "sourcejs": "^0.6.0-nightly.6",
-    "eqcss":"1.1.0"
+    "eqcss": "1.1.0",
+    "gulp": "^3.9.1",
+    "sourcejs": "^0.6.0-nightly.6"
+  },
+  "devDependencies": {
+    "concurrently": "^2.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-minify": "0.0.12",
+    "gulp-sass": "^2.3.1",
+    "jquery": "^2.2.4"
   }
 }

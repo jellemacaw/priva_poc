@@ -1,6 +1,4 @@
-﻿<link rel="stylesheet" href="css/example.css" />
-
-# Color Spec
+﻿# Color Spec
 
 The following color palette is defined for this site.
 
