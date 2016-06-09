@@ -10,11 +10,11 @@ For performance reasons the fonts are loaded with basic Latin characters. For fu
 
 ## Font families
 ```example
-<h3 class="example-font-OSl">Grumpy wizards make toxic brew for the evil Queen and Jack.</h3>
-<h3 class="example-font-OS">Grumpy wizards make toxic brew for the evil Queen and Jack.</h3>
-<h3 class="example-font-OSsb">Grumpy wizards make toxic brew for the evil Queen and Jack.</h3>
-<h3 class="example-font-OSb">Grumpy wizards make toxic brew for the evil Queen and Jack.</h3>
-<h3 class="example-font-RS">Grumpy wizards make toxic brew for the evil Queen and Jack.</h3>
+<h3 class="sourcejs-fonts-font-OSl">Grumpy wizards make toxic brew for the evil Queen and Jack.</h3>
+<h3 class="sourcejs-fonts-font-OS">Grumpy wizards make toxic brew for the evil Queen and Jack.</h3>
+<h3 class="sourcejs-fonts-font-OSsb">Grumpy wizards make toxic brew for the evil Queen and Jack.</h3>
+<h3 class="sourcejs-fonts-font-OSb">Grumpy wizards make toxic brew for the evil Queen and Jack.</h3>
+<h3 class="sourcejs-fonts-font-RS">Grumpy wizards make toxic brew for the evil Queen and Jack.</h3>
 ```
 
 ## Basic usage

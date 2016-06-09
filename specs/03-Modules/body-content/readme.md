@@ -1,6 +1,4 @@
-﻿<link rel="stylesheet" href="css/example.css">
-
-# Body Content Spec
+﻿# Body Content Spec
 
 A content component is used to display a piece of text. There is no limitation to the length of the text.
 
