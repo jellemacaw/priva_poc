@@ -2,8 +2,6 @@
 
 A content component is used to display a piece of text. There is no limitation to the length of the text.
 
-TODO
-refactoreren van padding ivm mobile. Abstraheren naar rich-text?
 
 ## Data
 
