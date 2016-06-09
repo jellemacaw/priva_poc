@@ -1,13 +1,24 @@
 //All JS and CSS are global scope!
-.example {
-	.row {
-		div[class*='col-md'] {
-			border:1px solid grey;
-		}
-	}
-	&.container-fluid {
-		.row {
+@import '../../../00-Utilities/bootstrap/sass/bootstrap-custom/bootstrap-custom-variables';
 
+.container-fluid {
+	section {
+		max-width: $screen-sm;
+		margin: 0 auto;
+
+		.row {
+			div[class*='col-md'] {
+				padding:5px;
+			}
+		}
+		&.container-fluid {
+			.row {
+
+			}
+		}
+
+		&.full {
+			max-width:100%;
 		}
 	}
 }
