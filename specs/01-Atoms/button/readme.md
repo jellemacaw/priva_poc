@@ -1,6 +1,4 @@
-﻿<link rel="stylesheet" href="css/button.css">
-
-# Button Spec
+﻿# Button Spec
 
 Basic button spec demo
 

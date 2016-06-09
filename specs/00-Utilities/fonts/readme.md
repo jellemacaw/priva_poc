@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="css/example.css">
-
 # Font Spec
 
 The custom fonts 'Open Sans' and 'Roboto Slab' are sourced from Google Fonts.
