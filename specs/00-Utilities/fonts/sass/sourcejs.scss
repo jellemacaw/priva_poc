@@ -17,6 +17,7 @@
     font-size: .4em;
     font-family: $font-family-sans-serif;
     font-weight: normal;
+    font-style: normal;
     color: #333;
     position: absolute;
     top: -.1em;
@@ -33,6 +34,12 @@
   &::before { content: "Open Sans Light (=default font-weight)"; }
 }
 
+.sourcejs-fonts-font-OSli {
+  font-weight: 300;
+  font-style: italic;
+  &::before { content: "Open Sans Light Italic"; }
+}
+
 .sourcejs-fonts-font-OSsb {
   font-weight: 600;
   &::before { content: "Open Sans Semi Bold"; }
@@ -41,10 +48,4 @@
 .sourcejs-fonts-font-OSb {
   font-weight: 700;
   &::before { content: "Open Sans Bold"; }
-}
-
-.sourcejs-fonts-font-RS {
-  font-family: $font-family-serif;
-  font-weight: normal;
-  &::before { content: "Roboto Slab"; }
 }

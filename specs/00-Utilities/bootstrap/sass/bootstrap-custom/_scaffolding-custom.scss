@@ -10,18 +10,22 @@ body {
 }
 
 figure {
-  margin: $padding-large-vertical 0;
+  margin: $padding-base-horizontal 0;
 
   img {
+    display: block;
     width: 100%;
   }
 }
 
+@media screen and (min-width: $screen-xs) {
+  figure {
+    margin: $padding-large-vertical 0;
+  }
+}
+
 figcaption {
-  font-family: $font-family-serif;
   font-style: italic;
-  font-size: 12px;
-  color: #fff;
-  background: $thumbnail-bg;
+  font-size: $font-size-small;
   padding: $thumbnail-caption-padding $padding-base-horizontal;
 }
