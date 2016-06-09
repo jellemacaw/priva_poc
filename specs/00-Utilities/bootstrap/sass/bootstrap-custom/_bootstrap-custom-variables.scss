@@ -6,7 +6,7 @@
 // Custom color palette
 // which we link here to Bootstrap color vars
 // --------------------------------------------------
-@import "../../../colors/sass/color-theme";
+@import "../../../colors/sass/color-names";
 
 //
 // Additional custom variable definitions
@@ -39,11 +39,11 @@ $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-$brand-primary:         $color--primary !default; // #337ab7
-$brand-success:         $color--accent-02 !default;
-$brand-info:            $color--secondary !default;
+$brand-primary:         $color--petrol !default; // #337ab7
+$brand-success:         $color--genoa !default;
+$brand-info:            $color--pacific-blue !default;
 $brand-warning:         #f0ad4e !default;
-$brand-danger:          $color--accent-05 !default;
+$brand-danger:          $color--cannon-pink !default;
 
 
 //== Scaffolding
@@ -53,10 +53,10 @@ $brand-danger:          $color--accent-05 !default;
 //** Background color for `<body>`.
 $body-bg:               #fff !default;
 //** Global text color on `<body>`.
-$text-color:            $color--support !default;
+$text-color:            $color--taupe !default;
 
 //** Global textual link color.
-$link-color:            $color--secondary !default;
+$link-color:            $color--pacific-blue !default;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      darken($link-color, 15%) !default;
 //** Link hover decoration.
@@ -393,13 +393,13 @@ $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 $navbar-collapse-max-height:       340px !default;
 
-$navbar-default-color:             #777 !default;
-$navbar-default-bg:                #f8f8f8 !default;
+$navbar-default-color:             $color--pacific-blue !default;
+$navbar-default-bg:                $color--petrol !default;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 // Navbar links
-$navbar-default-link-color:                #777 !default;
-$navbar-default-link-hover-color:          #333 !default;
+$navbar-default-link-color:                $color--light-taupe !default;
+$navbar-default-link-hover-color:          #fff !default;
 $navbar-default-link-hover-bg:             transparent !default;
 $navbar-default-link-active-color:         #555 !default;
 $navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
@@ -551,7 +551,7 @@ $tooltip-max-width:           200px !default;
 //** Tooltip text color
 $tooltip-color:               #fff !default;
 //** Tooltip background color
-$tooltip-bg:                  #000 !default;
+$tooltip-bg:                  $color--genoa !default;
 $tooltip-opacity:             .9 !default;
 
 //** Tooltip arrow width
@@ -773,9 +773,9 @@ $panel-danger-heading-bg:     $state-danger-bg !default;
 //** Padding around the thumbnail image
 $thumbnail-padding:           .5em !default;
 //** Thumbnail background color
-$thumbnail-bg:                $color--support !default;
+$thumbnail-bg:                $color--taupe !default;
 //** Thumbnail border color
-$thumbnail-border:            $color--support !default;
+$thumbnail-border:            $color--taupe !default;
 //** Thumbnail border radius
 $thumbnail-border-radius:     0 !default;
 

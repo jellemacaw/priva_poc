@@ -5,68 +5,72 @@ The following color palette is defined for this site.
 ## Palette
 
 ```example
-<div class="sourcejs-colors-swatches">
-  <div class="sourcejs-colors-swatch-primary">
-    <span>$color--primary<br></span>
+
+<h4 class="sourcejs-colortitle">Primary colors</h4>
+<div class="sourcejs-colorswatches">
+  <div class="sourcejs-color-taupe">
+    <span>$color--taupe<br></span>
   </div>
-  <div class="sourcejs-colors-swatch-secondary">
-    <span>$color--secondary<br></span>
+  <div class="sourcejs-color-light-taupe">
+    <span>$color--light-taupe<br></span>
+  </div>
+  <div class="sourcejs-color-petrol">
+    <span>$color--petrol<br></span>
+  </div>
+  <div class="sourcejs-color-petrol2">
+    <span>$color--petrol2<br></span>
+  </div>
+  <div class="sourcejs-color-pacific-blue">
+    <span>$color--pacific-blue<br></span>
+  </div>
+  <div class="sourcejs-color-cannon-pink">
+    <span>$color--cannon-pink<br></span>
   </div>
 </div>
 
-<div class="sourcejs-colors-swatches">
-  <div class="sourcejs-colors-swatch-accent01">
-    <span>$color--accent-01<br></span>
+<h4 class="sourcejs-colortitle">Overlay colors</h4>
+<div class="sourcejs-colorswatches sourcejs-colorswatches--transparancy">
+  <div class="sourcejs-color-petrol--overlay">
+    <span>$color--petrol--overlay<br></span>
   </div>
-  <div class="sourcejs-colors-swatch-accent02">
-    <span>$color--accent-02<br></span>
+  <div class="sourcejs-color-armadillo--overlay">
+    <span>$color--armadillo--overlay<br></span>
   </div>
-  <div class="sourcejs-colors-swatch-accent03">
-    <span>$color--accent-03<br></span>
+  <div class="sourcejs-color-black--overlay">
+    <span>$color--black--overlay<br></span>
   </div>
-  <div class="sourcejs-colors-swatch-accent04">
-    <span>$color--accent-04<br></span>
-  </div>
-  <div class="sourcejs-colors-swatch-accent05">
-    <span>$color--accent-05<br></span>
-  </div>
-  <div class="sourcejs-colors-swatch-support">
-    <span>$color--support<br></span>
+  <div class="sourcejs-color-gradient--hero">
+    <span>$color--gradient--hero *<br></span>
   </div>
 </div>
+<small>* can only be set as a background</small>
 
-<div class="sourcejs-colors-swatches sourcejs-colors-swatches--transparancy">
-  <div class="sourcejs-colors-swatch-primary-op80">
-    <span>$color--primary--op80<br></span>
+<h4 class="sourcejs-colortitle">Additional colors</h4>
+<div class="sourcejs-colorswatches">
+  <div class="sourcejs-color-lima1">
+    <span>$color--lima1<br></span>
   </div>
-  <div class="sourcejs-colors-swatch-primary-op70">
-    <span>$color--primary--op70<br></span>
+  <div class="sourcejs-color-genoa">
+    <span>$color--genoa<br></span>
   </div>
-  <div class="sourcejs-colors-swatch-primary-op50">
-    <span>$color--primary--op50<br></span>
+  <div class="sourcejs-color-alizarin-crimson">
+    <span>$color--alizarin-crimson<br></span>
   </div>
-  <div class="sourcejs-colors-swatch-primary-op30">
-    <span>$color--primary--op30<br></span>
+  <div class="sourcejs-color-black">
+    <span>$color--black<br></span>
   </div>
-  <div class="sourcejs-colors-swatch-primary-op20">
-    <span>$color--primary--op20<br></span>
-  </div>
-  <div class="sourcejs-colors-swatch-primary-op05">
-    <span>$color--primary--op05<br></span>
-  </div>
-  <div class="sourcejs-colors-swatch-primary-light">
-    <span>$color--primary--light<br></span>
+  <div class="sourcejs-color-white">
+    <span>$color--white<br></span>
   </div>
 </div>
 ```
 
 
 ## Basic usage
-The colors as defined in the [online styleguide](https://app.frontify.com/document/79284#/basics/colors) are codified by their color names and then abstracted to the color definitions as seen above.
-These variable names are imported and used in the custom bootstrap variables file so Bootstrap still uses its own internal variable names. E.g.:
+The colors as defined in the [online styleguide](https://app.frontify.com/document/79284#/basics/colors) are codified by their color names. These names are imported and used in the custom bootstrap variables file so Bootstrap still uses its own internal variable names in all its components. E.g.:
 
 ```pre
-_color-names.scss         _color-theme.scss         _bootstrap-custom-variables.scss
+_color-names.scss             _bootstrap-custom-variables.scss
 
-$color--blue-dianne -->   $color--primary -->       $brand-primary
+$color--petrol      -->       $brand-primary
 ```

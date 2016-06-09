@@ -1,61 +1,83 @@
-/*
-* example css for documentation of colors
-*/
-@import "color-theme";
+//Files named Sourcejs.scss wil be ignored when compiling to main.min.css.
+//These files will be compiled to a specific stylesheet. and only uses in SourceJs spec templates.
 
-.sourcejs-colors-swatches {
+@import "color-names";
+
+.sourcejs-colorswatches {
   display: flex;
   flex-wrap: wrap;
   border-radius: .75em;
-  padding: 1em 1em 0;
+  padding: 0;
 
-  &.sourcejs-colors-swatches--transparancy {
+  &.sourcejs-colorswatches--transparancy {
     background: linear-gradient( to bottom, #f6f6f6, #f6f6f6 50%, white 50%) repeat;
     background-size: 4px 4px;
+    padding-top: 1em;
   }
 }
 
-[class*="sourcejs-colors-swatch-"] {
+.sourcejs-colortitle {
+  padding-top: 1em;
+  padding-left: 1em;
+  margin-bottom: .75em;
+}
+
+[class*="sourcejs-color-"] {
   position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 148px;
-  height: 75px;
-  border-radius: 1em;
-  margin: 1em 1em 4em;
+  width: 90px;
+  height: 90px;
+  border: 1px solid rgba(0,0,0,.05);
+  border-radius: 50%;
+  margin: 1em 1.85em 4em;
 
   span {
     position: absolute;
     bottom: -3.5em;
     left: 0;
     display: block;
-    width: 100%;
+    width: 250%;
+    margin-left: -75%;
     text-align: center;
     padding: 1em .5em 0;
-    font-size: 12px;
-    color: #000;
+    font-size: 11px;
+    color: $color--taupe;
+    font-weight: 600;
 
     &::after {
-      color: #999;
+      color: #666;
+      font-weight: 300;
     }
   }
 }
 
-.sourcejs-colors-swatch-primary {       background: $color--primary; span::after { content: " #{$color--primary}"; } }
-.sourcejs-colors-swatch-secondary {     background: $color--secondary; span::after { content: " #{$color--secondary}"; } }
+[class*="sourcejs-color-gradient"] {
+  background-size: cover;
+  border: 0;
 
-.sourcejs-colors-swatch-accent01 {      background: $color--accent-01; span::after { content: " #{$color--accent-01}"; } }
-.sourcejs-colors-swatch-accent02 {      background: $color--accent-02; span::after { content: " #{$color--accent-02}"; } }
-.sourcejs-colors-swatch-accent03 {      background: $color--accent-03; span::after { content: " #{$color--accent-03}"; } }
-.sourcejs-colors-swatch-accent04 {      background: $color--accent-04; span::after { content: " #{$color--accent-04}"; } }
-.sourcejs-colors-swatch-accent05 {      background: $color--accent-05; span::after { content: " #{$color--accent-05}"; } }
-.sourcejs-colors-swatch-support {       background: $color--support; span::after { content: " #{$color--support}"; } }
+    span {
+      width: 350%;
+      margin-left: -20%;
+      text-align: left;
+    }
+}
 
-.sourcejs-colors-swatch-primary-op80 {  background: $color--primary--op80; span::after { content: " #{$color--primary--op80}"; } }
-.sourcejs-colors-swatch-primary-op70 {  background: $color--primary--op70; span::after { content: " #{$color--primary--op70}"; } }
-.sourcejs-colors-swatch-primary-op50 {  background: $color--primary--op50; span::after { content: " #{$color--primary--op50}"; } }
-.sourcejs-colors-swatch-primary-op30 {  background: $color--primary--op30; span::after { content: " #{$color--primary--op30}"; } }
-.sourcejs-colors-swatch-primary-op20 {  background: $color--primary--op20; span::after { content: " #{$color--primary--op20}"; } }
-.sourcejs-colors-swatch-primary-op05 {  background: $color--primary--op05; span::after { content: " #{$color--primary--op05}"; } }
-.sourcejs-colors-swatch-primary-light { background: $color--primary--light; span::after { content: " #{$color--primary--light}"; } }
+.sourcejs-color-taupe {               background: $color--taupe; span::after { content: " #{$color--taupe}"; } }
+.sourcejs-color-light-taupe {         background: $color--light-taupe; span::after { content: " #{$color--light-taupe}"; } }
+.sourcejs-color-petrol {              background: $color--petrol; span::after { content: " #{$color--petrol}"; } }
+.sourcejs-color-petrol2 {             background: $color--petrol2; span::after { content: " #{$color--petrol2}"; } }
+.sourcejs-color-pacific-blue {        background: $color--pacific-blue; span::after { content: " #{$color--pacific-blue}"; } }
+.sourcejs-color-cannon-pink {         background: $color--cannon-pink; span::after { content: " #{$color--cannon-pink}"; } }
+
+.sourcejs-color-petrol--overlay {     background: $color--petrol--overlay; span::after { content: " #{$color--petrol--overlay}"; } }
+.sourcejs-color-armadillo--overlay {  background: $color--armadillo--overlay; span::after { content: " #{$color--armadillo--overlay}"; } }
+.sourcejs-color-black--overlay {      background: $color--black--overlay; span::after { content: " #{$color--black--overlay}"; } }
+.sourcejs-color-gradient--hero {      background: $gradient--hero; span::after { content: " #{$gradient--hero}"; } }
+
+.sourcejs-color-lima1 {               background: $color--lima1; span::after { content: " #{$color--lima1}"; } }
+.sourcejs-color-genoa {               background: $color--genoa; span::after { content: " #{$color--genoa}"; } }
+.sourcejs-color-alizarin-crimson {    background: $color--alizarin-crimson; span::after { content: " #{$color--alizarin-crimson}"; } }
+.sourcejs-color-black {               background: $color--black; span::after { content: " #{$color--black}"; } }
+.sourcejs-color-white {               background: $color--white; span::after { content: " #{$color--white}"; } }
