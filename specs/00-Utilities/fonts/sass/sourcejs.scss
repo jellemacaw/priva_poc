@@ -1,16 +1,9 @@
 /*
 * example css for documentation of custom fonts via Google Fonts
 */
-@import "../../bootstrap/sass/bootstrap-custom/bootstrap-custom-variables";
+@import "../../../00-utilities/bootstrap/sass/bootstrap-custom/bootstrap-custom-variables";
 
-.source_section__open .source_example {
-  border: 0;
-  padding: 0;
-  display: block;
-  overflow: hidden;
-}
-
-[class*="example-font-"] {
+[class*="sourcejs-fonts-font-"] {
   font-size: 2.2em;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -30,26 +23,28 @@
   }
 }
 
-.example-font-OS {
+.sourcejs-fonts-font-OS {
+  font-weight: 400;
   &::before { content: "Open Sans Normal (use 'font-weight: 400')"; }
 }
 
-.example-font-OSl {
+.sourcejs-fonts-font-OSl {
   font-weight: 300;
   &::before { content: "Open Sans Light (=default font-weight)"; }
 }
 
-.example-font-OSsb {
+.sourcejs-fonts-font-OSsb {
   font-weight: 600;
   &::before { content: "Open Sans Semi Bold"; }
 }
 
-.example-font-OSb {
+.sourcejs-fonts-font-OSb {
   font-weight: 700;
   &::before { content: "Open Sans Bold"; }
 }
 
-.example-font-RS {
+.sourcejs-fonts-font-RS {
   font-family: $font-family-serif;
+  font-weight: normal;
   &::before { content: "Roboto Slab"; }
 }

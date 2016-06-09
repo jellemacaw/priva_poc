@@ -5,56 +5,56 @@ The following color palette is defined for this site.
 ## Palette
 
 ```example
-<div class="example-swatches">
-  <div class="example-swatch-primary">
+<div class="sourcejs-colors-swatches">
+  <div class="sourcejs-colors-swatch-primary">
     <span>$color--primary<br></span>
   </div>
-  <div class="example-swatch-secondary">
+  <div class="sourcejs-colors-swatch-secondary">
     <span>$color--secondary<br></span>
   </div>
 </div>
 
-<div class="example-swatches">
-  <div class="example-swatch-accent01">
+<div class="sourcejs-colors-swatches">
+  <div class="sourcejs-colors-swatch-accent01">
     <span>$color--accent-01<br></span>
   </div>
-  <div class="example-swatch-accent02">
+  <div class="sourcejs-colors-swatch-accent02">
     <span>$color--accent-02<br></span>
   </div>
-  <div class="example-swatch-accent03">
+  <div class="sourcejs-colors-swatch-accent03">
     <span>$color--accent-03<br></span>
   </div>
-  <div class="example-swatch-accent04">
+  <div class="sourcejs-colors-swatch-accent04">
     <span>$color--accent-04<br></span>
   </div>
-  <div class="example-swatch-accent05">
+  <div class="sourcejs-colors-swatch-accent05">
     <span>$color--accent-05<br></span>
   </div>
-  <div class="example-swatch-support">
+  <div class="sourcejs-colors-swatch-support">
     <span>$color--support<br></span>
   </div>
 </div>
 
-<div class="example-swatches example-swatches--transparancy">
-  <div class="example-swatch-primary-op80">
+<div class="sourcejs-colors-swatches sourcejs-colors-swatches--transparancy">
+  <div class="sourcejs-colors-swatch-primary-op80">
     <span>$color--primary--op80<br></span>
   </div>
-  <div class="example-swatch-primary-op70">
+  <div class="sourcejs-colors-swatch-primary-op70">
     <span>$color--primary--op70<br></span>
   </div>
-  <div class="example-swatch-primary-op50">
+  <div class="sourcejs-colors-swatch-primary-op50">
     <span>$color--primary--op50<br></span>
   </div>
-  <div class="example-swatch-primary-op30">
+  <div class="sourcejs-colors-swatch-primary-op30">
     <span>$color--primary--op30<br></span>
   </div>
-  <div class="example-swatch-primary-op20">
+  <div class="sourcejs-colors-swatch-primary-op20">
     <span>$color--primary--op20<br></span>
   </div>
-  <div class="example-swatch-primary-op05">
+  <div class="sourcejs-colors-swatch-primary-op05">
     <span>$color--primary--op05<br></span>
   </div>
-  <div class="example-swatch-primary-light">
+  <div class="sourcejs-colors-swatch-primary-light">
     <span>$color--primary--light<br></span>
   </div>
 </div>

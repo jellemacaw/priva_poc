@@ -1,0 +1,66 @@
+/*
+* example css for documentation of colors
+*/
+@import "color-theme";
+
+.source_example {
+  border: 0;
+  padding: 0;
+}
+
+.sourcejs-colors-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: .75em;
+  padding: 1em 1em 0;
+
+  &.sourcejs-colors-swatches--transparancy {
+    background: linear-gradient( to bottom, #f6f6f6, #f6f6f6 50%, white 50%) repeat;
+    background-size: 4px 4px;
+  }
+}
+
+[class*="sourcejs-colors-swatch-"] {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 148px;
+  height: 75px;
+  border-radius: 1em;
+  margin: 1em 1em 4em;
+
+  span {
+    position: absolute;
+    bottom: -3.5em;
+    left: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1em .5em 0;
+    font-size: 12px;
+    color: #000;
+
+    &::after {
+      color: #999;
+    }
+  }
+}
+
+.sourcejs-colors-swatch-primary {       background: $color--primary; span::after { content: " #{$color--primary}"; } }
+.sourcejs-colors-swatch-secondary {     background: $color--secondary; span::after { content: " #{$color--secondary}"; } }
+
+.sourcejs-colors-swatch-accent01 {      background: $color--accent-01; span::after { content: " #{$color--accent-01}"; } }
+.sourcejs-colors-swatch-accent02 {      background: $color--accent-02; span::after { content: " #{$color--accent-02}"; } }
+.sourcejs-colors-swatch-accent03 {      background: $color--accent-03; span::after { content: " #{$color--accent-03}"; } }
+.sourcejs-colors-swatch-accent04 {      background: $color--accent-04; span::after { content: " #{$color--accent-04}"; } }
+.sourcejs-colors-swatch-accent05 {      background: $color--accent-05; span::after { content: " #{$color--accent-05}"; } }
+.sourcejs-colors-swatch-support {       background: $color--support; span::after { content: " #{$color--support}"; } }
+
+.sourcejs-colors-swatch-primary-op80 {  background: $color--primary--op80; span::after { content: " #{$color--primary--op80}"; } }
+.sourcejs-colors-swatch-primary-op70 {  background: $color--primary--op70; span::after { content: " #{$color--primary--op70}"; } }
+.sourcejs-colors-swatch-primary-op50 {  background: $color--primary--op50; span::after { content: " #{$color--primary--op50}"; } }
+.sourcejs-colors-swatch-primary-op30 {  background: $color--primary--op30; span::after { content: " #{$color--primary--op30}"; } }
+.sourcejs-colors-swatch-primary-op20 {  background: $color--primary--op20; span::after { content: " #{$color--primary--op20}"; } }
+.sourcejs-colors-swatch-primary-op05 {  background: $color--primary--op05; span::after { content: " #{$color--primary--op05}"; } }
+.sourcejs-colors-swatch-primary-light { background: $color--primary--light; span::after { content: " #{$color--primary--light}"; } }

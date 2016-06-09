@@ -1,6 +1,4 @@
-﻿<link rel="stylesheet" href="css/bootstrap.css">
-
-# Bootstrap Spec
+﻿# Bootstrap Spec
 
 Bootstrap is a UI kit to quickly create websites.
 
