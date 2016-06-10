@@ -5,5 +5,10 @@ Basic button spec demo
 ## Basic button
 
 ```example
-<a href="#777" class="btn btn-primary btn-priva-default">Button</a>
+<div class="result-1"></div>
+<script>
+	var element = ".result-1";
+	var url = "variants/default.html";
+	$(element).load(url);
+</script>
 ```
