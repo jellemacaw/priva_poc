@@ -1,0 +1,18 @@
+//All JS and CSS are global scope!
+.navigation-top {
+	.wrapper {
+		display:flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+
+		width: 100%;
+
+		padding:0;
+		margin:0;
+
+		.item {
+			list-style: none;
+		}
+	}
+}
