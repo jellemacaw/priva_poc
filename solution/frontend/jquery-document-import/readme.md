@@ -11,9 +11,9 @@ Import accepts path relative to the root of the site.
 ```example
 	<div class="result-1"></div>
 	<script>
-		var element = ".result-1";
-		var url = "/specs/01-Atoms/button/variants/default.html";
-		$(element).load(url);
+		var target = ".result-1";
+		var block = "/specs/01-Atoms/button/variants/default.html";
+		$(target).load(block);
   </script>
 ```
 
@@ -23,10 +23,10 @@ The load function accepts a second parameter on complete. In the example below t
 ```example
 	<div class="result-2"></div>
 	<script>
-		var element = ".result-2";
-		var url = "/specs/01-Atoms/button/variants/default.html";
+		var target = ".result-2";
+		var block = "/specs/01-Atoms/button/variants/default.html";
 
-		$(element).load(url, function() {
+		$(target).load(block, function() {
 	  	console.log( "Load was performed." );
 		});
   </script>
@@ -38,8 +38,8 @@ You are able to load specific elements of within the imported file. In the examp
 ```example
 	<div class="result-3"></div>
 	<script>
-		var element = ".result-3";
-		var url = "/specs/01-Atoms/button/variants/default.html .txt";
-		$(element).load(url);
+		var target = ".result-3";
+		var block = "/specs/01-Atoms/button/variants/default.html .txt";
+		$(target).load(block);
   </script>
 ```

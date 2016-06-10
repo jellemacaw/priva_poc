@@ -7,8 +7,9 @@ Basic button spec demo
 ```example
 <div class="result-1"></div>
 <script>
-	var element = ".result-1";
-	var url = "variants/default.html";
-	$(element).load(url);
+	var target = ".result-1";
+	var block = "variants/default.html";
+	
+	$(target).load(block);
 </script>
 ```
