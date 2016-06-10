@@ -70,7 +70,7 @@ The following color palette is defined for this site.
 The colors as defined in the [online styleguide](https://app.frontify.com/document/79284#/basics/colors) are codified by their color names. These names are imported and used in the custom bootstrap variables file so Bootstrap still uses its own internal variable names in all its components. E.g.:
 
 ```pre
-_color-names.scss             _bootstrap-custom-variables.scss
+color-names.scss             _bootstrap-custom-variables.scss
 
 $color--petrol      -->       $brand-primary
 ```

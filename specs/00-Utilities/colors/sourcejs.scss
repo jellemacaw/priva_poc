@@ -8,6 +8,7 @@
   flex-wrap: wrap;
   border-radius: .75em;
   padding: 0;
+  overflow: hidden;
 
   &.sourcejs-colorswatches--transparancy {
     background: linear-gradient( to bottom, #f6f6f6, #f6f6f6 50%, white 50%) repeat;
