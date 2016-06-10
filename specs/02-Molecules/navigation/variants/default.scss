@@ -1,0 +1,46 @@
+//All JS and CSS are global scope!
+@import '../../../00-Utilities/colors/sass/color-names';
+
+.navigation-top {
+	.wrapper {
+		display:flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+
+		width: 100%;
+
+		padding:0;
+		margin:0;
+
+		.item {
+			display: flex;
+			> a {
+				padding: 1em 1.5em;
+
+				color:white;
+				text-transform: uppercase;
+				font-weight: bold;
+
+				&:hover {
+					background-color: $color--petrol2;
+					text-decoration: none;
+					position: relative;
+
+					&:after {
+						width: 0;
+					  height: 0;
+					  content: '';
+					  z-index: 2;
+					  border-top: 1.5em solid $color--petrol2;
+					  border-left: 1em solid transparent;
+					  border-right: 1em solid transparent;
+					  position: absolute;
+					  left: 45%;
+					  top: 100%;
+					}
+				}
+			}
+		}
+	}
+}
