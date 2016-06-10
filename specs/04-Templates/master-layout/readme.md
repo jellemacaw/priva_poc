@@ -381,6 +381,7 @@ On responsive view the columns become full width in the ltr order
 		</div>
 	</section>
 </div>
+```
 
 ## Template variant 3-3-3-3
 On responsive view the columns become full width in the rtl order
