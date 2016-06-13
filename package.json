@@ -9,10 +9,8 @@
   "dependencies": {
     "eqcss": "1.1.0",
     "gulp": "^3.9.1",
-    "sourcejs": "^0.6.0-nightly.6"
-  },
-  "devDependencies": {
-    "concurrently": "^2.1.0",
+    "sourcejs": "^0.6.0-nightly.6",
+		"concurrently": "^2.1.0",
     "gulp-concat": "^2.6.0",
     "gulp-minify": "0.0.12",
     "gulp-sass": "^2.3.1",
