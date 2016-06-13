@@ -1,0 +1,9 @@
+//All JS and CSS are global scope!
+@import '../../../00-Utilities/colors/color-names';
+@import '../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-custom-variables';
+
+header {
+	&.header {
+		background-color: $color--petrol;
+	}
+}
