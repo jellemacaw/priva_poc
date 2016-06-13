@@ -1,0 +1,126 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+// extended to enable custom colors for hover and disabled
+
+@mixin button-variant(
+  $color,
+  $background,
+  $border,
+  $hover-color: bootstrap-default,
+  $hover-background: bootstrap-default,
+  $hover-border: bootstrap-default,
+  $disabled-color: lighten($text-color, 35%),
+  $disabled-background: transparent,
+  $disabled-border: lighten($text-color, 35%)
+) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:focus,
+  &.focus {
+    @if $hover-color != bootstrap-default {
+      color: $hover-color;
+    } @else {
+      color: $color;
+    }
+    @if $hover-background != bootstrap-default {
+      background-color: $hover-background;
+    } @else {
+      background-color: darken($background, 10%);
+    }
+    @if $hover-border != bootstrap-default {
+      border-color: $hover-border;
+    } @else {
+      border-color: darken($border, 25%);
+    }
+  }
+  &:hover {
+    @if $hover-color != bootstrap-default {
+      color: $hover-color;
+    } @else {
+      color: $color;
+    }
+    @if $hover-background != bootstrap-default {
+      background-color: $hover-background;
+    } @else {
+      background-color: darken($background, 10%);
+    }
+    @if $hover-border != bootstrap-default {
+      border-color: $hover-border;
+    } @else {
+      border-color: darken($border, 12%);
+    }
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    @if $hover-color != bootstrap-default {
+      color: $hover-color;
+    } @else {
+      color: $color;
+    }
+    @if $hover-background != bootstrap-default {
+      background-color: $hover-background;
+    } @else {
+      background-color: darken($background, 10%);
+    }
+    @if $hover-border != bootstrap-default {
+      border-color: $hover-border;
+    } @else {
+      border-color: darken($border, 12%);
+    }
+    &:hover,
+    &:focus,
+    &.focus {
+      @if $hover-color != bootstrap-default {
+        color: $hover-color;
+      } @else {
+        color: $color;
+      }
+      @if $hover-background != bootstrap-default {
+        background-color: $hover-background;
+      } @else {
+        background-color: darken($background, 17%);
+      }
+      @if $hover-border != bootstrap-default {
+        border-color: $hover-border;
+      } @else {
+        border-color: darken($border, 25%);
+      }
+    }
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $disabled-color;
+      background-color: $disabled-background;
+          border-color: $disabled-border;
+    }
+  }
+
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+}
+
+// Button sizes
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-radius: $border-radius;
+}

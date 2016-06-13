@@ -2,6 +2,21 @@
 // Custom type additions and overrides
 // --------------------------------------------------
 
+h1 {
+  text-transform: uppercase;
+  line-height: $headings-h1-line-height;
+  font-weight: $font-weight-base;
+}
+
+h2 {
+  line-height: $headings-h2-line-height;
+}
+
+h3 {
+  line-height: $headings-h3-line-height;
+  font-weight: $font-weight-base;
+}
+
 h1, h2, h3, h4,
 .h1, .h2, .h3, .h4 {
   margin-bottom: 1em;

@@ -13,15 +13,20 @@
 // so, we're not using this one:
 //@import "assets/stylesheets/bootstrap/variables";
 // but this one:
-@import "bootstrap-custom/bootstrap-custom-variables";
+@import "bootstrap-custom/bootstrap-variables-custom";
 
 
+
+// Core variables and mixins
+// we use a custom mixins masterfile so we can clearly replace some stuff
+// with our own but keep it relatively explicit
+// so, we're not using this one:
+//@import "assets/stylesheets/bootstrap/mixins";
+// but this one:
+@import "bootstrap-custom/mixins-custom";
 
 // vanilla Bootstrap, but only what we use in the project
 // disable or enable components as needed
-
-// Core variables and mixins
-@import "assets/stylesheets/bootstrap/mixins";
 
 // Reset and dependencies
 @import "assets/stylesheets/bootstrap/normalize";
@@ -30,14 +35,15 @@
 
 // Core CSS
 @import "assets/stylesheets/bootstrap/scaffolding";
-  @import "bootstrap-custom/scaffolding-custom";
+  @import "bootstrap-custom/scaffolding-addition";
 @import "assets/stylesheets/bootstrap/type";
-  @import "bootstrap-custom/type-custom";
+  @import "bootstrap-custom/type-addition";
 @import "assets/stylesheets/bootstrap/code";
 @import "assets/stylesheets/bootstrap/grid";
 @import "assets/stylesheets/bootstrap/tables";
 @import "assets/stylesheets/bootstrap/forms";
-@import "assets/stylesheets/bootstrap/buttons";
+//@import "assets/stylesheets/bootstrap/buttons";
+  @import "bootstrap-custom/buttons-custom";
 
 // Components
 @import "assets/stylesheets/bootstrap/component-animations";
@@ -51,7 +57,7 @@
 //@import "assets/stylesheets/bootstrap/pager";
 @import "assets/stylesheets/bootstrap/labels";
 //@import "assets/stylesheets/bootstrap/badges";
-@import "assets/stylesheets/bootstrap/jumbotron";
+//@import "assets/stylesheets/bootstrap/jumbotron";
 @import "assets/stylesheets/bootstrap/thumbnails";
 @import "assets/stylesheets/bootstrap/alerts";
 //@import "assets/stylesheets/bootstrap/progress-bars";

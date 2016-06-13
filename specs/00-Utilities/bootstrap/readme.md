@@ -41,3 +41,7 @@ Include stylesheet in head of each page.
   <div class="col-md-6">.col-md-6</div>
 </div>
 ```
+
+## Customization and replacement of standard Bootstrap
+
+Some components of the Bootstrap styling have been adapted for this project.
