@@ -3,7 +3,7 @@
 
 .container-fluid {
 	section {
-		max-width: $screen-sm;
+		max-width: 100%;
 		margin: 0 auto;
 
 		.row {
@@ -17,8 +17,8 @@
 			}
 		}
 
-		&.full {
-			max-width:100%;
+		&.boxed {
+			max-width:$screen-lg;
 		}
 	}
 }
