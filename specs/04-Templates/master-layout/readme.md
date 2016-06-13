@@ -3,16 +3,16 @@
 Master template is based on bootstrap classes
 
 ## Sections
-A page consists of sections. Sections are boxed by default. Pass the class "full" to unbox a section
+A page consists of sections. Sections are FULL WIDTH by default. Pass the class "boxed" to box a section
 
 ```example
 <div class="container-fluid example">
-	<section>
+	<section class="boxed">
 		<div class="row">
 			<div class="col-md-12">Boxed row</div>
 		</div>
 	</section>
-	<section class="full">
+	<section>
 		<div class="row">
 			<div class="col-md-12">Full width row</div>
 		</div>
@@ -53,7 +53,7 @@ A page consists of sections. Sections are boxed by default. Pass the class "full
 			<div class="col-md-4">.col-md-4</div>
 	  </div>
 	</section>
-	<section class="full">
+	<section class="boxed">
 		<div class="row">
 			<div class="col-md-6">
 				<div class="col-md-6">.col-md-6</div>
@@ -72,7 +72,7 @@ A page consists of sections. Sections are boxed by default. Pass the class "full
 			<div class="col-md-4">.col-md-4</div>
 	  </div>
 	</section>
-	<section class="full">
+	<section class="boxed">
 	  <div class="row">
 			<div class="col-md-12">.col-md-12</div>
 	  </div>

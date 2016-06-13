@@ -14,7 +14,14 @@
 // --------------------------------------------------
 
 // Priva uses a Light font variant as a basis:
-$font-weight-base:  300;
+$font-weight-base:                300;
+// custom line height for headings
+$headings-h1-line-height:         1.25;
+$headings-h2-line-height:         1.13;
+$headings-h3-line-height:         1.5;
+$headings-letter-spacing:         1px;
+
+$btn-text-transform:              uppercase;
 
 
 
@@ -58,7 +65,7 @@ $text-color:            $color--taupe !default;
 //** Global textual link color.
 $link-color:            $color--pacific-blue !default;
 //** Link hover color set via `darken()` function.
-$link-hover-color:      darken($link-color, 15%) !default;
+$link-hover-color:      $link-color !default;
 //** Link hover decoration.
 $link-hover-decoration: underline !default;
 
@@ -75,11 +82,11 @@ $font-family-base:        $font-family-sans-serif !default;
 
 $font-size-base:          16px !default; // Priva
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
-$font-size-small:         ceil(($font-size-base * 0.85714)) !default; // ~12px priva
+$font-size-small:         ceil(($font-size-base * 0.85714)) !default; // ~14px priva
 
-$font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
-$font-size-h2:            floor(($font-size-base * 1.5714)) !default; // ~22px Priva
-$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h1:            floor(($font-size-base * 3.3125)) !default; // ~53px priva
+$font-size-h2:            floor(($font-size-base * 2.8125)) !default; // ~45px Priva
+$font-size-h3:            ceil(($font-size-base * 1.8125)) !default; // ~29px priva
 $font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-h5:            $font-size-base !default;
 $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
@@ -92,7 +99,7 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
 //** By default, this inherits from the `<body>`.
 $headings-font-family:    inherit !default;
 $headings-font-weight:    600 !default;
-$headings-line-height:    1.13333 !default;
+$headings-line-height:    1.5 !default;
 $headings-color:          $brand-primary !default;
 
 
@@ -171,15 +178,60 @@ $table-border-color:            #ddd !default;
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-font-weight:                normal !default;
+$btn-font-weight:                400 !default;
 
-$btn-default-color:              #333 !default;
-$btn-default-bg:                 #fff !default;
-$btn-default-border:             #ccc !default;
+$btn-default-color:              $brand-primary !default;
+$btn-default-bg:                 transparent !default;
+$btn-default-border:             $brand-primary !default;
+$btn-default-hover-color:        #fff !default;
+$btn-default-hover-bg:           $brand-primary !default;
+$btn-default-hover-border:       $brand-primary !default;
 
-$btn-primary-color:              #fff !default;
-$btn-primary-bg:                 $brand-primary !default;
-$btn-primary-border:             darken($btn-primary-bg, 5%) !default;
+$btn-primary-color:              $btn-default-color !default;
+$btn-primary-bg:                 $btn-default-bg !default;
+$btn-primary-border:             $btn-default-border !default;
+$btn-primary-hover-color:        $btn-default-hover-color !default;
+$btn-primary-hover-bg:           $btn-default-hover-bg !default;
+$btn-primary-hover-border:       $btn-default-hover-border !default;
+
+$btn-primary-2-color:            $color--pacific-blue !default;
+$btn-primary-2-bg:               transparent !default;
+$btn-primary-2-border:           $color--pacific-blue !default;
+$btn-primary-2-hover-color:      #fff !default;
+$btn-primary-2-hover-bg:         $color--pacific-blue !default;
+$btn-primary-2-hover-border:     $color--pacific-blue !default;
+
+$btn-primary-3-color:            $color--taupe !default;
+$btn-primary-3-bg:               transparent !default;
+$btn-primary-3-border:           $color--taupe !default;
+$btn-primary-3-hover-color:      #fff !default;
+$btn-primary-3-hover-bg:         $color--taupe !default;
+$btn-primary-3-hover-border:     $color--taupe !default;
+
+$btn-primary-4-color:            #fff !default;
+$btn-primary-4-bg:               transparent !default;
+$btn-primary-4-border:           #fff !default;
+$btn-primary-4-hover-color:      $color--pacific-blue !default;
+$btn-primary-4-hover-bg:         transparent !default;
+$btn-primary-4-hover-border:     $color--pacific-blue !default;
+
+$btn-cta-color:                  #fff !default;
+$btn-cta-bg:                     $color--pacific-blue !default;
+$btn-cta-border:                 $color--pacific-blue !default;
+$btn-cta-hover-color:            $btn-default-hover-color !default;
+$btn-cta-hover-bg:               $btn-default-hover-bg !default;
+$btn-cta-hover-border:           $btn-default-hover-border !default;
+
+$btn-cta-alt-color:              $brand-primary !default;
+$btn-cta-alt-bg:                 $color--light-taupe !default;
+$btn-cta-alt-border:             $color--light-taupe !default;
+$btn-cta-alt-hover-color:        #fff !default;
+$btn-cta-alt-hover-bg:           $color--taupe !default;
+$btn-cta-alt-hover-border:       $color--taupe !default;
+
+//$btn-primary-color:              #fff !default;
+//$btn-primary-bg:                 $color--pacific-blue !default;
+//$btn-primary-border:             $color--pacific-blue !default;
 
 $btn-success-color:              #fff !default;
 $btn-success-bg:                 $brand-success !default;
@@ -200,9 +252,9 @@ $btn-danger-border:              darken($btn-danger-bg, 5%) !default;
 $btn-link-disabled-color:        $gray-light !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius-base:         $border-radius-base !default;
-$btn-border-radius-large:        $border-radius-large !default;
-$btn-border-radius-small:        $border-radius-small !default;
+$btn-border-radius-base:         0 !default;
+$btn-border-radius-large:        0 !default;
+$btn-border-radius-small:        0 !default;
 
 
 //== Forms

@@ -1,9 +1,9 @@
 //All JS and CSS are global scope!
-@import '../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-custom-variables';
+@import '../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom';
 
 .container-fluid {
 	section {
-		max-width: $screen-sm;
+		max-width: 100%;
 		margin: 0 auto;
 
 		.row {
@@ -17,8 +17,8 @@
 			}
 		}
 
-		&.full {
-			max-width:100%;
+		&.boxed {
+			max-width:$screen-lg;
 		}
 	}
 }
