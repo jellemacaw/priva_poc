@@ -68,6 +68,7 @@
 					  position: absolute;
 					  left: 45%;
 					  top: 100%;
+						z-index: $mainZindex;
 					}
 				}
 			}
@@ -75,11 +76,13 @@
 	}
 	.subs-wrapper {
 		display: none;
+		position: fixed;
+		left: 0px;
+		width: 100%;
 
-		height: 0;
+		height:inherit;
 		opacity: 0;
-		position: relative;;
-		z-index:$mainZindex;
+		z-index:($mainZindex - 1);
 
 		background-color: $color--petrol;
 
@@ -87,6 +90,7 @@
 		&:hover,
 		&.active {
 			opacity: 1;
+
 			&.subs-wrapper{
 				@extend %flex-row;
 				padding:$item-padding-hor;
@@ -123,7 +127,7 @@
 	}
 	.bg-mask {
 		position: fixed;
-		z-index: ($mainZindex - 1);
+		z-index: ($mainZindex - 2);
 
 		width: 100%;
 		height: 100%;

@@ -1,6 +1,9 @@
 ﻿# Navigation spec
 
-Different types of navigation blocks
+Different types of navigation blocks.
+
+! Header background is set in Header template spec. 
+! Use clarify to view variants.
 
 ## Navigation top with 3column submenu
 
