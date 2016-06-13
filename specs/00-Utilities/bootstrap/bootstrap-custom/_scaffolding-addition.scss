@@ -25,6 +25,7 @@ figure {
 }
 
 figcaption {
+  font-family: $font-family-serif;
   font-style: italic;
   font-size: $font-size-small;
   padding: $thumbnail-caption-padding $padding-base-horizontal;
