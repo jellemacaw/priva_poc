@@ -2,7 +2,8 @@
 
 [class*="sourcejs-fonts-font-"]{font-size:2.2em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;position:relative;padding:.5em 0 0;margin-bottom:1em}[class*="sourcejs-fonts-font-"]::before{content:"fontname";font-size:.4em;font-family:"Open Sans","Gill Sans","Gill Sans MT",Calibri,sans-serif;font-weight:normal;font-style:normal;color:#333;position:absolute;top:-.1em}.sourcejs-fonts-font-OS{font-weight:400}.sourcejs-fonts-font-OS::before{content:"Open Sans Normal (use 'font-weight: 400')"}.sourcejs-fonts-font-OSl{font-weight:300}.sourcejs-fonts-font-OSl::before{content:"Open Sans Light (=default font-weight)"}.sourcejs-fonts-font-OSli{font-weight:300;font-style:italic}.sourcejs-fonts-font-OSli::before{content:"Open Sans Light Italic"}.sourcejs-fonts-font-OSsb{font-weight:600}.sourcejs-fonts-font-OSsb::before{content:"Open Sans Semi Bold"}.sourcejs-fonts-font-OSb{font-weight:700}.sourcejs-fonts-font-OSb::before{content:"Open Sans Bold"}
 
+.theme-petrol .btn-cta{display:none}
+
+.result-1 .navigation-top,.result-2 .navigation-top,.result-3 .navigation-top,.result-4 .navigation-top,.result-5 .navigation-top,.result-6 .navigation-top,.result-7 .navigation-top,.result-8 .navigation-top,.result-9 .navigation-top,.result-10 .navigation-top{background:#CCC}
 
 .container-fluid.example .row div[class*='col-md']{border:1px solid #c3c3c3;background-color:#dcdcdc}.container-fluid.example .row div[class*='col-sm']{border:1px solid #dcdcdc;background-color:#f6f6f6}
-
-.navigation-top{background-color:#254a5d}

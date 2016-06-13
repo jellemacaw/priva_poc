@@ -16,8 +16,15 @@ jQuery('.btn-priva-default').on('click', function () {
 
 //You can use jQuery but keep in mind that javascript is NOT scoped to spec!
 //All JS and CSS are global scope!
-jQuery('.btn-priva-default').on('click', function () {
-  console.log('Demo click');
+
+$('.navigation-top .wrapper > .item').hover(function () {
+
+  $('.navigation-top').append("<div class='bg-mask'></div>");
+  $('.subs-wrapper').addClass('hover');
+}, function () {
+
+  $('.bg-mask').remove();
+  $('.subs-wrapper').removeClass('hover');
 });
 
 //= require ./bootstrap/affix
