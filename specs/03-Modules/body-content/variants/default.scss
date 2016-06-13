@@ -1,4 +1,4 @@
-@import "../../../00-utilities/bootstrap/bootstrap-custom/bootstrap-custom-variables";
+@import "../../../00-utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
 
 .body-content {
   padding: $padding-base-vertical 0;
@@ -8,7 +8,6 @@
     font-weight: 600;
     margin-bottom: 0;
     line-height: $line-height-base;
-    color: inherit;
   }
 }
 

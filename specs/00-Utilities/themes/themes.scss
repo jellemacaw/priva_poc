@@ -1,0 +1,94 @@
+@import "../colors/color-names";
+@import "../bootstrap/bootstrap-custom/bootstrap-variables-custom";
+@import "../bootstrap/bootstrap-custom/mixins-custom";
+@import "../bootstrap/bootstrap-custom/buttons-custom";
+
+.theme-white {
+  color: $text-color;
+  background-color: $body-bg;
+
+  a {
+    color: $link-color;
+
+    &:hover,
+    &:focus {
+      color: $link-hover-color;
+    }
+  }
+}
+
+.theme-light-taupe {
+  color: $text-color;
+  background-color: $color--light-taupe;
+
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: inherit;
+  }
+
+  a {
+    color: $link-color;
+
+    &:hover,
+    &:focus {
+      color: $link-hover-color;
+    }
+  }
+}
+
+.theme-petrol {
+  color: #fff;
+  background-color: $color--petrol;
+
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: inherit;
+  }
+
+  a {
+    color: $link-color;
+
+    &:hover,
+    &:focus {
+      color: $link-hover-color;
+    }
+  }
+}
+
+.theme-dark-taupe {
+  color: #fff;
+  background-color: $color--taupe;
+
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: inherit;
+  }
+
+  a {
+    color: $link-color;
+
+    &:hover,
+    &:focus {
+      color: $link-hover-color;
+    }
+  }
+}
+
+.theme-light-blue {
+  color: #fff;
+  background-color: $color--pacific-blue;
+
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: inherit;
+  }
+
+  a {
+    color: $color--petrol;
+
+    &:hover,
+    &:focus {
+      color: $color--petrol2;
+    }
+  }
+}

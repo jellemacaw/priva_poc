@@ -1,0 +1,41 @@
+// Mixins (with some replacements!)
+// --------------------------------------------------
+
+// Utilities
+@import "../assets/stylesheets/bootstrap/mixins/hide-text";
+@import "../assets/stylesheets/bootstrap/mixins/opacity";
+@import "../assets/stylesheets/bootstrap/mixins/image";
+@import "../assets/stylesheets/bootstrap/mixins/labels";
+@import "../assets/stylesheets/bootstrap/mixins/reset-filter";
+@import "../assets/stylesheets/bootstrap/mixins/resize";
+@import "../assets/stylesheets/bootstrap/mixins/responsive-visibility";
+@import "../assets/stylesheets/bootstrap/mixins/size";
+@import "../assets/stylesheets/bootstrap/mixins/tab-focus";
+@import "../assets/stylesheets/bootstrap/mixins/reset-text";
+@import "../assets/stylesheets/bootstrap/mixins/text-emphasis";
+@import "../assets/stylesheets/bootstrap/mixins/text-overflow";
+@import "../assets/stylesheets/bootstrap/mixins/vendor-prefixes";
+
+// Components
+@import "../assets/stylesheets/bootstrap/mixins/alerts";
+//@import "../assets/stylesheets/bootstrap/mixins/buttons";
+  @import "mixins/buttons-custom";
+@import "../assets/stylesheets/bootstrap/mixins/panels";
+@import "../assets/stylesheets/bootstrap/mixins/pagination";
+@import "../assets/stylesheets/bootstrap/mixins/list-group";
+@import "../assets/stylesheets/bootstrap/mixins/nav-divider";
+@import "../assets/stylesheets/bootstrap/mixins/forms";
+@import "../assets/stylesheets/bootstrap/mixins/progress-bar";
+@import "../assets/stylesheets/bootstrap/mixins/table-row";
+
+// Skins
+@import "../assets/stylesheets/bootstrap/mixins/background-variant";
+@import "../assets/stylesheets/bootstrap/mixins/border-radius";
+@import "../assets/stylesheets/bootstrap/mixins/gradients";
+
+// Layout
+@import "../assets/stylesheets/bootstrap/mixins/clearfix";
+@import "../assets/stylesheets/bootstrap/mixins/center-block";
+@import "../assets/stylesheets/bootstrap/mixins/nav-vertical-align";
+@import "../assets/stylesheets/bootstrap/mixins/grid-framework";
+@import "../assets/stylesheets/bootstrap/mixins/grid";
