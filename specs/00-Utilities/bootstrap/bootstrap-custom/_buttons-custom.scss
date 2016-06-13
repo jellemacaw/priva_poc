@@ -144,7 +144,6 @@ a.btn {
 .theme-light-taupe .btn-cta-alt,
 .theme-petrol .btn-cta,
 .theme-petrol .btn-cta-alt,
-.theme-dark-taupe .btn-cta,
 .theme-light-blue .btn-cta,
 .theme-light-blue .btn-cta-alt {
   @include button-variant(
@@ -154,6 +153,16 @@ a.btn {
     $btn-cta-alt-hover-color,
     $btn-cta-alt-hover-bg,
     $btn-cta-alt-hover-border
+  );
+}
+.theme-dark-taupe .btn-cta {
+  @include button-variant(
+    $btn-cta-2-color,
+    $btn-cta-2-bg,
+    $btn-cta-2-border,
+    $btn-cta-2-hover-color,
+    $btn-cta-2-hover-bg,
+    $btn-cta-2-hover-border
   );
 }
 // Success appears as green
