@@ -1,6 +1,15 @@
 @import '../../../00-Utilities/colors/color-names';
 @import '../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom';
 
+.link-dark {
+  color: $color--petrol;
+  transition: .12s;
+
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
 .component-title {
   text-transform: uppercase;
   font-size: 20px;

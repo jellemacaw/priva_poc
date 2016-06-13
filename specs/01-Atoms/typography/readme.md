@@ -1,9 +1,10 @@
 ﻿# Typography Spec
 
 Collection of font sizes used, both for rich text (body text, H1 etc.) and application specific (component titles etc.)<br>
+Default html styling is applied via Bootstrap.<br>
 TODO
 
-## Basic button
+## Typography samples
 
 ```example
 <div class="result-1"></div>
