@@ -1,0 +1,18 @@
+//Files named Sourcejs.scss wil be ignored when compiling to main.min.css.
+//These files will be compiled to a specific stylesheet. and only uses in SourceJs spec templates.
+
+@import '../../00-Utilities/colors/color-names';
+
+.sourcejs-separator {
+  margin-bottom: 1em;
+  overflow: hidden;
+  border-bottom: 1px solid $color--light-taupe;
+}
+
+.sourcejs-label {
+  width: 100%;
+  //background: $color--light-taupe;
+  padding: .1em .4em;
+  border-radius: .2em .2em 0 0;
+  border-bottom: 1px solid $color--light-taupe;
+}

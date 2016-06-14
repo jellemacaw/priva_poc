@@ -117,7 +117,7 @@ a.btn {
 .btn-primary4,
 .theme-white .btn-primary4,
 .theme-light-taupe .btn-primary4,
-.theme-dark-taupe .btn-primary {
+.theme-taupe .btn-primary {
   @include button-variant(
     $btn-primary-4-color,
     $btn-primary-4-bg,
@@ -155,7 +155,7 @@ a.btn {
     $btn-cta-alt-hover-border
   );
 }
-.theme-dark-taupe .btn-cta {
+.theme-taupe .btn-cta {
   @include button-variant(
     $btn-cta-2-color,
     $btn-cta-2-bg,

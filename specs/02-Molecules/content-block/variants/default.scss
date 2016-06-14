@@ -1,0 +1,20 @@
+//All JS and CSS are global scope!
+@import "../../../00-utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+
+.content-block {
+  padding: $padding-base-vertical $padding-base-horizontal;
+
+  .content-block__inner {
+    max-width: 40em;
+
+    > :first-child { margin-top: 0; }
+    > :last-child {  margin-bottom: 0; }
+  }
+}
+
+// unfortunately, the element selector doesn't seem to like SASS vars... :-(
+@element ".content-block" and (min-width: 480px) {
+  .content-block {
+    padding: $padding-large-vertical $padding-large-horizontal;
+  }
+}

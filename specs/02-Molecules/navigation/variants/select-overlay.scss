@@ -1,0 +1,63 @@
+@import '../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom';
+@import '../../../00-Utilities/colors/color-names';
+
+.navigation-select-overlay {
+	$mainZindex:100;
+	> a {
+		background: $color--petrol;
+		color:white;
+		padding:5px 10px;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		&.open {
+			z-index:($mainZindex + 1);
+			position: relative;
+			background: $color--petrol2;
+
+			&:after {
+				width: 0;
+				height: 0;
+				content: '';
+				z-index: 2;
+				border-top: 1.2em solid $color--petrol2;
+				border-left: 0.8em solid transparent;
+				border-right: 0.8em solid transparent;
+				position: absolute;
+				left: 25px;
+				top: 100%;
+				z-index: $mainZindex;
+			}
+		}
+	}
+}
+
+.layer {
+	$navigationWidth: $screen-lg;
+	$item-padding-hor: 1.5em;
+	$item-padding-vert: 1em;
+	$mainZindex: 100;
+	$bgMaskColor: rgba(0,0,0,0.5);
+	$layerInnerBackground: $color--petrol;
+
+	&.layer__outer {
+		display: none;
+
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top:0;
+		left:0;
+		z-index:$mainZindex;
+
+		background: $bgMaskColor;
+	}
+
+	&.layer__inner {
+		background: $layerInnerBackground;
+		z-index: ($mainZindex + 1);
+	}
+}

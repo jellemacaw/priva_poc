@@ -60,16 +60,16 @@ Uses the classname:
 
 
 
-## Dark taupe
+## Taupe
 
 Uses the classname:
 ```
-.theme-dark-taupe
+.theme-taupe
 ```
 
 ```example
 <div class="sourcejs-themes-minified">
-  <section id="example-4" class="theme-dark-taupe"></section>
+  <section id="example-4" class="theme-taupe"></section>
 </div>
 <script>
 	var target = "#example-4";

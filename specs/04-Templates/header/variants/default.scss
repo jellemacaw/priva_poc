@@ -5,5 +5,19 @@
 header {
 	&.header {
 		background-color: $color--petrol;
+
+		.header__inner {
+			max-width: $screen-lg;
+			margin:0 auto;
+
+			.logo{
+				img {
+					position: fixed;
+
+					width: 50px;
+				}
+			}
+		}
+		
 	}
 }
