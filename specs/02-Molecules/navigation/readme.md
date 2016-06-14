@@ -45,10 +45,22 @@ Different types of navigation blocks.
 ## Post footer navigation
 
 ```example
-<div class="postfooter"></div>
+<div class="postfooter-spec theme-taupe"></div>
 <script>
-	var target = ".postfooter";
+	var target = ".postfooter-spec";
 	var block = "variants/postfooter.html";
+
+	$(target).load(block);
+</script>
+```
+
+## Post footer coda navigation
+
+```example
+<div class="postfooter-coda-spec theme-taupe"></div>
+<script>
+	var target = ".postfooter-coda-spec";
+	var block = "variants/postfooter-coda.html";
 
 	$(target).load(block);
 </script>
