@@ -40,3 +40,15 @@ Different types of navigation blocks.
 	$(target).load(block);
 </script>
 ```
+
+## Quicklinks navigation
+
+```example
+<div class="quicklinks"></div>
+<script>
+	var target = ".quicklinks";
+	var block = "variants/quicklinks.html";
+
+	$(target).load(block);
+</script>
+```
