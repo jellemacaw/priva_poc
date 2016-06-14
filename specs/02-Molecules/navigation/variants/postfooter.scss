@@ -1,0 +1,9 @@
+.postfooter {
+  font-size: 34px;
+}
+
+@media screen and (min-width: $screen-xs) {
+  .postfooter {
+    font-size: 29px;
+  }
+}

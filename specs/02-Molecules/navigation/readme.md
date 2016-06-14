@@ -2,7 +2,7 @@
 
 Different types of navigation blocks.
 
-! Header background is set in Header template spec. 
+! Header background is set in Header template spec.
 ! Use clarify to view variants.
 
 ## Navigation top with 3column submenu
@@ -48,6 +48,19 @@ Different types of navigation blocks.
 <script>
 	var target = ".quicklinks";
 	var block = "variants/quicklinks.html";
+
+	$(target).load(block);
+</script>
+```
+
+
+## Post footer navigation
+
+```example
+<div class="postfooter"></div>
+<script>
+	var target = ".postfooter";
+	var block = "variants/postfooter.html";
 
 	$(target).load(block);
 </script>
