@@ -4,27 +4,27 @@
 
 WebFont.load({
   google: {
-    families: ['Open Sans:300,400,600,700,300italic']
+    families: ['Open Sans:300,400,600,700,300italic','Roboto Slab:normal']
   }
+});
+
+//You can use jQuery but keep in mind that javascript is NOT scoped to spec!
+//All JS and CSS are global scope!
+
+$('.navigation-main .wrapper > .item').hover(function () {
+
+  $('.navigation-main').append("<div class='bg-mask'></div>");
+  $('.subs-wrapper').addClass('hover');
+}, function () {
+
+  $('.bg-mask').remove();
+  $('.subs-wrapper').removeClass('hover');
 });
 
 //You can use jQuery but keep in mind that javascript is NOT scoped to spec!
 //All JS and CSS are global scope!
 jQuery('.btn-priva-default').on('click', function () {
   console.log('Demo click');
-});
-
-//You can use jQuery but keep in mind that javascript is NOT scoped to spec!
-//All JS and CSS are global scope!
-
-$('.navigation-top .wrapper > .item').hover(function () {
-
-  $('.navigation-top').append("<div class='bg-mask'></div>");
-  $('.subs-wrapper').addClass('hover');
-}, function () {
-
-  $('.bg-mask').remove();
-  $('.subs-wrapper').removeClass('hover');
 });
 
 //= require ./bootstrap/affix
