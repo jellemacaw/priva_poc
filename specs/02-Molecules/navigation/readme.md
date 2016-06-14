@@ -17,30 +17,6 @@ Different types of navigation blocks.
 </script>
 ```
 
-## Navigation top with 2column submenu
-
-```example
-<div class="result-2"></div>
-<script>
-	var target = ".result-2";
-	var block = "variants/2col-submenu.html";
-
-	$(target).load(block);
-</script>
-```
-
-## Navigation top with 1column submenu
-
-```example
-<div class="result-3"></div>
-<script>
-	var target = ".result-3";
-	var block = "variants/1col-submenu.html";
-
-	$(target).load(block);
-</script>
-```
-
 ## Quicklinks navigation
 
 ```example
@@ -48,6 +24,18 @@ Different types of navigation blocks.
 <script>
 	var target = ".quicklinks";
 	var block = "variants/quicklinks.html";
+
+	$(target).load(block);
+</script>
+```
+
+## Select overlay
+
+```example
+<div class="result-2"></div>
+<script>
+	var target = ".result-2";
+	var block = "variants/select-overlay.html";
 
 	$(target).load(block);
 </script>
