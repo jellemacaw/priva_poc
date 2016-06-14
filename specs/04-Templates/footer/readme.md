@@ -6,9 +6,9 @@ TODO
 
 ## Example
 ```example
-<div class="result-1"></div>
+<div class="footer-spec"></div>
 <script>
-	var target = ".result-1";
+	var target = ".footer-spec";
 	var block = "variants/default.html";
 
 	$(target).load(block);
