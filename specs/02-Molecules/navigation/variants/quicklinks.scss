@@ -1,4 +1,9 @@
+@import '../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom';
+@import '../../../00-Utilities/colors/color-names';
+
 .quicklink-navigation {
+	$submenuLinkHoverColor: white;
+
 	display:flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -6,6 +11,10 @@
 
 	padding:0;
 	margin:0;
+
+	* {
+		transition: 100ms ease color;
+	}
 
 	> .item,
 	> li {
@@ -15,6 +24,12 @@
 
 		a {
 			text-transform: uppercase;
+			font-size:$font-size-small;
+
+			&:hover {
+				text-decoration: none;
+				color:$submenuLinkHoverColor;
+			}
 		}
 	}
 }
