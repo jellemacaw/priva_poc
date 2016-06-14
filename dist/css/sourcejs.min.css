@@ -4,8 +4,8 @@
 
 .theme-petrol .btn-cta{display:none}
 
-.result-1 .navigation-main,.result-2 .navigation-main,.result-3 .navigation-main,.result-4 .navigation-main,.result-5 .navigation-main,.result-6 .navigation-main,.result-7 .navigation-main,.result-8 .navigation-main,.result-9 .navigation-main,.result-10 .navigation-main{background:#CCC}
-
 .sourcejs-separator{margin-bottom:1em;overflow:hidden;border-bottom:1px solid #ececec}.sourcejs-label{width:100%;padding:.1em .4em;border-radius:.2em .2em 0 0;border-bottom:1px solid #ececec}
+
+.result-1 .navigation-main,.result-2 .navigation-main,.result-3 .navigation-main,.result-4 .navigation-main,.result-5 .navigation-main,.result-6 .navigation-main,.result-7 .navigation-main,.result-8 .navigation-main,.result-9 .navigation-main,.result-10 .navigation-main{background:#CCC}
 
 .container-fluid.example .row div[class*='col-md']{border:1px solid #c3c3c3;background-color:#dcdcdc}.container-fluid.example .row div[class*='col-sm']{border:1px solid #dcdcdc;background-color:#f6f6f6}

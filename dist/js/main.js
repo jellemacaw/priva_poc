@@ -10,6 +10,12 @@ WebFont.load({
 
 //You can use jQuery but keep in mind that javascript is NOT scoped to spec!
 //All JS and CSS are global scope!
+jQuery('.btn-priva-default').on('click', function () {
+  console.log('Demo click');
+});
+
+//You can use jQuery but keep in mind that javascript is NOT scoped to spec!
+//All JS and CSS are global scope!
 
 $('.navigation-main .wrapper > .item').hover(function () {
 
@@ -19,12 +25,6 @@ $('.navigation-main .wrapper > .item').hover(function () {
 
   $('.bg-mask').remove();
   $('.subs-wrapper').removeClass('hover');
-});
-
-//You can use jQuery but keep in mind that javascript is NOT scoped to spec!
-//All JS and CSS are global scope!
-jQuery('.btn-priva-default').on('click', function () {
-  console.log('Demo click');
 });
 
 //= require ./bootstrap/affix
