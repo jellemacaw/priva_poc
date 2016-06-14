@@ -5,5 +5,14 @@
 header {
 	&.header {
 		background-color: $color--petrol;
+		color:white;
+
+		.logo{
+			img {
+				position: fixed;
+
+				width: 50px;
+			}
+		}
 	}
 }
