@@ -5,14 +5,19 @@
 header {
 	&.header {
 		background-color: $color--petrol;
-		color:white;
 
-		.logo{
-			img {
-				position: fixed;
+		.header__inner {
+			max-width: $screen-lg;
+			margin:0 auto;
 
-				width: 50px;
+			.logo{
+				img {
+					position: fixed;
+
+					width: 50px;
+				}
 			}
 		}
+		
 	}
 }
