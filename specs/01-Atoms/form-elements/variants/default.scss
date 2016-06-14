@@ -1,0 +1,8 @@
+//All JS and CSS are global scope!
+form {
+	* {
+		&:focus {
+			outline: 0;
+		}
+	}
+}
