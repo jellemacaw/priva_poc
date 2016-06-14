@@ -16,9 +16,9 @@ Place the following two wrapper classes around your content:
 ```
 ### Example
 ```example
-<div class="helper-spec__content-block theme-light-taupe"></div>
+<div class="content-block-spec theme-light-taupe"></div>
 <script>
-	var target = ".helper-spec__content-block.theme-light-taupe";
+	var target = ".content-block-spec.theme-light-taupe";
 	var block = "variants/default.html";
 	$(target).load(block);
 </script>
