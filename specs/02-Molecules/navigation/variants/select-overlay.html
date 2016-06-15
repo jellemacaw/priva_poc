@@ -1,6 +1,6 @@
 <body>
 	<div class="navigation navigation-select-overlay">
-		<a href="#" data-layer-id="932" onClick="layerHandler(932)">Select a country</a>
+		<a href="#" data-layer-id="932" onClick="layerHandler(932)">Select a country<span class="icon i-arrow down"></span></a>
 		<div class="layer layer__outer" id="932">
 			<div class="layer layer__inner">
 				<span class="close" onClick="layerHandler(932)">X</span>
@@ -39,10 +39,10 @@
 
 		if($(layerId).is(":visible")) {
 			$(layerId).hide();
-			$(dataLayerId).removeClass('open');
+			$(dataLayerId).removeClass('open').find('.i-arrow').toggleClass('up down');
 		} else {
 			$(layerId).show();
-			$(dataLayerId).addClass('open');
+			$(dataLayerId).addClass('open').find('.i-arrow').toggleClass('up down');
 		}
 	}
 </script>
