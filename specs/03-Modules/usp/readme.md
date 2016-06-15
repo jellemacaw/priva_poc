@@ -4,7 +4,7 @@ A list of unique selling points.
 
 
 ## Basic usage
-TODO: usp styling, .list-txt-vert
+TODO: usp-item, usp-item--light
 
 ### Default
 ```example

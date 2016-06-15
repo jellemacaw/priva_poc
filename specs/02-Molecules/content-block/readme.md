@@ -16,10 +16,27 @@ Place the following two wrapper classes around your content:
 ```
 ### Example
 ```example
-<div class="helper-spec__content-block theme-light-taupe"></div>
+<div class="content-block-spec theme-light-taupe"></div>
 <script>
-	var target = ".helper-spec__content-block.theme-light-taupe";
+	var target = ".content-block-spec.theme-light-taupe";
 	var block = "variants/default.html";
+	$(target).load(block);
+</script>
+```
+### Variant with centered content
+Also removes max-width limitation.
+```code
+<div class="content-block content-block--center">
+	<div class="content-block__inner">
+		[content]
+	</div>
+</div>
+```
+```example
+<div class="content-block-centered-spec theme-light-taupe"></div>
+<script>
+	var target = ".content-block-centered-spec.theme-light-taupe";
+	var block = "variants/centered.html";
 	$(target).load(block);
 </script>
 ```

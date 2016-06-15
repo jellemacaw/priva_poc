@@ -2,12 +2,13 @@
 @import '../../../00-Utilities/colors/color-names';
 
 .navigation-select-overlay {
-	$mainZindex:100;
+	$mainZindex:101;
 	> a {
 		background: $color--petrol;
 		color:white;
 		padding:5px 10px;
 		text-decoration: none;
+		position: relative;
 
 		&:hover {
 			text-decoration: none;
@@ -33,13 +34,72 @@
 			}
 		}
 	}
+
+	.i-arrow {
+		$size: 7px;
+		$rotation: 43deg;
+		
+		position: absolute;
+    	top: 12px;
+    	right: 0;
+
+		&:after {
+			content:"";
+			display: block;
+			width: $size;
+			height: $size;
+
+			border-style:solid;
+			border-width: 0 1px 0 0;
+			border-color:white;
+
+			position: absolute;
+			transform: rotate(-$rotation);
+			transform-origin: center center;
+
+		}
+		&:before {
+			content:"";
+			display: block;
+			width: $size;
+			height: $size;
+
+			border-style:solid;
+			border-width: 0 0 0 1px;
+			border-color:white;
+
+			position: absolute;
+			transform: rotate($rotation);
+			transform-origin: center center;
+		}
+
+		&.down {
+			&:after {
+				transform: rotate($rotation);
+			}
+			&:before {
+				transform: rotate(-($rotation));
+			}
+		}
+		&.up {
+			&:after {
+				transform: rotate(-($rotation));
+			}
+			&:before {
+				transform: rotate($rotation);
+			}
+		}
+	}
+
+	.i-arrow-up {
+	}
 }
 
 .layer {
 	$navigationWidth: $screen-lg;
 	$item-padding-hor: 1.5em;
 	$item-padding-vert: 1em;
-	$mainZindex: 100;
+	$mainZindex: 101;
 	$bgMaskColor: rgba(0,0,0,0.5);
 	$layerInnerBackground: $color--petrol;
 

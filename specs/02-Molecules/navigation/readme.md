@@ -2,7 +2,7 @@
 
 Different types of navigation blocks.
 
-! Header background is set in Header template spec. 
+! Header background is set in Header template spec.
 ! Use clarify to view variants.
 
 ## Navigation top with 3column submenu
@@ -36,6 +36,31 @@ Different types of navigation blocks.
 <script>
 	var target = ".result-2";
 	var block = "variants/select-overlay.html";
+
+	$(target).load(block);
+</script>
+```
+
+
+## Post footer navigation
+
+```example
+<div class="postfooter-spec theme-taupe"></div>
+<script>
+	var target = ".postfooter-spec";
+	var block = "variants/postfooter.html";
+
+	$(target).load(block);
+</script>
+```
+
+## Post footer coda navigation
+
+```example
+<div class="postfooter-coda-spec theme-taupe"></div>
+<script>
+	var target = ".postfooter-coda-spec";
+	var block = "variants/postfooter-coda.html";
 
 	$(target).load(block);
 </script>

@@ -1,0 +1,34 @@
+//All JS and CSS are global scope!
+@import '../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom';
+
+.postfooter-coda {
+  font-size: 13px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  a {
+    display: inline-block;
+    margin-bottom: 1em;
+    color: rgba(255,255,255,.35);
+    transition: .12s;
+
+    &:hover, &:focus {
+      color: rgba(255,255,255,.7);
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-xs) {
+  .postfooter-coda {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: $screen-md) {
+  .postfooter-coda {
+    margin-top: 10px;
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,49 @@
+//All JS and CSS are global scope!
+@import "../../../00-utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+
+.list-vert {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  list-style: none;
+
+  > * {
+    display: block;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+// horizontal list
+
+.list-hor {
+  @extend .list-vert;
+}
+
+// unfortunately, the element selector doesn't seem to like SASS vars... :-(
+@element ".list-hor" and (min-width: 480px) {
+  .list-hor {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+    > * {
+      display: inline-block;
+      margin-left: 1.5em;
+      margin-right: 1.5em;
+    }
+  }
+}
+
+.list--txtcenter {
+  align-items: center;
+
+  > * {
+    text-align: center;
+  }
+}
