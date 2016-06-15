@@ -6,7 +6,7 @@
   padding: $padding-base-vertical $padding-base-horizontal;
 
   .content-block__inner {
-    max-width: 40em;
+    //max-width: 40em;
 
     > :first-child { margin-top: 0; }
     > :last-child {  margin-bottom: 0; }
@@ -14,7 +14,14 @@
 }
 
 // unfortunately, the element selector doesn't seem to like SASS vars... :-(
-@element ".content-block" and (min-width: 480px) {
+// @element ".content-block" and (min-width: 480px) {
+//   .content-block {
+//     padding: $padding-large-vertical $padding-large-horizontal;
+//   }
+// }
+
+// unfortunately, the element selector doesn't seem to like SASS vars... :-(
+@media screen and (min-width: $screen-xs) {
   .content-block {
     padding: $padding-large-vertical $padding-large-horizontal;
   }
@@ -23,7 +30,7 @@
 .content-block--center {
   @extend .text-center;
 
-  .content-block__inner {
-    max-width: none;
-  }
+  // .content-block__inner {
+  //   max-width: none;
+  // }
 }

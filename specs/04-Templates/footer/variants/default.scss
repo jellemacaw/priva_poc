@@ -1,0 +1,13 @@
+@import '../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom';
+
+.site-footer {
+
+  .quicklinks {
+    font-size: $font-size-small;
+
+    @media screen and (min-width: $screen-md) {
+      font-size: 12px;
+    }
+  }
+
+}

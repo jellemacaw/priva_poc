@@ -1,9 +1,10 @@
 @import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
 @import "../../../02-Molecules/content-block/variants/default";
 
-footer [data-usp="cta"] {
+footer .usp-cta {
   position: relative;
   display: inline-block;
+  width: 100%;
 
   &::before {
     content: "";
@@ -20,7 +21,7 @@ footer [data-usp="cta"] {
 }
 
 @media screen and (min-width: $screen-xs) {
-  footer [data-usp="cta"]::before {
+  footer .usp-cta::before {
     left: $padding-large-horizontal;
     right: $padding-large-horizontal;
   }
@@ -28,7 +29,7 @@ footer [data-usp="cta"] {
 
 @media screen and (min-width: $screen-md) {
 
-  footer [data-usp="cta"]::before {
+  footer .usp-cta::before {
     top: $padding-base-vertical;
     bottom: $padding-base-vertical;
     left: 0;
