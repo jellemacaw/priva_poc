@@ -1,35 +1,73 @@
 @import '../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom';
 @import '../../../00-Utilities/colors/color-names';
 
-.quicklink-navigation {
-	$submenuLinkHoverColor: white;
+[data-navigation="quicklinks"] {
+	font-size: 24px;
 
-	display:flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-
-	padding:0;
-	margin:0;
-
-	* {
-		transition: 100ms ease color;
+	.component-title {
+		font-size: 1em;
 	}
 
-	> .item,
-	> li {
-		&:before {
+	.quicklink-navigation {
+
+		display:flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+
+		padding:0;
+		margin:0;
+
+		* {
+			transition: 100ms ease color;
+		}
+
+		> .item,
+		> li {
+			&:before {
+				display: none;
+			}
+
+			a {
+				color: $brand-primary;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	&.quicklink-header {
+
+		.component-title {
 			display: none;
 		}
 
-		a {
-			text-transform: uppercase;
-			font-size:$font-size-small;
+		.quicklink-navigation {
+			$submenuLinkHoverColor: white;
 
-			&:hover {
-				text-decoration: none;
-				color:$submenuLinkHoverColor;
+			display:flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+
+			> .item,
+			> li {
+				&:before {
+					display: none;
+				}
+
+				a {
+					text-transform: uppercase;
+					font-size:$font-size-small;
+
+					&:hover {
+						text-decoration: none;
+						color:$submenuLinkHoverColor;
+					}
+				}
 			}
 		}
+
 	}
 }

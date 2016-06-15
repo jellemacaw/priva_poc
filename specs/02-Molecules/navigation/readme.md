@@ -20,10 +20,20 @@ Different types of navigation blocks.
 ## Quicklinks navigation
 
 ```example
-<div class="quicklinks"></div>
+<div class="quicklinks-spec"></div>
 <script>
-	var target = ".quicklinks";
+	var target = ".quicklinks-spec";
 	var block = "variants/quicklinks.html";
+
+	$(target).load(block);
+</script>
+```
+### Header variant
+```example
+<div class="quicklinks-header-spec"></div>
+<script>
+	var target = ".quicklinks-header-spec";
+	var block = "variants/quicklinks-header.html";
 
 	$(target).load(block);
 </script>

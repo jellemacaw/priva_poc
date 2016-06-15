@@ -1,1 +1,39 @@
+@import "../../../00-utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
 @import "../../../02-molecules/content-block/variants/default";
+
+footer [data-usp="cta"] {
+  position: relative;
+  display: inline-block;
+
+  &::before {
+    content: "";
+    display: block;
+    background: $color--taupe;
+    opacity: .1;
+    position: absolute;
+    top: 0;
+    left: $padding-base-horizontal;
+    right: $padding-base-horizontal;
+    height: 1px;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: $screen-xs) {
+  footer [data-usp="cta"]::before {
+    left: $padding-large-horizontal;
+    right: $padding-large-horizontal;
+  }
+}
+
+@media screen and (min-width: $screen-md) {
+
+  footer [data-usp="cta"]::before {
+    top: $padding-base-vertical;
+    bottom: $padding-base-vertical;
+    left: 0;
+    right: auto;
+    width: 1px;
+    height: auto;
+  }
+}
