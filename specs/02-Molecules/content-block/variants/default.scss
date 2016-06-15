@@ -1,5 +1,6 @@
 //All JS and CSS are global scope!
 @import "../../../00-utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+@import "../../../00-utilities/bootstrap/bootstrap-custom";
 
 .content-block {
   padding: $padding-base-vertical $padding-base-horizontal;
@@ -16,5 +17,13 @@
 @element ".content-block" and (min-width: 480px) {
   .content-block {
     padding: $padding-large-vertical $padding-large-horizontal;
+  }
+}
+
+.content-block--center {
+  @extend .text-center;
+
+  .content-block__inner {
+    max-width: none;
   }
 }
