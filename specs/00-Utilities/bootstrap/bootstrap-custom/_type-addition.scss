@@ -5,11 +5,13 @@
 h1, .h1 {
   text-transform: uppercase;
   line-height: $headings-h1-line-height;
-  font-weight: $font-weight-base;
+  font-weight: $headings-font-weight;
 }
 
 h2, .h2 {
   line-height: $headings-h2-line-height;
+  font-weight: $headings-font-weight;
+  color: inherit;
 }
 
 h3, .h3 {
