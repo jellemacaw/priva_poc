@@ -3,52 +3,88 @@
 @import "../../body-content/variants/default";
 
 .hero-title {
-  position: relative;
-  height: 144px;
   overflow: hidden;
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: $gradient--hero 0 0/cover no-repeat;
-    z-index: 5;
+  h1 {
+    padding: $padding-base-vertical $padding-base-horizontal 0;
+    box-sizing: content-box;
+    max-width: (40em/1.625); // equivalent aan 40em body-text gedeeld door grootte h1
+
+    @media screen and (min-width: $screen-xs) {
+      padding: $padding-large-vertical $padding-large-horizontal 0;
+    }
   }
+
+  &:last-child {
+
+    h1 {
+      margin-bottom: $padding-base-vertical;
+
+      @media screen and (min-width: $screen-xs) {
+        margin-bottom: $padding-large-vertical;
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: (0 - $padding-base-vertical);
+
+    @media screen and (min-width: $screen-xs) {
+      margin-bottom: (0 - $padding-large-vertical);
+    }
+  }
+}
+
+.hero-title--img, .hero-title--alt-img {
+  position: relative;
+  height: 144px;
+  width: 100%;
 
   @media screen and (min-width: $screen-xs) {
     height: 164px;
   }
 
-  img {
-    min-width: 100%;
-    min-height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    z-index: 1;
-
-    // @media screen and (min-width: $screen-xs) {
-    //   height: auto;
-    //   width: 100%;
-    // }
+  &:not(:last-child) {
+    margin-bottom: 0;
   }
 
   h1 {
     position: absolute;
-    z-index: 10;
+    z-index: 3;
     bottom: 0;
-    left: $padding-base-horizontal;
-    right: $padding-base-horizontal;
-    max-width: (40em/1.625);
+    left: 0;
     color: #fff;
+  }
 
-    @media screen and (min-width: $screen-xs) {
-      left: $padding-large-horizontal;
-      right: $padding-large-horizontal;
-    }
+  img {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%,-50%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 25%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: transparent $gradient--hero 0 0 no-repeat;
+    background-size: cover;
+    z-index: 2;
+  }
+}
+
+.hero-title--alt-img {
+  h1 {
+    color: $text-color;
+  }
+
+  &::after {
+    background-image: $gradient--hero--inv;
   }
 }
