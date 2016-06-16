@@ -1,0 +1,21 @@
+//All JS and CSS are global scope!
+@import "../bootstrap/bootstrap-custom/bootstrap-variables-custom";
+@import '../colors/color-names';
+
+.sourcejs-ani-sm-demo {
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: $brand-primary;
+  animation: flutter .4s 2s;
+}
+
+.sourcejs-ani-sm-demo-container {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+}

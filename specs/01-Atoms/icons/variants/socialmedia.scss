@@ -1,49 +1,52 @@
 //All JS and CSS are global scope!
 @import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+@import '../../../00-Utilities/colors/color-names';
+@import '../../../00-Utilities/animations/variants/default';
 
-.list-vert {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  list-style: none;
+.icon-sm {
+  $icon-sm-size: 50px;
 
-  > * {
+  position: relative;
+  display: inline-block;
+  width: $icon-sm-size;
+  height: $icon-sm-size;
+  overflow: hidden;
+
+  img {
+    position: relative;
+    z-index: 1;
     display: block;
-
-    &::before {
-      display: none;
-    }
+    width: 100%;
+    height: auto;
+    transition: .3s .1s $ani-flutter-timing;
   }
-}
 
-// horizontal list
-
-.list-hor {
-  @extend .list-vert;
-}
-
-// unfortunately, the element selector doesn't seem to like SASS vars... :-(
-@element ".list-hor" and (min-width: 480px) {
-  .list-hor {
-    display: inline-flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-
-    > * {
-      display: inline-block;
-      margin-left: 1.5em;
-      margin-right: 1.5em;
-    }
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: calc(#{$icon-sm-size} - 16%);
+    height: calc(#{$icon-sm-size} - 16%);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
+    transition: .3s .2s $ani-flutter-timing;
+    background: #fff;
+    opacity: .4;
   }
-}
 
-.list--txtcenter {
-  align-items: center;
+  &:hover, &:focus {
 
-  > * {
-    text-align: center;
+    img {
+      transform: scale(1.24);
+      animation: flutter .3s .12s $ani-flutter-timing;
+    }
+
+    &::after {
+      opacity: .8;
+      transform: translate(-50%, -50%) scale(1.12);
+    }
   }
 }

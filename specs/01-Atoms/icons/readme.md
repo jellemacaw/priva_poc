@@ -10,9 +10,9 @@ As used in the footer
 ```
 ### Example
 ```example
-<div class="icons-sm-spec"></div>
+<div class="icons-sm-spec theme-light-taupe"></div>
 <script>
-	var target = ".icons-sm-spec";
+	var target = ".icons-sm-spec.theme-light-taupe";
 	var block = "variants/socialmedia.html";
 	$(target).load(block);
 </script>
