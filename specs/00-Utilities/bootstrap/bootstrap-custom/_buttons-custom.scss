@@ -25,7 +25,7 @@
   @include button-size(
     .75em,
     $padding-base-horizontal,
-    $font-size-base,
+    inherit,
     1,
     $btn-border-radius-base
   );
