@@ -1,6 +1,6 @@
 ﻿# Job Spec
 
-This component will display a block with the meta data of the job. This includes: PageTitle + JobType + JobLevel + ContractType + Location. This component shou
+This component will display a block with the meta data of the job. This includes: PageTitle + JobType + JobLevel + ContractType + Location.
 
 
 ## Basic usage
