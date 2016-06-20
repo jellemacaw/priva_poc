@@ -1,8 +1,28 @@
 @import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
-@import "../../../02-Molecules/content-block/variants/default";
+@import "default";
 
-// footer .usp-cta {
-//   position: relative;
-//   display: inline-block;
-//   width: 100%;
-// }
+.usp-item.usp-item--light {
+  font-weight: $font-weight-base;
+}
+
+.usp-cta {
+  .btn {
+    margin-top: 1.5em;
+    padding-left: 0;
+    padding-right: 0;
+
+    @media screen and (min-width: $screen-xs) {
+      padding-left: $padding-base-horizontal;
+      padding-right: $padding-base-horizontal;
+      margin-left: 36px;
+      display: inline-block;
+      width: auto;
+    }
+  }
+
+  @media screen and (min-width: $screen-sm) {
+    .content-block__inner {
+      padding-top: 2.25em;
+    }
+  }
+}

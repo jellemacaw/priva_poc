@@ -3,10 +3,8 @@
 A list of unique selling points.
 
 
-## Basic usage
-TODO: usp-item, usp-item--light
 
-### Default
+## Default
 ```example
 <div class="usp-spec"></div>
 <script>
@@ -16,8 +14,9 @@ TODO: usp-item, usp-item--light
 </script>
 ```
 
-### CTA
-Variant for use in footer
+## CTA
+Variant for use in footer with a CTA button
+
 ```example
 <div class="usp-spec-cta"></div>
 <script>

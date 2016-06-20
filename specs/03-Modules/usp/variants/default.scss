@@ -1,1 +1,24 @@
 @import "../../../02-Molecules/content-block/variants/default";
+@import "../../../01-Atoms/icons/variants/vshape";
+
+.usp-item {
+  $usp-spacing: .3em;
+
+  font-weight: 400;
+  max-width: 40em;
+  padding: $usp-spacing 0 $usp-spacing 36px;
+  background-position: left ($usp-spacing + .225em);
+  background-repeat: no-repeat;
+  background-size: auto 1.1em;
+  
+  @extend %icon-vshape;
+
+  &:first-child {
+    padding-top: 0;
+    background-position: left .225em;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}

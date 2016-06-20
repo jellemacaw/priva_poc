@@ -33,7 +33,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     transform-origin: center center;
-    transition: .3s .2s $ani-flutter-timing;
+    transition: .3s .1s $ani-flutter-timing;
     background: #fff;
     opacity: .4;
   }
@@ -48,6 +48,7 @@
     &::after {
       opacity: .8;
       transform: translate(-50%, -50%) scale(1.12);
+      transition-delay: .2s;
     }
   }
 }
