@@ -1,0 +1,11 @@
+//
+@import "../../../00-Utilities/mixins/variants/functions";
+
+
+@function svg-vshape() {
+  @return svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="32.62" height="29.407" viewBox="0 0 32.62 29.407"><path fill="#00b5ce" fill-rule="evenodd" d="M0 6.908v-6.92l32.63 10.986v7.472L0 29.41v-6.916l19.42-6.08c1.14-.338 2.48-.687 4-1.048s2.59-.587 3.19-.675a57.53 57.53 0 0 1-7.19-1.655z"/></svg>');
+}
+
+%icon-vshape {
+  background-image: svg-vshape();
+}

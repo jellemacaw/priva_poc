@@ -22,4 +22,14 @@ As used in the footer
 TODO
 
 ## V-shape
-TODO
+The V-shape is implemented as a SASS placeholder, to be extended to other classes. It will add the svg shape as an inline background image without sizing or placement.
+
+```code
+%icon-vshape {
+	background-image: url("...");
+}
+```
+### Example
+```example
+<div class="icons-vshape-spec"></div>
+```

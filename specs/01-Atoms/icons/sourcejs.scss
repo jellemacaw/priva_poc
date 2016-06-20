@@ -1,0 +1,10 @@
+@import "variants/vshape";
+
+.icons-vshape-spec {
+  display: block;
+  width: 100px;
+  height: 50px;
+  background: #eee 10px 10px no-repeat;
+  
+  @extend %icon-vshape;
+}
