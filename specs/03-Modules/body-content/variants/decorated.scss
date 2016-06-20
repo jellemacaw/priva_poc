@@ -1,0 +1,30 @@
+@import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+
+// variant for key content and job component
+
+.body-content--decorated {
+  position: relative;
+  overflow: hidden;
+
+  .body-content__inner {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.body-content__decoration {
+  position: absolute;
+  display: none;
+  bottom: $padding-large-vertical;
+  right: $padding-large-horizontal;
+  width: 140px;
+  height: auto;
+  z-index: 0;
+}
+
+@media screen and (min-width: $screen-md) {
+
+  .body-content__decoration {
+    display: block;
+  }
+}

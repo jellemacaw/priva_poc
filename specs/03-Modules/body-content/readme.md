@@ -13,7 +13,6 @@ A content component is used to display a piece of text. There is no limitation t
 | BodyText     | Body Text     | Rich textfield        | Text displayed                            | -   |
 
 ## Basic usage
-Blaat
 
 ### Example
 ```example
@@ -21,6 +20,22 @@ Blaat
 <script>
 	var target = ".example--body-content";
 	var block = "variants/default.html";
+
+	$(target).load(block);
+</script>
+```
+
+## Decorated
+This version has an decorative image in the bottom right corner that will only be shown at higher screen resolutions.
+This front-end structure is only used for the [Key content](../key-content) and [Job](../job) components.
+The decorative image has a width of 140px or 280px (High dpi) but a non-determinded height.
+
+### Example
+```example
+<div class="example--job-content theme-light-taupe"></div>
+<script>
+	var target = ".example--job-content";
+	var block = "variants/decorated.html";
 
 	$(target).load(block);
 </script>
