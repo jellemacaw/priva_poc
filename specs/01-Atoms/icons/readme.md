@@ -47,6 +47,24 @@ The placeholder <b>@extend %icon-vshape</b> will insert a complete background-im
 <div class="icons-vshape-spec"></div>
 ```
 
+## Image icons
+Images displayed as an icon inline with text.
+
+```code
+<a href="">
+	<img src="[url]" alt="" class="icon-img">
+	Interesting text with an icon in front
+</a>
+```
+
+### Example
+```example
+<a href="">
+	<img src="img/envelope-lightblue.png" alt="" class="icon-img">
+	Interesting text with an icon in front
+</a>
+```
+
 
 ## Tile icons
 TODO

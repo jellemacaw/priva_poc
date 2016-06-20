@@ -11,9 +11,18 @@
     margin-bottom: 1em;
     transition: .12s;
 
+    .icon-img{
+      transition: .12s;
+    }
+
     &:hover, &:focus {
       color: lighten($color--pacific-blue,10%);
       text-decoration: none;
+
+      .icon-img {
+        -webkit-filter: brightness(120%);
+        filter: brightness(120%);
+      }
     }
   }
 }
