@@ -65,6 +65,19 @@ Images displayed as an icon inline with text.
 </a>
 ```
 
+## Arrow head
+"V"-shaped arrow for links and panels. Uses a mixin to insert a pseudo-element with a transformed ">" character.
+See [Functions and Mixins](/specs/00-Utilities/mixins) for more details.
+
+### Example
+```example
+<div class="theme-taupe">
+  <a href="" class="btn btn-link">
+  	The .btn-link uses this mixin
+  </a>
+</div>
+```
+
 
 ## Tile icons
 TODO

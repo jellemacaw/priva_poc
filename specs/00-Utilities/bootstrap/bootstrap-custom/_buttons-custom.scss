@@ -2,6 +2,9 @@
 // Buttons
 // --------------------------------------------------
 
+// mixin needed
+@import "../../../00-Utilities/mixins/variants/mixins";
+
 
 // Base styles
 // --------------------------------------------------
@@ -222,6 +225,13 @@ a.btn {
   color: $link-color;
   font-weight: normal;
   border-radius: 0;
+  text-transform: none;
+  font-weight: 400;
+
+  @include icon-arrowhead(static) {
+    float: right;
+    margin-left: .75em;
+  }
 
   &,
   &:active,
@@ -239,16 +249,33 @@ a.btn {
   }
   &:hover,
   &:focus {
-    color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
+    color: $brand-primary;
+    text-decoration: none;
     background-color: transparent;
   }
   &[disabled],
   fieldset[disabled] & {
+    &,
     &:hover,
     &:focus {
       color: $btn-link-disabled-color;
       text-decoration: none;
+    }
+  }
+
+  // theming
+  .theme-taupe & {
+    color: $link-color;
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+  }
+  .theme-light-blue &,
+  .theme-petrol & {
+    &:hover,
+    &:focus {
+      color: #fff;
     }
   }
 }

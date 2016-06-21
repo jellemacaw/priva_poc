@@ -1,2 +1,7 @@
 @import "../../../02-Molecules/content-block/variants/default";
 @import "../../../01-Atoms/icons/variants/socialmedia";
+
+.teaser--socialmedia .list-inline {
+  width: 75%;
+  margin: 1.5em auto 0;
+}

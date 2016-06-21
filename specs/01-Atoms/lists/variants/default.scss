@@ -1,6 +1,20 @@
 //All JS and CSS are global scope!
 @import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
 
+// double classsname to 'hack' specificity and overrule Bootstrap
+.list-inline.list-inline {
+  margin-left: 0;
+
+  > li {
+    padding-left: 0;
+    padding-right: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
 .list-vert {
   display: flex;
   flex-direction: column;
@@ -25,7 +39,7 @@
 }
 
 // unfortunately, the element selector doesn't seem to like SASS vars... :-(
-@element ".list-hor" and (min-width: 480px) {
+@element ".list-hor" and (min-width: #{$screen-xs}) {
   .list-hor {
     display: inline-flex;
     flex-wrap: wrap;

@@ -17,3 +17,18 @@
   font-weight: normal;
   line-height: 1.2;
 }
+
+.teaser-title {
+  display: block;
+  font-size: $font-size-base * 1.0625;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 1.35;
+  letter-spacing: $headings-letter-spacing;
+}
+
+@element ".teaser"  and (min-width: #{$screen-md}) {
+  .teaser .teaser-title {
+    font-size: 22px;
+  }
+}

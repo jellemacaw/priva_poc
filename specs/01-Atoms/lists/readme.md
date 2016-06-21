@@ -2,6 +2,26 @@
 
 Some basic list types for constructing components. Intended to be used with HTML unordered lists and list-items but can be used with any container and children.
 
+## Inline
+Displays items horizontally as text elements. Small adaptation of Bootstrap default to compensate for project styling of a normal list and remove any spacing between list-items.
+
+```code
+<ul class="list-inline">
+	<li>
+		[content]
+	</li>
+</ul>
+```
+### Example
+```example
+<div class="list-spec-inline"></div>
+<script>
+	var target = ".list-spec-inline";
+	var block = "variants/inline.html";
+	$(target).load(block);
+</script>
+```
+
 ## Vertical
 A clean, vertical list
 
