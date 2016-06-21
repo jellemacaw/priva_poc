@@ -13,8 +13,8 @@
 }
 
 .body-content__decoration {
-  position: absolute;
   display: none;
+  position: absolute;
   bottom: $padding-large-vertical;
   right: $padding-large-horizontal;
   width: 140px;
@@ -22,8 +22,7 @@
   z-index: 0;
 }
 
-@media screen and (min-width: $screen-md) {
-
+@element ".body-content--decorated" and (min-width: #{$screen-md}) {
   .body-content__decoration {
     display: block;
   }

@@ -32,7 +32,7 @@ The function <b>svg-vshape()</b> will return an UTF-8 encoded url. It will add t
 }
 ```
 
-The placeholder <b>@extend %icon-vshape</b> will insert a complete background-image property. This might conflict with a background definition which resets all background properties but is more efficient with repeated use. It uses the SASS function.
+The placeholder <b>%icon-vshape</b> will insert a complete background-image property. This might conflict with a background definition which resets all background properties but using '@extend' is more efficient with repeated use. It uses the above defined SASS function.
 
 ```code
 .classname {
