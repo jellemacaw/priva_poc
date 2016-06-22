@@ -80,21 +80,28 @@ See [Functions and Mixins](/specs/00-Utilities/mixins) for more details.
 
 
 ## Tile icons
-Big and round, with an img as for extensibility.
+Big and round, with an image tag for easy extensibility.
+
+```code
+<a href="#" class="icon-tile">
+  <img src="img/tile-contact.png" alt="Contact">
+  Contact
+</a>
+```
 
 
 ### Example
 ```example
 <div class="theme-light-taupe content-block">
-  <a href="" class="icon-tile">
+  <a href="#" class="icon-tile">
     <img src="img/tile-contact.png" alt="Contact">
     Contact
   </a>
-  <a href="" class="icon-tile">
+  <a href="#" class="icon-tile">
     <img src="img/tile-support.png" alt="Service & support">
     Service & support
   </a>
-  <a href="" class="icon-tile">
+  <a href="#" class="icon-tile">
     <img src="img/tile-mypriva.png" alt="My Priva">
     My Priva
   </a>

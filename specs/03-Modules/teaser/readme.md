@@ -25,6 +25,16 @@ TODO
 </script>
 ```
 
+### Tile teaser
+```example
+<div class="teaser-spec-tile"></div>
+<script>
+	var target = ".teaser-spec-tile";
+	var block = "variants/tile.html";
+	$(target).load(block);
+</script>
+```
+
 ### Social media variant
 Variant for use in footer
 ```example
