@@ -1,0 +1,152 @@
+<html>
+  <head>
+    <style>
+       @import "/specs/02-Molecules/google-map/variants/default.css";
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+	  function googleMap() {
+
+        var mapDiv = document.getElementById('map');
+        var data = { "type": "FeatureCollection",
+                      "features": [
+                        {
+                          "type": "Feature",
+                          "geometry": {"type": "Point", "coordinates": [5.461088, 52.380133]},
+                          "properties": {
+                            "id":"map-to-office-1",
+                            "title":"Priva North America",
+                            "description":"The Netherlands",
+                            "linkTitle":"Naar de website",
+                            "link":"http://www.linktowebsite.nl",
+                            "icon": "images/maps-marker.png"
+                          }
+                        },
+                        {
+                          "type": "Feature",
+                          "geometry": {"type": "Point", "coordinates": [5.204516, 52.366193]},
+                          "properties": {
+                            "id":"map-to-office-2",
+                            "title":"Priva South America",
+                            "description":"United States",
+                            "linkTitle":"Ook naar de website",
+                            "link":"http://www.linktowebsite.nl",
+                            "icon": "images/maps-marker.png"
+                          }
+                        },
+                        {
+                          "type": "Feature",
+                          "geometry": {"type": "Point", "coordinates": [5, 52]},
+                          "properties": {
+                            "id":"map-to-office-3",
+                            "title":"Priva Central America",
+                            "description":"The Netherlands",
+                            "linkTitle":"Ook naar de website",
+                            "link":"http://www.linktowebsite.nl",
+                            "icon": "images/maps-marker.png"
+                          }
+                        }
+                      ]
+                  };
+
+        var mapInitOptions = {
+          "center": {"lat": 52.278498, "lng": 4.743898},
+          "zoom": 8,
+          "mapTypeId": "roadmap",
+          "scrollwheel":  false,
+          "mapTypeControl":false
+        };
+
+        var getUrlParameter = function getUrlParameter(sParam) {
+            var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
+
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
+
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true : sParameterName[1];
+                }
+            }
+        };
+
+         function checkUrlParamsOptions(){
+          var result = mapInitOptions;
+          var customLat = parseInt(getUrlParameter('lat'));
+          var customLong = parseInt(getUrlParameter('long'));
+
+          if(customLat && customLong) {
+            result.center.lat = customLat;
+            result.center.long = customLong;
+            return result;
+
+          } else if (customLat) {
+            result.center.lat = customLat;
+            return result;
+          } else if (customLong) {
+            result.center.long = customLong;
+            return result;
+          } else {
+            return result;
+          }
+          return result;
+        }
+
+        var mapOptions = checkUrlParamsOptions();
+        var map = new google.maps.Map(mapDiv, mapOptions);
+
+        map.data.addGeoJson(data);
+
+        //Info window
+        map.data.addListener('click', function(event) {
+
+          if( prev_infowindow ) {
+            prev_infowindow.close();
+          }
+
+          var anchor = "<a href='#" + event.feature.getProperty('id') + "' class='map-to-list'></a>";
+          var titleHtml = "<h5>" + event.feature.getProperty('title') + "</h5>";
+          var descriptionHtml = "<p>"+ event.feature.getProperty('description') + "</p>";
+          var linkTitle = event.feature.getProperty('linkTitle') ? event.feature.getProperty('linkTitle') : event.feature.getProperty('link') ? event.feature.getProperty('link') : '';
+          var officeLinkHtml = event.feature.getProperty('link') ? "<a href='" + event.feature.getProperty('link') + "' class='map-link'>" + linkTitle + "</a>" : '';
+          var innerHtml = anchor + titleHtml + descriptionHtml; // + officeLinkHtml;
+
+          var infowindow = new google.maps.InfoWindow({content: innerHtml});
+
+          prev_infowindow = infowindow;
+
+          infowindow.setContent("<div class='info-window'>"+innerHtml+"</div>");
+          infowindow.setPosition(event.feature.getGeometry().get());
+          infowindow.setOptions({pixelOffset: new google.maps.Size(0,-40)});
+          infowindow.open(map);
+
+          google.maps.event.addDomListener(infowindow, 'domready', function() {
+            $('.gm-style-iw').parent().addClass('macaw-gmap-outer');
+          });
+      });
+
+        //Return custom map icon
+        map.data.setStyle(function(feature) {
+          return {icon:feature.getProperty('icon')};
+        });
+
+		function moveToLocation(lat, lng){
+            var center = new google.maps.LatLng(lat, lng);
+            // using global variable:
+            map.panTo(center);
+        }
+
+
+        googleMap.moveToLocation = moveToLocation;
+
+      }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDmKjBlSvOOz3m7YLNmSXyLel1zLUsgvjg&callback=googleMap">
+    </script>
+  </body>
+</html>

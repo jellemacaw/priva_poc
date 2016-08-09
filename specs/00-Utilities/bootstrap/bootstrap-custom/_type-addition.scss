@@ -5,13 +5,12 @@
 h1, .h1 {
   text-transform: uppercase;
   line-height: $headings-h1-line-height;
-  font-weight: $headings-font-weight;
+  font-weight: 700;
 }
 
 h2, .h2 {
   line-height: $headings-h2-line-height;
   font-weight: $headings-font-weight;
-  color: inherit;
 }
 
 h3, .h3 {
@@ -34,6 +33,15 @@ h1, h2, h3, h4,
 
   &:first-child  {
     margin-top: 0;
+  }
+
+  &:last-child  {
+    margin-bottom: 0;
+  }
+
+  a:hover &,
+  a:focus & {
+    color: currentColor;
   }
 }
 

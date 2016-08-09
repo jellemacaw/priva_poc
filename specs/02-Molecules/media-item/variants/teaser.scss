@@ -1,0 +1,219 @@
+//All JS and CSS are global scope!
+@import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+@import '../../../00-Utilities/animations/variants/default';
+@import '../../../01-Atoms/icons/variants/vshape';
+
+@media screen and (max-width: $screen-xs-max) {
+
+  .media-item--teaser {
+    margin-top: $padding-base;
+    margin-bottom: $padding-base;
+
+    // &+& {
+    //   margin-top: $padding-base;
+    // }
+
+    &::after {
+      left: 33.333%;
+      transform: translate(-50%,-50%) scale(.35) rotate(180deg);
+    }
+
+    .media-item__img {
+      //flex-basis: 33.333%;
+      width: 33.333%;
+
+      &::before {
+        padding-bottom: 75%; // 4:3
+      }
+    }
+
+    .media-item__text {
+      position: static;
+      width: 66.666%;
+      padding: 0 $padding-base;
+
+      p, small {
+        display: none;
+      }
+
+      .item-title {
+        margin-bottom: 0;
+        font-size: $font-size-small;
+      }
+
+      .btn {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 5;
+        opacity: 0 !important;
+      }
+    }
+  }
+
+  a.media-item--teaser {
+    &:active,
+    &:hover,
+    &:focus {
+      &::after {
+        transform: translate(-50%,-50%) scale(.42) rotate(180deg);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+
+  .media-item--teaser {
+
+    // switcherooooo!
+    &.media-item--reverse {
+
+      &::after {
+        transform: translate(-50%,-50%) scale(.5) rotate(0deg);
+      }
+
+      .media-item__img { order: 2; }
+      .media-item__text { order: 1; }
+    }
+
+    .btn {
+      margin-top: 1em;
+    }
+  }
+
+  a.media-item--teaser {
+    &:hover,
+    &:focus {
+      &::after {
+        transform: translate(-50%,-50%) scale(.6) rotate(0deg);
+      }
+    }
+  }
+
+  .col-sm-12-6-4:only-child > .media-item--teaser .media-item__text {
+    padding-left: 0;
+  }
+
+  // do vertical!
+  .col-sm-12-6-4:not(:only-child),
+  .col-sm-3, .col-sm-4, .col-sm-6,
+  .col-md-3, .col-md-4, .col-md-6 {
+    .media-item--teaser {
+      flex-flow: column;
+      position: static;
+      padding: 0;
+
+      &::after {
+        display: none;
+      }
+
+      .media-item__img { order: 1; width: 100%; }
+      .media-item__text { order: 2; width: 100%; }
+
+      .media-item__img {
+        position: relative;
+        overflow: visible; // no problemo since this img will always have correct aspect-ratio
+
+        // v-shape arrow, thanks to overflow: visible
+        &::after {
+          content: "";
+          background: #fff svg-vshape($brand-primary) center center no-repeat;
+          position: absolute;
+          left: 50%;
+          top: 100%;
+          transform: translate(-50%,-50%) scale(.45) rotate(-90deg);
+          z-index: 20;
+          display: block;
+          width: 90px;
+          height: 90px;
+          overflow: hidden;
+          border-radius: 50%;
+          transition: .3s .1s $ani-flutter-timing;
+        }
+      }
+
+      .media-item__text {
+        overflow: visible;
+        position: static;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: $padding-base-vertical;
+      }
+
+      .btn {
+        position: absolute;
+        bottom: $padding-base;
+      }
+
+      //theming for the background color
+      .theme-light-taupe &, &.theme-light-taupe {
+        .media-item__img::after {
+          background-color: $color--light-taupe;
+        }
+      }
+      .theme-light-blue &, &.theme-light-blue {
+        .media-item__img::after {
+          background-color: $color--pacific-blue;
+          background-image: svg-vshape(#fff);
+        }
+      }
+      .theme-petrol &, &.theme-petrol {
+        .media-item__img::after {
+          background-color: $color--petrol;
+          background-image: svg-vshape(#fff);
+        }
+      }
+      .theme-taupe &, &.theme-taupe {
+        .media-item__img::after {
+          background-color: $color--taupe;
+          background-image: svg-vshape(#fff);
+        }
+      }
+    }
+  }
+
+  // normal columned teaser should have button inline and not abs pos'ed
+  .col-sm-3, .col-sm-4, .col-sm-6,
+  .col-md-3, .col-md-4, .col-md-6 {
+    .media-item--teaser {
+      padding: $padding-base $padding-base/2 0;
+      //padding: $padding-base $padding-large-horizontal 0;
+
+      // .media-item__text {
+      //   padding: $padding-base $padding-large-horizontal;
+      //   padding: $padding-base;
+      // }
+
+      .btn {
+        position: static;
+      }
+
+      //
+      //
+      //
+      // when using the full-collumn option, extra shit needs to be done
+      // but only at wider rezzes
+      //
+      //
+      &.fill-column {
+        // use flexbox to stretch text and put button at bottom
+        .media-item__text {
+          display: flex;
+          flex-grow: 1;
+          position: relative;
+          justify-content: flex-start;
+          padding-bottom: $padding-base*4;
+        }
+
+        .btn {
+          position: absolute;
+          bottom: $padding-base*2;
+        }
+      }
+
+    }
+  }
+}

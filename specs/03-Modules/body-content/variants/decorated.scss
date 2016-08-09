@@ -1,6 +1,6 @@
 @import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
 
-// variant for key content and job component
+// variant for key content
 
 .body-content--decorated {
   position: relative;
@@ -17,9 +17,23 @@
   position: absolute;
   bottom: $padding-large-vertical;
   right: $padding-large-horizontal;
-  width: 140px;
   height: auto;
+  max-width: 140px;
+  max-height: calc( 100% - #{$padding-large-vertical*2} );
   z-index: 0;
+
+  .theme-taupe &,
+  .theme-petrol &,
+  .theme-gray &,
+  .theme-light-blue & {
+    opacity: .25;
+  }
+
+  // makes white image light gray on very modern browsers only...
+  .theme-white & {
+    -webkit-filter: invert(.03);
+    filter: invert(.03);
+  }
 }
 
 @element ".body-content--decorated" and (min-width: #{$screen-md}) {

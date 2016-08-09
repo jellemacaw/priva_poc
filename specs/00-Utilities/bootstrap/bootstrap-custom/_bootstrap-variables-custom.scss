@@ -23,6 +23,8 @@ $headings-letter-spacing:         1px;
 
 $btn-text-transform:              uppercase;
 
+$max-site-width:                  1200px;
+
 
 
 /*
@@ -41,9 +43,9 @@ $bootstrap-sass-asset-helper: false !default;
 
 $gray-base:              #000 !default;
 $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
-$gray-dark:              lighten($gray-base, 20%) !default;   // #333
-$gray:                   lighten($gray-base, 33.5%) !default; // #555
-$gray-light:             lighten($gray-base, 46.7%) !default; // #777
+$gray-dark:              lighten($gray-base, 25%) !default;   // #333
+$gray:                   lighten($gray-base, 50%) !default; // #555
+$gray-light:             lighten($gray-base, 75%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
 $brand-primary:         $color--petrol !default; // #337ab7
@@ -83,6 +85,7 @@ $font-family-base:        $font-family-sans-serif !default;
 $font-size-base:          16px !default; // Priva
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85714)) !default; // ~14px priva
+$font-size-medium:        $font-size-base * 1.0625; // 17px, priva
 
 $font-size-h1:            floor(($font-size-base * 1.625)) !default; // ~26px priva
 $font-size-h2:            floor(($font-size-base * 1.375)) !default; // ~22px Priva
@@ -141,7 +144,7 @@ $line-height-small:         1.5 !default;
 
 $border-radius-base:        4px !default;
 $border-radius-large:       6px !default;
-$border-radius-small:       3px !default;
+$border-radius-small:       1px !default;
 
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color:    #fff !default;
@@ -272,30 +275,31 @@ $btn-border-radius-small:        0 !default;
 //** `<input>` background color
 $input-bg:                       #fff !default;
 //** `<input disabled>` background color
-$input-bg-disabled:              $gray-lighter !default;
+$input-bg-disabled:              lighten($color--light-taupe, 4) !default;
 
 //** Text color for `<input>`s
-$input-color:                    $gray !default;
+$input-color:                    $color--petrol !default;
 //** `<input>` border color
-$input-border:                   #ccc !default;
+$input-border:                   $color--light-taupe !default;
 
 // TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
 //** Default `.form-control` border radius
 // This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
-$input-border-radius:            $border-radius-base !default;
+$input-border-radius:            $border-radius-small !default;
 //** Large `.form-control` border radius
 $input-border-radius-large:      $border-radius-large !default;
 //** Small `.form-control` border radius
 $input-border-radius-small:      $border-radius-small !default;
 
 //** Border color for inputs on focus
-$input-border-focus:             #66afe9 !default;
+$input-border-focus:             #ccc !default;
 
 //** Placeholder text color
 $input-color-placeholder:        #999 !default;
 
 //** Default `.form-control` height
-$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
+//$input-height-base:              ($line-height-computed + (.75 * 2) + 2) !default;
+$input-height-base:              36px !default; // priva!
 //** Large `.form-control` height
 $input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
 //** Small `.form-control` height
@@ -308,7 +312,7 @@ $legend-color:                   $gray-dark !default;
 $legend-border-color:            #e5e5e5 !default;
 
 //** Background color for textual input addons
-$input-group-addon-bg:           $gray-lighter !default;
+$input-group-addon-bg:           #f3f3f3 !default;
 //** Border color for textual input addons
 $input-group-addon-border-color: $input-border !default;
 
@@ -412,6 +416,9 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
 
 //** Number of columns in the grid.
 $grid-columns:              12 !default;
+// $grid-gutter-width no longer works as originally intended in bootstrap
+// use the gutter mixin in _grid-addition.scss to generate modifier classes for gutters
+// therefore leave this variable set to 0!
 //** Padding between columns. Gets divided in half for the left and right.
 $grid-gutter-width:         0 !default; // priva
 // Navbar collapse
@@ -585,21 +592,21 @@ $jumbotron-heading-font-size:    ceil(($font-size-base * 4.5)) !default;
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-success-text:             #3c763d !default;
+$state-success-text:             $color--genoa !default;
 $state-success-bg:               #dff0d8 !default;
-$state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
+$state-success-border:           darken(adjust-hue($color--genoa, -10), 5%) !default;
 
-$state-info-text:                #31708f !default;
+$state-info-text:                $color--petrol !default;
 $state-info-bg:                  #d9edf7 !default;
-$state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
+$state-info-border:              darken(adjust-hue($color--petrol, -10), 7%) !default;
 
 $state-warning-text:             #8a6d3b !default;
 $state-warning-bg:               #fcf8e3 !default;
 $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
 
-$state-danger-text:              #a94442 !default;
-$state-danger-bg:                #f2dede !default;
-$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
+$state-danger-text:              $color--cannon-pink !default;
+$state-danger-bg:                lighten($color--cannon-pink,50) !default;
+$state-danger-border:            $state-danger-text !default;
 
 
 //== Tooltips
@@ -795,7 +802,7 @@ $panel-bg:                    #fff !default;
 $panel-body-padding:          15px !default;
 $panel-heading-padding:       10px 15px !default;
 $panel-footer-padding:        $panel-heading-padding !default;
-$panel-border-radius:         $border-radius-base !default;
+$panel-border-radius:         $border-radius-small !default;
 
 //** Border color for elements within panels
 $panel-inner-border:          #ddd !default;

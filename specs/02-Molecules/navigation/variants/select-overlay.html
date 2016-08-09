@@ -1,48 +1,46 @@
 <body>
 	<div class="navigation navigation-select-overlay">
-		<a href="#" data-layer-id="932" onClick="layerHandler(932)">Select a country<span class="icon i-arrow down"></span></a>
-		<div class="layer layer__outer" id="932">
-			<div class="layer layer__inner">
-				<span class="close" onClick="layerHandler(932)">X</span>
+		<a href="#" data-layer-id="country" onClick="layerHandler(event)">Select a country<span class="icon i-arrow down"></span></a>
+		<div class="layer layer--inline" id="country">
+			<div class="layer__inner layer--navigation">
+				<div class="row title">
+					<h5 class="component-title">Component title</h5>
+				</div>
 				<div class="row">
-					<div class="col-md-4">
-						<h6 class="col-header">Optional column title</h6>
+					<div class="col-md-3 col">
+						<h6 class="col-header">Optional column title with extra long title</h6>
 						<div class="item"><a href="#">Sub item 3 cols</a></div>
 						<div class="item"><a href="#">Sub item 3 cols</a></div>
 						<div class="item" data-item-id="item-0003"><a href="#">Sub item 3 cols</a></div>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-3 col">
+						<h6 class="col-header">Optional column title</h6>
+						<div class="item"><a href="#">Sub item 3 cols</a></div>
+						<div class="item"><a href="#">Sub item 3 cols</a></div>
 						<div class="item"><a href="#">Sub item 3 cols</a></div>
 						<div class="item"><a href="#">Sub item 3 cols</a></div>
 						<div class="item"><a href="#">Sub item 3 cols</a></div>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-3 col">
+						<h6 class="col-header">Optional column title</h6>
+						<div class="item"><a href="#">Sub item 3 cols</a></div>
+						<div class="item"><a href="#">Sub item 3 cols</a></div>
+					</div>
+					<div class="col-md-3 col">
+						<h6 class="col-header">Optional column title</h6>
+						<div class="item"><a href="#">Sub item 3 cols</a></div>
+						<div class="item"><a href="#">Sub item 3 cols</a></div>
+						<div class="item"><a href="#">Sub item 3 cols</a></div>
+						<div class="item"><a href="#">Sub item 3 cols</a></div>
+						<div class="item"><a href="#">Sub item 3 cols</a></div>
+						<div class="item"><a href="#">Sub item 3 cols</a></div>
 						<div class="item"><a href="#">Sub item 3 cols</a></div>
 						<div class="item"><a href="#">Sub item 3 cols</a></div>
 						<div class="item"><a href="#">Sub item 3 cols</a></div>
 					</div>
 				</div>
+				<button class="close-layer" data-layer-id="country" onClick="layerHandler(event)"></button>
 			</div>
 		</div>
 	</div>
 </body>
-
-<script>
-	var layerHandler = function(id) {
-		var dataLayerId = '[data-layer-id="'+ id + '"]';
-		var layerId = '.layer'+'#'+ id;
-
-		var itemHeight = $(dataLayerId).outerHeight();
-		$(layerId).css({
-			"padding-top":itemHeight
-		})
-
-		if($(layerId).is(":visible")) {
-			$(layerId).hide();
-			$(dataLayerId).removeClass('open').find('.i-arrow').toggleClass('up down');
-		} else {
-			$(layerId).show();
-			$(dataLayerId).addClass('open').find('.i-arrow').toggleClass('up down');
-		}
-	}
-</script>

@@ -11,7 +11,10 @@ Compleet example with image, abstract and date. This image variant uses the modi
 ```example
 <div class="example--header-content theme-light-taupe"></div>
 <script>
-	$(".example--header-content").load("variants/default.html");
+	var target = ".example--header-content";
+	var block = "variants/default.html";
+	$(target).parent().load(block);
+	$(target).remove();
 </script>
 ```
 
@@ -19,7 +22,10 @@ Compleet example with image, abstract and date. This image variant uses the modi
 ```example
 <div class="example--header-content2 theme-light-taupe"></div>
 <script>
-	$(".example--header-content2").load("variants/title-only.html");
+	var target = ".example--header-content2";
+	var block = "variants/title-only.html";
+	$(target).parent().load(block);
+	$(target).remove();
 </script>
 ```
 
@@ -27,7 +33,10 @@ Compleet example with image, abstract and date. This image variant uses the modi
 ```example
 <div class="example--header-content3 theme-light-taupe"></div>
 <script>
-	$(".example--header-content3").load("variants/title-abstract.html");
+	var target = ".example--header-content3";
+	var block = "variants/title-abstract.html";
+	$(target).parent().load(block);
+	$(target).remove();
 </script>
 ```
 
@@ -35,7 +44,10 @@ Compleet example with image, abstract and date. This image variant uses the modi
 ```example
 <div class="example--header-content4 theme-light-taupe"></div>
 <script>
-	$(".example--header-content4").load("variants/title-abstract-date.html");
+	var target = ".example--header-content4";
+	var block = "variants/title-abstract-date.html";
+	$(target).parent().load(block);
+	$(target).remove();
 	</script>
 	```
 
@@ -44,6 +56,9 @@ Alternative for use with a light background image. Can be enabled by replacing t
 ```example
 <div class="example--header-content5 theme-light-taupe"></div>
 <script>
-	$(".example--header-content5").load("variants/alternative.html");
+	var target = ".example--header-content5";
+	var block = "variants/alternative.html";
+	$(target).parent().load(block);
+	$(target).remove();
 </script>
 ```

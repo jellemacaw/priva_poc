@@ -1,9 +1,13 @@
 //All JS and CSS are global scope!
 @import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
 
+
+// list-clear and list-inline have some extra markup on top of bootstrap
+.list-clear,
 // double classsname to 'hack' specificity and overrule Bootstrap
 .list-inline.list-inline {
   margin-left: 0;
+  padding-left: 0;
 
   > li {
     padding-left: 0;
@@ -56,8 +60,31 @@
 
 .list--txtcenter {
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 
   > * {
     text-align: center;
+  }
+}
+
+.list-spacious {
+  @extend .list-clear;
+
+  padding-bottom: .25em;
+
+  li {
+    margin-bottom: 1em;
+
+    &:last-child {
+      margin-bottom: $padding-base/2;
+    }
+  }
+}
+
+
+.list-group {
+  > li::before {
+    display: none;
   }
 }

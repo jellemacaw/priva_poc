@@ -10,15 +10,15 @@
   background-position: left ($usp-spacing + .225em);
   background-repeat: no-repeat;
   background-size: auto 1.1em;
-  
+
   @extend %icon-vshape;
 
   &:first-child {
     padding-top: 0;
     background-position: left .225em;
   }
+  &:last-child { padding-bottom: 0; }
 
-  &:last-child {
-    padding-bottom: 0;
-  }
+  > :first-child { margin-top: 0; }
+  > :last-child { margin-bottom: 0; }
 }

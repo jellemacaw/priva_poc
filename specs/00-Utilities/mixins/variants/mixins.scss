@@ -1,4 +1,4 @@
-@mixin icon-arrowhead($positioning: "absolute") {
+@mixin icon-arrowhead($positioning: absolute) {
   &::after {
     content: ">";
     position: $positioning;

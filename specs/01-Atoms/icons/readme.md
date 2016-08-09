@@ -2,7 +2,7 @@
 
 There are several different types of icons.
 
-## Social media icons
+## Small icons
 As used in the footer. An img-tag is used to facilitate easy expansion.
 
 ```code
@@ -15,9 +15,27 @@ As used in the footer. An img-tag is used to facilitate easy expansion.
 <div class="icons-sm-spec theme-light-blue"></div>
 <script>
 	var target = ".icons-sm-spec";
-	var block = "variants/socialmedia.html";
+	var block = "variants/small.html";
 	$(target).load(block);
 </script>
+```
+
+## Extra small icons
+Like small icons but even smaller and with a colored circle background, and some text at the end (if affects line-height, though). The image needs to be 30x30px with enough transparent whitespace.
+
+```code
+<a href="#" class="icon-xs">
+	<img src="[url]" alt="">
+	Interesting text with an icon in front
+</a>
+```
+
+### Example
+```example
+<a href="#" class="icon-xs">
+	<img src="img/envelope-xs.png" alt="">
+	Interesting text with an icon in front
+</a>
 ```
 
 ## V-shape
@@ -47,14 +65,14 @@ The placeholder <b>%icon-vshape</b> will insert a complete background-image prop
 <div class="icons-vshape-spec"></div>
 ```
 
-## Image icons
-Images displayed as an icon inline with text.
+## Inline image icons
+Images displayed as an icon, inline with text.  Vertical this icon only takes up 1em as not to disrupt line-height.
 
 ```code
-<a href="">
+<p>
 	<img src="[url]" alt="" class="icon-img">
 	Interesting text with an icon in front
-</a>
+</p>
 ```
 
 ### Example

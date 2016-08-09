@@ -1,0 +1,59 @@
+//All JS and CSS are global scope!
+@import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+@import '../../../00-Utilities/animations/variants/default';
+
+.icon-sm {
+  $icon-sm-size: 50px;
+
+  position: relative;
+  display: inline-block;
+  width: $icon-sm-size;
+  height: $icon-sm-size;
+  text-align: center;
+  border-radius: 50%;
+  overflow: hidden;
+
+  img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform-origin: center;
+    transition: 1.5s cubic-bezier(.62,1.88,.47,.82);
+    transition-delay: 0s;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: calc(#{$icon-sm-size} - 16%);
+    height: calc(#{$icon-sm-size} - 16%);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
+    background: #fff;
+    opacity: .4;
+    transition: 1.5s cubic-bezier(.62,1.88,.47,.82);
+    transition-delay: 0s;
+  }
+
+  &:hover, &:focus {
+
+    img {
+      transform: scale(1.2);
+      transition-delay: .1s;
+      transition-duration: .36s;
+    }
+
+    &::after {
+      opacity: .8;
+      transform: translate(-50%, -50%) scale(.85);
+      transition-delay: .1s;
+      transition-duration: .36s;
+    }
+  }
+}

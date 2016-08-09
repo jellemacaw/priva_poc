@@ -1,0 +1,154 @@
+//All JS and CSS are global scope!
+@import '../../../01-Atoms/icons/variants/vshape';
+@import '../../../00-Utilities/animations/variants/default';
+@import '../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom';
+
+.media-item {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: row;
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+
+  // v-shape arrow
+  &::after {
+    content: "";
+    background: #fff svg-vshape($brand-primary) center center no-repeat;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(.5) rotate(180deg);
+    z-index: 1;
+    display: flex;
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: .3s .1s $ani-flutter-timing;
+  }
+
+  //theming for the background color
+  .theme-light-taupe &,
+  &.theme-light-taupe {
+    &::after {
+      background-color: $color--light-taupe;
+    }
+  }
+  .theme-light-blue &,
+  &.theme-light-blue {
+    &::after {
+      background-color: $color--pacific-blue;
+      background-image: svg-vshape(#fff);
+    }
+  }
+  .theme-petrol &,
+  &.theme-petrol {
+    &::after {
+      background-color: $color--petrol;
+      background-image: svg-vshape(#fff);
+    }
+  }
+  .theme-taupe &,
+  &.theme-taupe {
+    &::after {
+      background-color: $color--taupe;
+      background-image: svg-vshape(#fff);
+    }
+  }
+
+  // in case the media-item is a link....
+  @at-root a#{&} {
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+
+      &::after {
+        transform: translate(-50%,-50%) scale(.6) rotate(180deg);
+        animation: item-flutter .3s .1s $ani-flutter-timing;
+      }
+    }
+  }
+}
+
+.media-item__img {
+  display: block;
+  //flex-basis: 50%;
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+
+  // define a minimum relative aspect ratio:
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0;
+    // padding-bottom: 56.25%; // = 16:9
+    padding-bottom: 50%; // = 2:1
+    // padding-bottom: 75%; // = 4:3
+  }
+
+  // the actual photo always fills the entire area
+  img {
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+.media-item__text {
+  position: relative;
+  display: inline-flex;
+  //flex-basis: 50%;
+  width: 50%;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
+  padding: $padding-large-vertical $padding-large-horizontal;
+  overflow: hidden;
+  border-color: $brand-primary;
+
+  //theming for the border color
+  .theme-light-blue &,
+  .theme-petrol &,
+  .theme-taupe & {
+    border-color: #fff;
+  }
+
+  p, .item-title {
+    transition: .3s;
+  }
+}
+
+.media-item__text__inner {
+  > :first-child { margin-top: 0; }
+  > :last-child { margin-bottom: 0; }
+}
+
+@element ".media-item__text" and (min-width: 650px) {
+  .media-item__text .item-title {
+    font-size: 1.4em;
+  }
+}
+
+@element ".media-item__text" and (min-width: 850px) {
+  .media-item__text .item-title {
+    font-size: 2em;
+  }
+}

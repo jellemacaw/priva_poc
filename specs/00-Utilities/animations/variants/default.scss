@@ -18,3 +18,13 @@ $ani-flutter-timing: cubic-bezier(.45,.99,.45,1);
     opacity: 0;
   }
 }
+
+
+@keyframes item-flutter {
+  50% {
+    background-position: 200% center;
+  }
+  51% {
+    background-position: -200% center;
+  }
+}

@@ -1,0 +1,28 @@
+<div class="content-block">
+  <div class="content-block__inner">
+
+    <div id='slider_default_3' class='carousel carousel--assets'>
+      <a href="#" class="slide video" data-layer-id="videoIed435" onClick="layerHandler(event)">
+      </a>
+      <div class="slide">
+      </div>
+      <div class="slide">
+      </div>
+      <div class="slide">
+      </div>
+    </div>
+
+		<div class="layer video" id="videoIed435">
+			<div class="layer__inner">
+				<iframe src="http://www.youtube.com/embed/jWZyvmiylng?loop=0&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+        <button class="close-layer" data-layer-id="videoIed435" onClick="layerHandler(event)"></button>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<script>
+  $(".carousel--assets .slide")
+    .load("/specs/02-Molecules/media-item/variants/carouselPage.html");
+</script>

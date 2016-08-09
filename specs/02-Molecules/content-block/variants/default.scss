@@ -1,6 +1,5 @@
 //All JS and CSS are global scope!
 @import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
-@import "../../../00-Utilities/bootstrap/bootstrap-custom";
 
 .content-block {
   padding: $padding-base-vertical $padding-base-horizontal;
@@ -13,14 +12,6 @@
   }
 }
 
-// unfortunately, the element selector doesn't seem to like SASS vars... :-(
-// @element ".content-block" and (min-width: 480px) {
-//   .content-block {
-//     padding: $padding-large-vertical $padding-large-horizontal;
-//   }
-// }
-
-// unfortunately, the element selector doesn't seem to like SASS vars... :-(
 @media screen and (min-width: $screen-xs) {
   .content-block {
     padding: $padding-large-vertical $padding-large-horizontal;
@@ -28,9 +19,21 @@
 }
 
 .content-block--center {
-  @extend .text-center;
+  text-align: center;
+}
 
-  // .content-block__inner {
-  //   max-width: none;
-  // }
+.content-block--slim {
+  padding: $padding-base $padding-base-horizontal;
+
+  @media screen and (min-width: $screen-xs) {
+    padding: $padding-base $padding-large-horizontal;
+  }
+}
+
+.content-block--slimtop {
+  padding: $padding-base $padding-base-horizontal $padding-base-vertical;
+
+  @media screen and (min-width: $screen-xs) {
+    padding: $padding-base $padding-large-horizontal $padding-large-vertical;
+  }
 }

@@ -1,0 +1,117 @@
+//All JS and CSS are global scope!
+@import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+@import '../../../00-Utilities/animations/variants/default';
+
+.media-item.media-item--product {
+  flex-direction: column;
+  // vertical spacing is handled in the gutter of the list
+  //margin-bottom: $padding-base/2;
+
+  &::after {
+    display: none;
+  }
+
+  .media-item__img {
+    //flex-basis: auto;
+    width: 100%;
+
+    &::before {
+      padding-bottom: 75%; // 4:3
+    }
+  }
+
+  .media-item__text {
+    //flex-basis: auto;
+    width: 100%;
+    padding: $padding-base $padding-base/2;
+    padding: $padding-base 0 $padding-base $padding-base/2;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+  }
+
+  .media-item__text__inner {
+    height: 4.5em;
+    overflow: hidden;
+  }
+
+  .item-title {
+    font-size: $font-size-small;
+    text-transform: none;
+  }
+}
+
+.media-item--product__last {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 12px;
+  line-height: 1.35;
+  font-weight: 600;
+  padding: $padding-base/2;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .txt-arrow {
+    margin-top: 0;
+    white-space: normal;
+    text-align: left;
+    line-height: inherit;
+    display: inline-block;
+
+    &::after {
+      position: static;
+      display: inline;
+      padding-left: .5em;
+    }
+  }
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: $font-size-small;
+
+    .txt-arrow {
+      padding-top: .5em;
+    }
+  }
+
+  @media screen and (min-width: ($screen-xs + #{$screen-sm - $screen-xs}/3) ) {
+    padding-top: $padding-base*1.5;
+
+    .txt-arrow {
+      position: absolute;
+      bottom: $padding-base/2;
+      left: $padding-base/2;
+    }
+  }
+
+  @media screen and (min-width: $screen-sm) {
+    padding-top: $padding-base/2;
+
+    .txt-arrow {
+      position: static;
+      bottom: auto;
+      left: auto;
+    }
+  }
+
+  @media screen and (min-width: $screen-md) {
+    padding-top: $padding-base*1.5;
+
+    .txt-arrow {
+      position: absolute;
+      bottom: $padding-base/2;
+      left: $padding-base/2;
+    }
+  }
+
+  @media screen and (min-width: ($screen-md + #{$screen-lg - $screen-md}/2)) {
+    padding: $padding-base*2 $padding-base;
+
+    .txt-arrow {
+      left: $padding-base;
+    }
+  }
+}

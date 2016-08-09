@@ -1,0 +1,54 @@
+@import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+
+.contact {
+  display: flex;
+  width: auto;
+  margin: 2em auto 0;
+  justify-content: center;
+
+  + .contact {
+    margin-top: 1em;
+
+    + .btn-cta {
+      margin-top: $padding-base;
+    }
+  }
+}
+
+.contact__img {
+  margin-right: 1.5em;
+
+  img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: $gray-lighter;
+    font-size: .75em;
+  }
+}
+
+.contact__person {
+  display: inherit;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+  width: 100%;
+  margin-bottom: 1.5em;
+
+  .contact__img + .contact__info & {
+    align-items: flex-start;
+  }
+}
+
+.contact__info {
+
+  .list-spacious {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .contact__img + & {
+    text-align: left;
+  }
+}

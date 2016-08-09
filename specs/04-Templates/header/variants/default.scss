@@ -1,23 +1,129 @@
 //All JS and CSS are global scope!
-@import '../../../00-Utilities/colors/color-names';
 @import '../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom';
 
 header {
 	&.header {
 		background-color: $color--petrol;
 
+		$logoWidth: 64px;
+		$menuTypesTopOffset: 11px;
+		$innerHeaderHeight: 145px;
+		$innerMediumHeaderHeight: 111px;
+		$innerMobileHeaderHeight: 77px;
+
 		.header__inner {
-			max-width: $screen-lg;
+			max-width: $max-site-width;
 			margin:0 auto;
+			height: $innerMobileHeaderHeight;
+			transition: .1s;
 
-			.logo{
+			.logo {
+				top: 14px;
+
 				img {
-					position: fixed;
+					width: $logoWidth;
+					height: auto;
+				}
+			}
 
-					width: 50px;
+			@media screen and (min-width: $screen-xs + ($screen-sm - $screen-xs)/1.65) {
+				height: $innerMediumHeaderHeight;
+
+				.logo {
+					top: 17px;
+
+					img {
+						width: $logoWidth*1.5;
+					}
+				}
+			}
+
+			@media screen and (min-width: $screen-md) {
+				height: $innerHeaderHeight;
+
+				.logo img {
+					width: $logoWidth*2;
+				}
+			}
+
+			.desktop {
+				position: relative;
+				height: 100%;
+
+				.logo {
+					position: absolute;
+					top:20px;
+					left: 55px;
+					z-index: 9
+				}
+
+				.navs-wrapper {
+					margin-left: 200px;
+					margin-right: $padding-large-horizontal;
+
+					.quick-links-wrapper {
+						padding: 10px 0;
+
+						.quicklink--header {
+							margin-top: 5px;
+						}
+					}
+
+					.select-overlay-item {
+						width: 200px;
+						float: right;
+						margin-left: 9px;
+						margin-top: 3px;
+						&:only-of-type {
+							float: right;
+						}
+					}
+
+					.quick-links-wrapper {
+						margin: $menuTypesTopOffset 0 auto;
+
+						.quicklinks {
+							width: auto;
+	    					float: right;
+						}
+					}
+
+
+
+					.search {
+						margin: 9px 0 0 0;
+					}
+				}
+			}
+
+			.handheld {
+
+				.logo {
+					left: $padding-base-horizontal - 1px;
+					position: absolute;
+					z-index: 9;
+
+					@media screen and (min-width: $screen-xs) {
+						left: $padding-large-horizontal - 3px;
+					}
+				}
+
+				.topnav-handheld {
+					position: absolute;
+					right: $padding-base-horizontal;
+					top: 32px;
+
+					@media screen and (min-width: $screen-xs) {
+						right: $padding-large-horizontal;
+						font-size: 1em;
+					}
+
+					@media screen and (min-width: $screen-xs + ($screen-sm - $screen-xs)/1.65) {
+						top: 50px;
+					}
 				}
 			}
 		}
-		
+
 	}
 }

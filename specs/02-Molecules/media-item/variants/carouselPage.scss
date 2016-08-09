@@ -1,0 +1,79 @@
+//All JS and CSS are global scope!
+@import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+
+.media-item.media-item--carouselpage {
+  flex-direction: column;
+
+  a:hover &,
+  a:active &,
+  a:focus & {
+    //color: $color--pacific-blue;
+
+    .media-item__img::after {
+      transform: translateY(-.25em);
+    }
+  }
+
+  &::after {
+    display: none;
+  }
+
+  .media-item__img {
+    width: 100%;
+
+    &::before {
+      padding-bottom: 50%; // 2:1
+    }
+
+    @media screen and (min-width: $screen-lg) {
+
+      img {
+        height: auto;
+        max-width: 100%;
+      }
+
+      &::before {
+        padding-bottom: 46%;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -.75em;
+      left: calc( 50% - 1em );
+      z-index: 100;
+      width: 0;
+      height: 0;
+      border: 0 solid transparent;
+      border-width: 0 1em 1.5em;
+      border-bottom-color: #fff;
+      transition: .24s ease-in;
+      text-shadow: transparent;
+
+      @media screen and (min-width: $screen-xs) {
+        bottom: -.75em;
+      }
+    }
+  }
+
+  .media-item__text {
+    width: 100%;
+    padding: $padding-base $padding-base 0;
+  }
+
+  .media-item__text__inner {
+    width: 100%; // IE needs this
+    max-width: 40em;
+    margin: auto;
+    text-align: center;
+
+    > :fist-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}

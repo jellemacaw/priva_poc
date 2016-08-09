@@ -1,0 +1,123 @@
+@import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+@import "../../../00-Utilities/mixins/variants/mixins";
+@import "../../../00-Utilities/animations/variants/default";
+
+.filters {
+  padding: $padding-base $padding-base 0 $padding-base;
+
+  @media screen and (min-width: $screen-sm) {
+    padding: 0 0 $padding-base-vertical;
+  }
+}
+
+.filters__header, // fills gap on IE mobile
+.filters__header [class^="col-"],
+.filters__body {
+  background-color: $color--light-taupe;
+}
+
+.filters__header {
+
+  .item-title {
+    padding: $padding-base/2 $padding-base*2;
+  }
+
+  @media screen and (min-width: $screen-sm) {
+    background-color: transparent;
+
+    .item-title {
+      padding: $padding-base/2 $padding-large-horizontal;
+    }
+  }
+}
+
+.filters__toggle {
+  outline: none;
+  border: 0;
+  display: block;
+  padding: $padding-base/2 0;
+  background-color: $color--light-taupe;
+  height: 1.35em; // line height in item-title
+  box-sizing: content-box;
+
+  @include icon-arrowhead() {
+    top: 50%;
+    right: 17px;
+    margin-top: -.75em;
+    font-size: 1.3em;
+    color: inherit;
+    transform: rotate(-90deg) scale(.9,1.75) translate(0,.02em);
+    transition: .4s $ani-flutter-timing;
+    will-change: transform;
+  }
+
+  &.collapsed::after {
+    transform: rotate(90deg) scale(.9,1.75) translate(0,.02em);
+  }
+
+  &:active {
+    &::after {
+      color: $color--pacific-blue;
+    }
+  }
+
+  @media screen and (min-width: $screen-sm) {
+    display: none;
+  }
+}
+
+.filters__body {
+  overflow: hidden;
+  position: relative;
+
+  // overrule the toggle func for bigger screens
+  @media screen and (min-width: $screen-sm) {
+    &.collapse {
+      display: block !important;
+      height: auto !important;
+    }
+  }
+}
+
+.filters__body__inner {
+  padding: $padding-base $padding-base*2;
+
+  @media screen and (min-width: $screen-sm) {
+    padding: $padding-base $padding-large-horizontal;
+  }
+
+  > a {
+    display: inline-block;
+    margin-bottom: 1em;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  > :first-child {
+    margin-top: 0;
+  }
+}
+
+
+
+.filter-results {
+  padding: $padding-base $padding-base 0 $padding-base;
+
+  @media screen and (min-width: $screen-xs) {
+    padding: $padding-base $padding-base 0 $padding-base;
+  }
+
+  @media screen and (min-width: $screen-sm) {
+    padding: $padding-large-vertical $padding-large-horizontal 0;
+  }
+
+  @media screen and (min-width: $screen-md) {
+    padding: $padding-large-vertical ($padding-large-horizontal + $padding-base) 0;
+
+    .panel {
+        padding-left: $padding-large-horizontal;
+    }
+  }
+}

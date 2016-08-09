@@ -1,1 +1,48 @@
 @import "../../../02-Molecules/content-block/variants/default";
+@import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+@import "../../../00-Utilities/mixins/variants/functions";
+
+.content-block.teaser--tiles {
+  padding-bottom: 0;
+
+  .content-block__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+
+    > * {
+      padding-bottom: $padding-large-vertical;
+    }
+
+    .component-title {
+      width: 100%;
+      margin-bottom: 0;
+      padding-bottom: 1.4em;
+    }
+  }
+
+  .icon-tile {
+    width: 26%;
+    max-width: em(162px);
+    font-size: .8725em;
+
+    margin-left: 0;
+    margin-right: 0;
+
+    @media screen and (min-width: $screen-xs) {
+      font-size: 1em;
+      width: 24%;
+    }
+
+    @media screen and (min-width: $screen-sm) {
+      font-size: 1.125em;
+      width: 22%;
+    }
+
+    @media screen and (min-width: $screen-md) {
+      font-size: 1.125em;
+    }
+
+  }
+}

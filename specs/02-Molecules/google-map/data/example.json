@@ -1,0 +1,46 @@
+{ "type": "FeatureCollection",
+  "features": [
+    {
+    	"type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [5.461088, 52.380133]},
+      "properties": {
+        "id":"map-to-office-1",
+        "title":"Priva North America",
+        "description":"The Netherlands",
+      	
+      	"icon": "/specs/02-Molecules/google-map/images/maps-marker.png"
+      }
+    },
+    {
+    	"type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [5.204516, 52.366193]},
+      "properties": {
+        "id":"map-to-office-2",
+        "title":"Priva South America",
+        "description":"United States",
+      	"linkTitle":"Ook naar de website",
+      	"link":"http://www.linktowebsite.nl",
+      	"icon": "/specs/02-Molecules/google-map/images/maps-marker.png"
+      }
+    },
+    {
+    	"type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [5, 52]},
+      "properties": {
+        "id":"map-to-office-3",
+        "title":"Priva Central America",
+        "description":"The Netherlands",
+      	"linkTitle":"Ook naar de website",
+      	"link":"http://www.linktowebsite.nl",
+      	"icon": "/specs/02-Molecules/google-map/images/maps-marker.png"
+      }
+    }
+  ],
+  "mapoptions":{
+    "center": {"lat": 52.278498, "lng": 4.743898},
+    "zoom": 8,
+    "mapTypeId": "roadmap",
+    "scrollwheel":  false,
+    "mapTypeControl":false
+  }
+}

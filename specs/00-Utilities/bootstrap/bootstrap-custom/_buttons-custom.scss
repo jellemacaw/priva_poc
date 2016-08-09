@@ -81,6 +81,7 @@ a.btn {
 .btn-primary,
 .theme-white .btn-primary,
 .theme-light-taupe .btn-primary,
+.theme-gray .btn-primary,
 .theme-light-blue .btn-primary {
   @include button-variant(
     $btn-primary-color,
@@ -94,6 +95,7 @@ a.btn {
 .btn-primary2,
 .theme-white .btn-primary2,
 .theme-light-taupe .btn-primary2,
+.theme-gray .btn-primary2,
 .theme-petrol .btn-primary,
 .theme-petrol .btn-primary2 {
   @include button-variant(
@@ -107,6 +109,7 @@ a.btn {
 }
 .btn-primary3,
 .theme-white .btn-primary3,
+.theme-gray .btn-primary3,
 .theme-light-taupe .btn-primary3 {
   @include button-variant(
     $btn-primary-3-color,
@@ -119,6 +122,7 @@ a.btn {
 }
 .btn-primary4,
 .theme-white .btn-primary4,
+.theme-gray .btn-primary4,
 .theme-light-taupe .btn-primary4,
 .theme-taupe .btn-primary {
   @include button-variant(
@@ -132,6 +136,7 @@ a.btn {
 }
 .btn-cta,
 .theme-white .btn-cta,
+.theme-gray .btn-cta,
 .theme-light-taupe .btn-cta {
   @include button-variant(
     $btn-cta-color,
@@ -145,6 +150,7 @@ a.btn {
 .btn-cta-alt,
 .theme-white .btn-cta-alt,
 .theme-light-taupe .btn-cta-alt,
+.theme-gray .btn-cta-alt,
 .theme-petrol .btn-cta,
 .theme-petrol .btn-cta-alt,
 .theme-light-blue .btn-cta,
@@ -264,6 +270,13 @@ a.btn {
   }
 
   // theming
+  .theme-white & {
+    color: $link-color;
+    &:hover,
+    &:focus {
+      color: $brand-primary;
+    }
+  }
   .theme-taupe & {
     color: $link-color;
     &:hover,

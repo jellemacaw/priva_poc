@@ -1,3 +1,64 @@
 //All JS and CSS are global scope!
+@import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+
 .btn {
+	&.txt-arrow {
+		$iconSize: .5em;
+		padding: .3125em 0;
+		margin: .3125em 0;
+		background: transparent;
+		border: 0;
+		text-transform: none;
+		transition: .16s ease-in;
+
+		position: relative;
+
+		&.right {
+			&:after {
+				content: "\f054";
+				right: 0;
+			}
+			padding-right: $iconSize  * 2.5;
+		}
+
+		&.left {
+			&:after {
+				content: "\f053";
+				left: 0;
+			}
+			padding-left: $iconSize  * 2.5;
+		}
+
+		&:after {
+			display: block;
+			width: $iconSize * 2;
+			height: $iconSize;
+			font: normal normal normal .7625em/1 FontAwesome;
+			position: absolute;
+			top: .75em;
+			transition: .16s ease-in;
+		}
+
+		&:hover,
+		&:focus {
+			color: $color--petrol;
+
+			&.right {
+				&:after {
+					right: -.2em;
+				}
+			}
+			&.left {
+				&:after {
+					left: -.2em;
+				}
+			}
+
+			.theme-petrol &,
+			.theme-taupe &,
+			.theme-light-blue & {
+				color: #fff;
+			}
+		}
+	}
 }

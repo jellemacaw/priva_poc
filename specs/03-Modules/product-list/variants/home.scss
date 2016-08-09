@@ -1,0 +1,101 @@
+@import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+
+.carousel--1-2-4 {
+  $numSlidesHeight: 15px;
+
+  padding: 0 $padding-base/4 #{$padding-base*2 - $numSlidesHeight};
+
+  .numSlides {
+    padding-top: $padding-base;
+    height: $numSlidesHeight;
+    position: static;
+    padding-left: 3px;
+
+  }
+
+  .carousel-nav {
+    bottom: 10px;
+
+    &.prev {
+      left: 9px;
+    }
+
+    &.next {
+      right: 8px;
+    }
+  }
+
+  // padding/whitespace stuff
+  @media screen and (min-width: $screen-xs) {
+    padding-left: #{$padding-large-horizontal - $padding-base/2};
+    padding-right: #{$padding-large-horizontal - $padding-base/2};
+
+    .carousel-nav {
+
+      &.prev {
+        left: #{9px + $padding-large-horizontal - $padding-base/2};
+      }
+
+      &.next {
+        right: #{8px + $padding-large-horizontal - $padding-base/2};
+      }
+    }
+  }
+
+  @media screen and (min-width: $screen-sm) {
+    padding-left: $padding-base/2;
+    padding-right: $padding-base/2;
+
+    .carousel-nav {
+
+      &.prev {
+        left: #{9px + $padding-base/2};
+      }
+
+      &.next {
+        right: #{8px + $padding-base/2};
+      }
+    }
+  }
+
+  @media screen and (min-width: $screen-md) {
+    padding-left: #{$padding-large-horizontal - $padding-base/2};
+    padding-right: #{$padding-large-horizontal - $padding-base/2};
+
+    .carousel-nav {
+
+      &.prev {
+        left: #{9px + $padding-large-horizontal - $padding-base/2};
+      }
+
+      &.next {
+        right: #{8px + $padding-large-horizontal - $padding-base/2};
+      }
+    }
+  }
+
+  // padding/ whitespace stuff for slides
+  .slick-slide > * {
+    margin-left: $padding-base/4;
+    margin-right: $padding-base/4;
+
+    @media screen and (min-width: $screen-xs) {
+      margin-left: $padding-base/2;
+      margin-right: $padding-base/2;
+    }
+  }
+
+  // to make loading look better:
+  max-height: 225px;
+  overflow-y: hidden;
+  opacity: 0;
+  transition: opacity .3s;
+  @media screen and (min-width: $screen-xs) { max-height: 275px; }
+  @media screen and (min-width: $screen-md) { max-height: 300px; }
+  @media screen and (min-width: $max-site-width) { max-height: 350px; }
+
+  &.slick-initialized {
+    max-height: none;
+    opacity: 1;
+  }
+}

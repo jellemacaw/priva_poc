@@ -1,0 +1,46 @@
+//All JS and CSS are global scope!
+@import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+@import '../../../00-Utilities/animations/variants/default';
+
+.media-item.media-item--related {
+  margin-bottom: $padding-base;
+
+  &+& {
+    margin-top: $padding-base;
+  }
+
+  &::after {
+    left: 112px;
+    transform: translate(-50%,-50%) scale(.35) rotate(180deg);
+  }
+
+  .media-item__img {
+    width: 112px;
+    min-width: 112px;
+
+    &::before {
+      padding-bottom: 75%; // 4:3
+    }
+  }
+
+  .media-item__text {
+    width: auto;
+    flex-grow: 1;
+    padding: 0 $padding-base;
+
+    .item-title {
+      margin-bottom: 0;
+      font-size: $font-size-small;
+    }
+  }
+}
+
+a.media-item.media-item--related {
+  &:active,
+  &:hover,
+  &:focus {
+    &::after {
+      transform: translate(-50%,-50%) scale(.42) rotate(180deg);
+    }
+  }
+}

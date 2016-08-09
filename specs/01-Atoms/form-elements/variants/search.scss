@@ -1,0 +1,58 @@
+@import '../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom';
+
+.search-box {
+	position: relative;
+
+	input {
+		&.search {
+			$pchColor: white;
+
+			border-style: solid;
+			border-width: 0 0 1px 0;
+			border-color: $color--pacific-blue;
+			width: 100%;
+			color:$color--pacific-blue;
+			background: transparent;
+			padding: 5px 28px 6px 0;
+
+			transition: 150ms all ease;
+
+			&:focus {
+				border-color: $pchColor;
+				padding-left:10px;
+				color:$pchColor;
+			}
+
+			&::-webkit-input-placeholder{
+			  color: $color--pacific-blue;
+			  opacity: 1;
+			}
+			&:-moz-placeholder {
+			  color: $color--pacific-blue;
+			  opacity: 1;
+			}
+			&::-moz-placeholder{
+			  color: $color--pacific-blue;
+			  opacity: 1;
+			}
+			&:-ms-input-placeholder {
+			  color: $color--pacific-blue;
+			  opacity: 1;
+			}
+		}
+	}
+	button {
+		border:none;
+		background-color: transparent;
+		color:white;
+		position: absolute;
+  	right: 0;
+  	top: 1em;
+  	font-size: 1.1em;
+		transition: .12s;
+
+    	&:hover {
+    		color: $color--pacific-blue;
+    	}
+	}
+}

@@ -17,6 +17,18 @@ Different types of navigation blocks.
 </script>
 ```
 
+## Handheld hamburger menu
+
+```example
+<div class="hamburger-menu"></div>
+<script>
+	var target = ".hamburger-menu";
+	var block = "variants/handheld.html";
+
+	$(target).load(block);
+</script>
+```
+
 ## Quicklinks navigation
 
 ```example

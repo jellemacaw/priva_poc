@@ -1,0 +1,187 @@
+//All JS and CSS are global scope!
+@import '../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom';
+
+.bg-mask {
+  $mainZindex: 100;
+  $bgMaskColor: rgba(0,0,0,0.5);
+
+  position: fixed;
+  z-index: ($mainZindex - 2);
+  top:0;
+  left:0;
+  bottom: 0;
+  right: 0;
+  background-color: $bgMaskColor;
+
+  &.lightbox {
+    z-index: ($mainZindex + 9999);
+    animation: fade .2s linear;
+  }
+}
+
+.layer {
+  $item-padding-hor: 1.5em;
+  $item-padding-vert: 1em;
+  $mainZindex: 10001;
+
+  $layerInnerBackground: $color--petrol;
+
+	@keyframes hide {
+		0% {
+			visibility: visible;
+			opacity: 1;
+		}
+		99% {
+			visibility: visible;
+			opacity: 0;
+		}
+		100% {
+			visibility: hidden;
+			opacity: 0;
+		}
+	}
+	@keyframes fade {
+		from {
+			background-color: rgba(0, 0, 0, 0);
+		}
+	}
+	@keyframes grow {
+		0% {
+			transform: rotateX(-30deg) scale(.9);
+			opacity: 0;
+		}
+		99% {
+			transform: rotateX(0deg) scale(1);
+			opacity: 1;
+		}
+		100% {
+			transform: rotateX(0deg) scale(1);
+			opacity: 1;
+		}
+	}
+	@keyframes zoom {
+		0% {
+			transform: scale(0);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: auto;
+  top:0;
+  left:0;
+  -webkit-overflow-scrolling: touch;
+  z-index:9999999;
+
+	&.is-shown {
+		animation: fade .4s;
+		animation-fill-mode: both;
+		visibility: visible;
+	}
+	&.is-hidden {
+		animation: hide .4s;
+		animation-fill-mode: both;
+		pointer-events: none;
+		visibility: hidden;
+	}
+}
+
+.layer__inner {
+  $max-width: 600px;
+
+  position: relative;
+  margin: 0 auto;
+  max-width: $max-width;
+  -webkit-overflow-scrolling: touch;
+  // default color, should be overridden by component background placed in popup
+  background: #fff;
+
+	animation: grow .36s cubic-bezier(0.155, 1.530, 0.690, 0.900);
+	animation-fill-mode: both;
+
+  @media screen and (min-width: $max-width) {
+    margin: $padding-base-vertical auto;
+  }
+
+  // make content work nice with the close button
+  // i.e. make some room on the first component
+  .form-block,
+  .content-block,
+  .body-content {
+    &:first-child {
+      padding-top: $padding-large-vertical + $padding-base/2;
+    }
+  }
+}
+
+.close-layer {
+  $positionnudge: 9px;
+
+  position: absolute;
+  right: $padding-base-horizontal - $positionnudge;
+  top: $padding-base - $positionnudge/2;
+  z-index: (10001 + 1);
+  width: 30px;
+  height: 30px;
+  border: 0;
+  background-color: transparent;
+  color: $brand-primary;
+  line-height: 29px;
+  font-size: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  text-align: center;
+  text-indent: 0;
+  transition: .2s;
+
+  animation: zoom  .16s .4s ease-out;
+  animation-fill-mode: both;
+
+  &::before {
+    content: "\00d7";
+    position: absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+		margin:auto;
+		font-size: 32px;
+		font-weight: 300;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $brand-primary;
+    color: #fff;
+  }
+
+  &:active {
+    line-height: 30px;
+    text-indent: .02em;
+    text-shadow: 0 0 1px #fff;
+  }
+
+  .theme-taupe ~ &,
+  .theme-petrol ~ & {
+    color: #fff;
+
+    &:hover,
+    &:active {
+      background-color: #fff;
+      color: $brand-primary;
+    }
+
+    &:active {
+      text-shadow-color: $brand-primary;
+    }
+  }
+
+  @media screen and (min-width: $screen-xs) {
+    right: $padding-large-horizontal - $positionnudge;
+  }
+}
