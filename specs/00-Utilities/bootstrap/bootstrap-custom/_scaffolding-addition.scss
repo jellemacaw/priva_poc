@@ -2,11 +2,24 @@
 // Custom scaffolding additions and overrides
 // --------------------------------------------------
 
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::selection {
+    background-color: transparentize($color--pacific-blue,.5);
+    text-shadow: none;
+}
 
 // Body reset
 
 body {
   font-weight: $font-weight-base;
+  overflow-y: scroll;
 }
 
 figure {

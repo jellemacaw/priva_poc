@@ -1,0 +1,120 @@
+//All JS and CSS are global scope!
+@import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+@import '../../../00-Utilities/animations/variants/default';
+
+.media-item.media-item--article {
+  // vertical spacing is handled in the gutter of the list
+  //margin-bottom: $padding-base;
+
+  .media-item__img::before {
+    padding-bottom: 75%; // 4:3
+  }
+}
+
+@media screen and (max-width: $screen-xs-max) {
+
+  .media-item.media-item--article {
+
+    &+& {
+      margin-top: $padding-base;
+    }
+
+    &::after {
+      left: 33.333%;
+      transform: translate(-50%,-50%) scale(.35) rotate(180deg);
+    }
+
+    .media-item__img {
+      //flex-basis: 33.333%;
+      width: 33.333%;
+    }
+
+    .media-item__text {
+      //flex-basis: 66.666%;
+      width: 66.666%;
+      padding: 0 $padding-base;
+
+      p, .btn, small {
+        display: none;
+      }
+
+      .item-title {
+        margin-bottom: 0;
+        font-size: $font-size-small;
+      }
+    }
+  }
+
+  a.media-item.media-item--article {
+    &:active,
+    &:hover,
+    &:focus {
+      &::after {
+        transform: translate(-50%,-50%) scale(.42) rotate(180deg);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+
+  .media-item.media-item--article {
+    flex-direction: column;
+
+    &::after {
+      display: none;
+    }
+
+    .media-item__img {
+      //flex-basis: auto;
+      width: 100%;
+    }
+
+    .media-item__text {
+      //flex-basis: auto;
+      width: 100%;
+      padding: $padding-large-vertical $padding-base-horizontal $padding-base;
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
+    }
+
+    .media-item__text__inner {
+      height: 4.5em;
+      overflow: hidden;
+    }
+
+    .item-title {
+      font-size: $font-size-small;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-md) {
+  .media-item.media-item--article {
+
+    .media-item__text__inner {
+      height: 3.8em;
+    }
+
+    .item-title {
+      font-size: $font-size-base;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .media-item.media-item--article {
+
+    .media-item__img::before {
+      padding-bottom: 50%; // 4:3
+    }
+
+    .media-item__text__inner {
+      height: 4em;
+    }
+
+    .item-title {
+      font-size: 17px;
+    }
+  }
+}

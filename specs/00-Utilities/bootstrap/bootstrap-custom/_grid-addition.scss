@@ -1,0 +1,184 @@
+//
+// Custom grid additions
+// -----------------------------------------------------------------
+
+
+// modifier classes to reverse source order from mobile to desktop
+// only works on layout rows
+//
+// this one works from the "md" (medium) breakpoint up
+.row.row--md-reverse {
+  @media screen and (min-width: $screen-md) {
+    flex-direction: row-reverse;
+  }
+}
+//
+// this one works from the "sm" (small) breakpoint up
+.row.row--sm-reverse {
+  @media screen and (min-width: $screen-sm) {
+    flex-direction: row-reverse;
+  }
+}
+
+
+// modifier class for stretching a component to a 100% height maximum
+// works only on a direct child of a row column
+// usefull for extending vertical background colors set on an individual
+// component to align it with a longer component in an adjacent column
+[class*="col-"] > .fill-column {
+  flex-grow: 1;
+}
+
+
+// a gutter mixin for creating modifier classes for a row
+// this gutter mixin allows for wrapping over multiple lines, great for result lists!
+//
+// by default the vertical margin will NOT be set (should normally be done by content)
+// NOTE: it is not possible to create a $side-margin smaller than half the $between-margin!
+// So zero side-margins are not possible here which can have consequences when nesting grids
+//
+//              -----------                -----------
+// $side-margin |  thing  | $between-margin |  thing  | $side-margin
+//              -----------                -----------
+//           $vertical-margin            $vertical-margin
+//
+@mixin gutter($side-margin,$between-margin,$vertical-margin: none) {
+  padding-left: ($side-margin - ($between-margin/2));
+  padding-right: ($side-margin - ($between-margin/2));
+  flex-wrap: wrap; // should be default, just to be sure
+
+  > [class*="col-"] {
+    padding-left: ($between-margin/2);
+    padding-right: ($between-margin/2);
+
+    @if $vertical-margin != none {
+      padding-bottom: $vertical-margin;
+    }
+  }
+}
+
+// a gutter mixin for creating modifier classes for a row
+// this gutter mixin can create zero width outer gutters but can only be used
+// in a single-line layout! so no wrapping of excess cells/columns to another row!
+//
+// by default the vertical margin will NOT be set (should normally be done by content)
+//
+// NOTE: this mixin has not been tested! Might be reliant on flex basis for proper working
+// for flex box to properly distribute width to columns
+// sample taken from http://codepen.io/chef/pen/GvImH
+//
+//       -----------                -----------
+//      |  thing  | $between-margin |  thing  |
+//      -----------                -----------
+//   $vertical-margin            $vertical-margin
+//
+@mixin gutter-row($between-margin,$vertical-margin: none) {
+  flex-wrap: nowrap !important;
+
+  > [class*="col-"] {
+    margin-right: $between-margin;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    @if $vertical-margin != none {
+      padding-bottom: $vertical-margin;
+    }
+  }
+}
+
+
+
+
+// row--gutter is used for the product list spec
+// and creates small gutters between and bigger around a list of items
+// special for row--gutter is the 2 columns layout on mobile and
+// in sidebars on desktop with very small margins
+.row--gutter.row--gutter { // double the specificity to overrule ul.row's padding: 0;
+  @include gutter($padding-base/2,$padding-base/2,$padding-base/2);
+  padding-bottom: $padding-base/2;
+
+  @media screen and (min-width: $screen-xs) {
+    @include gutter($padding-large-horizontal,$padding-base,$padding-base);
+    padding-bottom: 0;
+  }
+
+  @media screen and (min-width: $screen-md) {
+    .col-md-4 &, .col-md-3 & {
+      @include gutter($padding-base/2,$padding-base/2,$padding-base/2);
+      .col-xs-6.col-sm-3 {
+        width: 50%;
+      }
+    }
+  }
+}
+
+// row--gutter-sm is used for the product list spec
+// and creates small gutters between and bigger around a list of items
+// collapses to 1 column on mobile with no margins
+.row--gutter-sm {
+  > * {
+    padding-bottom: $padding-base;
+  }
+}
+
+// as used for product list and news list
+.row--gutter.row--gutter,
+.row--gutter-sm.row--gutter-sm {
+
+  @media screen and (min-width: $screen-sm) {
+    @include gutter($padding-base,$padding-base);
+  }
+
+  @media screen and (min-width: $screen-md) {
+    @include gutter($padding-large-horizontal,$padding-base);
+  }
+}
+
+
+// a fancy custom column class for these ul.rows that adapt to 1, 2 or 3 columns
+// depending on the number of siblings in the list
+// on desktop:
+// - 2 or 4 items produce a 2 column layout
+// - 1 item will produce a 1 column layout
+// - defaults to a 3 column layout for the rest
+.col-sm-12-6-4 {
+  width: 100%;
+
+  @media screen and (min-width: $screen-sm) {
+    // defaults to 3 columns
+    width: 33.3333%;
+
+    &:first-child:last-child {
+      width: 100%;
+    }
+
+    &:first-child:nth-last-child(2), &:first-child:nth-last-child(2) ~ &,
+    &:first-child:nth-last-child(4), &:first-child:nth-last-child(4) ~ & {
+      width: 50%;
+    }
+  }
+}
+
+//
+// Custom grid addition to make them work well with html lists
+// -----------------------------------------------------------------
+
+ul.row,
+ol.row {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+
+  > li {
+    position: relative;
+
+    > :first-child { margin-top: 0; }
+    > :last-child { margin-bottom: 0; }
+
+    &::before {
+      display: none;
+    }
+  }
+}

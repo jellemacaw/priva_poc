@@ -1,0 +1,30 @@
+<div id='slider_noimage' class='carousel small'>
+
+				<div class="slide">
+					<div class="content">
+						<h5>Anonther title</h5>
+						<div class="slide-txt">This slide has another position and a very long text. This text is so long that even long John would say... wow thats a long text.</div>
+						<a href="#" class="btn txt-arrow right">
+							Read more
+						</a>
+					</div>
+				</div>
+        <div class="slide">
+					<div class="content">
+						<h4>This slide only has a title and lets see what happens to long titles</h4>
+					</div>
+				</div>
+				<div class="slide video" data-layer-id="videoId2" onClick="layerHandler(event)">
+					<div class="content  transbg full centered">
+						<h5> This slide has a video</h5>
+					</div>
+					<img src="http://lorempixel.com/1200/650/people/" />
+				</div>
+</div>
+
+<div class="layer video" id="videoId2">
+	<div class="layer__inner">
+		<iframe src="http://www.youtube.com/embed/jWZyvmiylng?loop=0&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+		<button class="close-layer" data-layer-id="videoId2" onClick="layerHandler(event)"></button>
+	</div>
+</div>

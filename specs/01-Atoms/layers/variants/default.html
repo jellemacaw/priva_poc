@@ -1,0 +1,25 @@
+<a href="#" data-layer-id="666" onClick="layerHandler(event)">Click to open</a>
+<div id="666" class="layer">
+	<div class="layer__inner">
+
+		<!-- test divje -->
+		<div class="example-form"></div>
+
+		<button class="close-layer" data-layer-id="666" onClick="layerHandler(event)"></button>
+
+	</div>
+</div>
+
+<script>
+	var target = ".example-form";
+	var block = "/specs/02-Molecules/forms/variants/default.html";
+	//var block = "/specs/03-Modules/contact/variants/default.html";
+	//var block = "/specs/03-Modules/body-content/variants/default.html";
+	$(target)
+		.load(block, function() {
+			$(target)
+				.children()
+					.prependTo( $(target).parent() );
+			$(target).remove();
+		});
+</script>

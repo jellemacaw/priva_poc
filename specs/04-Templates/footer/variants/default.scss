@@ -1,0 +1,91 @@
+@import '../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom';
+
+.site-footer {
+  font-size: $font-size-small;
+
+  .col-sm-3:nth-child(2) .quicklinks,
+  .col-md-3:nth-child(2) .quicklinks {
+    .component-title {
+      visibility: hidden;
+    }
+  }
+
+  .col-sm-3:nth-child(2) .content-block,
+  .col-md-3:nth-child(2) .content-block {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: $padding-base-horizontal;
+      right: $padding-base-horizontal;
+      bottom: 0;
+      height: 1px;
+      overflow: hidden;
+      background: $color--taupe;
+      opacity: .1;
+
+
+    }
+
+    @media screen and (min-width: $screen-xs) {
+      &::after {
+        left: $padding-large-horizontal;
+        right: $padding-large-horizontal;
+      }
+    }
+
+    @media screen and (min-width: $screen-sm) {
+      &::after {
+        top:  $padding-large-vertical;
+        bottom: $padding-large-vertical;
+        left: auto;
+        right: 0;
+        height: auto;
+        width: 1px;
+      }
+    }
+
+    @media screen and(min-width: $screen-md) {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+
+    .col-sm-3:first-child .content-block,
+    .col-md-3:first-child .content-block {
+      padding-bottom: 0;
+    }
+
+    .col-sm-3:nth-child(2) .content-block,
+    .col-md-3:nth-child(2) .content-block {
+      padding-top: 0;
+    }
+  }
+
+  @media screen and (min-width: $screen-sm) {
+
+    .col-sm-3:first-child .content-block {
+      padding-right: $padding-base-horizontal;
+    }
+
+    .col-sm-3:nth-child(2) .content-block {
+      padding-left: $padding-base-horizontal;
+    }
+  }
+
+  @media screen and (min-width: $screen-md) {
+
+    .col-md-3:first-child .content-block {
+      padding-right: $padding-base-horizontal;
+    }
+
+    .col-md-3:nth-child(2) .content-block {
+      padding-left: $padding-base-horizontal;
+    }
+  }
+
+}

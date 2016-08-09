@@ -9,6 +9,10 @@
     margin-bottom: 0;
     line-height: $line-height-base;
   }
+
+	iframe {
+		max-width: 100%;
+	}
 }
 
 .body-content__inner {
@@ -22,6 +26,7 @@
   }
 }
 
+// only images and videos will touch the sides on mobile:
 @media screen and (max-width: $screen-xs) {
   .body-content__inner > *:not(figure) {
     margin-left: $padding-base-horizontal;
@@ -36,5 +41,27 @@
 
   .body-content__inner {
     max-width: 40em;
+  }
+}
+
+// center stuff
+.body-content--center .body-content__inner {
+  text-align: center;
+  margin: auto;
+}
+
+// center stuff, unless we're on desktop in a small column
+.body-content--widecenter {
+  @extend .body-content--center;
+
+  @media screen and (min-width: $screen-md) {
+    .col-md-4 &, .col-sm-3 & {
+      padding-left: $padding-base/2;
+      padding-right: $padding-base/2;
+
+      .body-content__inner {
+        text-align: left;
+      }
+    }
   }
 }

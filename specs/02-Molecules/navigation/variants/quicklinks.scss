@@ -1,11 +1,12 @@
 @import '../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom';
-@import '../../../00-Utilities/colors/color-names';
+@import '../../../00-Utilities/mixins/variants/functions';
 
-[data-navigation="quicklinks"] {
-	font-size: 24px;
+.quicklinks {
 
 	.component-title {
-		font-size: 1em;
+		font-size: 18px;
+		font-weight: 600;
+		min-height: 24px;
 	}
 
 	.quicklink-navigation {
@@ -23,6 +24,11 @@
 
 		> .item,
 		> li {
+
+			+ li {
+				margin-top: 1em;
+			}
+
 			&:before {
 				display: none;
 			}
@@ -38,7 +44,7 @@
 		}
 	}
 
-	&.quicklink-header {
+	&.quicklink--header {
 
 		.component-title {
 			display: none;
@@ -46,29 +52,66 @@
 
 		.quicklink-navigation {
 			$submenuLinkHoverColor: white;
-
-			display:flex;
-			flex-direction: row;
-			flex-wrap: nowrap;
-			justify-content: space-between;
+			display: block;
+			text-align:right;
 
 			> .item,
 			> li {
+				display: inline-block;
+				width: auto;
+
+				+ li {
+					margin-top: 0;
+					letter-spacing: 1px;
+				}
+
 				&:before {
 					display: none;
 				}
 
 				a {
 					text-transform: uppercase;
-					font-size:$font-size-small;
+					color: $color--pacific-blue;
+					font-weight: 400;
+					margin: 0 0 0 $padding-base;
+					font-size: em(12px);
+					letter-spacing: 0.08em;
+
+
 
 					&:hover {
 						text-decoration: none;
 						color:$submenuLinkHoverColor;
 					}
 				}
+
+				&:last-of-type {
+					a {
+						padding:0;
+						letter-spacing: .125em;
+					}
+
+				}
 			}
 		}
 
 	}
+}
+
+
+@media all and (min-width: 750px) and (max-width: 1200px)	 {
+	.quicklinks {
+		&.quicklink--header {
+			.quicklink-navigation {
+				> .item,
+				> li {
+					a {
+						padding: 0 4px;
+    					font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+
 }

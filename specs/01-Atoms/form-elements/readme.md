@@ -25,3 +25,15 @@ Default form elements spec
 	$(target).load(block);
 </script>
 ```
+
+## Search
+
+```example
+<div class="search-box-loader"></div>
+<script>
+	var target = ".search-box-loader";
+	var block = "variants/search.html";
+	
+	$(target).load(block);
+</script>
+```

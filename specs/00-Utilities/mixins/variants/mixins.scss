@@ -1,0 +1,9 @@
+@mixin icon-arrowhead($positioning: absolute) {
+  &::after {
+    content: ">";
+    position: $positioning;
+    transform: scale(.9,1.75) translate(0,.02em);
+    font-weight: 600;
+    @content;
+  }
+}

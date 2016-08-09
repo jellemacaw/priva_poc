@@ -1,0 +1,105 @@
+<html>
+  <head>
+    <style>
+       @import "/specs/02-Molecules/google-map/variants/default.css";
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+
+        var mapDiv = document.getElementById('map');
+        var data = '/specs/02-Molecules/google-map/data/example.json';
+        var getJson = jQuery.parseJSON(
+          jQuery.ajax({
+              url: data,
+              async: false,
+              dataType: 'json'
+          }).responseText
+        );
+
+        var getUrlParameter = function getUrlParameter(sParam) {
+            var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
+
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
+
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true : sParameterName[1];
+                }
+            }
+        };
+
+         function checkUrlParamsOptions(){
+          var result = getJson.mapoptions;
+          var customLat = parseInt(getUrlParameter('lat'));
+          var customLong = parseInt(getUrlParameter('long'));
+
+          if(customLat && customLong) {
+            result.center.lat = customLat;
+            result.center.long = customLong;
+            return result;
+
+          } else if (customLat) {
+            result.center.lat = customLat;
+            return result;
+          } else if (customLong) {
+            result.center.long = customLong;
+            return result;
+          } else {
+            return result;
+          }
+          return result;
+        }
+
+        var mapOptions = checkUrlParamsOptions();
+        var map = new google.maps.Map(mapDiv, mapOptions);
+        var prev_infowindow =false;
+
+        map.data.loadGeoJson(data);
+
+        //Info window
+        map.data.addListener('click', function(event) {
+
+          if( prev_infowindow ) {
+            prev_infowindow.close();
+          }
+
+          var anchor = "<a href='#" + event.feature.getProperty('id') + "' class='map-to-list'></a>";
+          var titleHtml = "<h5>" + event.feature.getProperty('title') + "</h5>";
+          var descriptionHtml = "<p>"+ event.feature.getProperty('description') + "</p>";
+          var linkTitle = event.feature.getProperty('linkTitle') ? event.feature.getProperty('linkTitle') : event.feature.getProperty('link') ? event.feature.getProperty('link') : '';
+          var officeLinkHtml = event.feature.getProperty('link') ? "<a href='" + event.feature.getProperty('link') + "' class='map-link'>" + linkTitle + "</a>" : '';
+          var innerHtml = anchor + titleHtml + descriptionHtml; // + officeLinkHtml;
+
+          var infowindow = new google.maps.InfoWindow({content: innerHtml});
+
+          prev_infowindow = infowindow;
+
+          infowindow.setContent("<div class='info-window'>"+innerHtml+"</div>");
+          infowindow.setPosition(event.feature.getGeometry().get());
+          infowindow.setOptions({pixelOffset: new google.maps.Size(0,-40)});
+          infowindow.open(map);
+
+          google.maps.event.addDomListener(infowindow, 'domready', function() {
+            $('.gm-style-iw').parent().addClass('macaw-gmap-outer');
+          });
+      });
+
+      //Return custom map icon
+      map.data.setStyle(function(feature) {
+        return {icon:feature.getProperty('icon')};
+      });
+
+      }
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDmKjBlSvOOz3m7YLNmSXyLel1zLUsgvjg&callback=initMap">
+    </script>
+  </body>
+</html>

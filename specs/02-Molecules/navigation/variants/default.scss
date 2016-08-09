@@ -1,5 +1,4 @@
 //All JS and CSS are global scope!
-@import '../../../00-Utilities/colors/color-names';
 @import '../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom';
 
 //Placholders
@@ -10,11 +9,20 @@
 	justify-content: space-between;
 }
 
-.navigation-main {
+@keyframes ani-mainnav {
+	from {
+		transform: scaleY(.5);
+		opacity: .5;
+	}
+}
+
+
+body {
 	//Variables
-	$navigationWidth: $screen-lg;
-	$item-padding-hor: 1.5em;
-	$item-padding-vert: 1em;
+	$headerHeight:140px;
+	$navigationWidth: $max-site-width;
+	$item-padding-hor: 1.4em;
+	$item-padding-vert: 1.39em;
 	$mainZindex: 100;
 	$bgMaskColor: rgba(0,0,0,0.5);
 
@@ -23,95 +31,142 @@
 	$submenuLinkHoverColor: $color--pacific-blue;
 	$submenuHeadingColor: $submenuLinkColor;
 	$submenuMimicLineheight: 15px;
-	$submenuLinkFontsize: 13px;
+	$submenuLinkFontsize: 16px;
 
-	* {
-		transition: 150ms ease all;
-	}
-	.wrapper {
-		@extend %flex-row;
+	.navigation-main {
 
-		position: relative;;
-		z-index:$mainZindex;
+		%menu-hoverState {
+			background-color: $color--petrol2;
+			text-decoration: none;
+			position: relative;
 
-		width: 100%;
-		max-width:$navigationWidth;
+			&:after {
+				transform: scaleY(1);
+				transition: .16s .12s;
+			}
+		}
+
+		* {
+			transition: 150ms ease all;
+		}
+		.wrapper {
+			position: relative;;
+			z-index:$mainZindex;
+
+			width: 100%;
+			max-width:$navigationWidth;
 
 
-		padding:0;
-		margin:0 auto;
+			padding:0;
+			margin:0;
 
-		.item,
-		.item.hover,
-		.item.active {
-			display: flex;
-			> a {
-				padding: $item-padding-vert $item-padding-hor;
+			.item {
+				position: relative;
+				display: inline-block;
+				float: left;
 
-				color:white;
-				text-transform: uppercase;
-				font-weight: bold;
+				> a {
+					padding: $item-padding-vert $item-padding-hor;
 
-				&:hover {
-					background-color: $color--petrol2;
-					text-decoration: none;
-					position: relative;
+					color:white;
+					text-transform: uppercase;
+					font-weight: 700;
+					display: block;
+					letter-spacing: .1em;
 
 					&:after {
 						width: 0;
-					  height: 0;
-					  content: '';
-					  z-index: 2;
-					  border-top: 1.2em solid $color--petrol2;
-					  border-left: 0.8em solid transparent;
-					  border-right: 0.8em solid transparent;
-					  position: absolute;
-					  left: 25px;
-					  top: 100%;
+						height: 0;
+						content: '';
+						z-index: 2;
+						border-top: 1em solid $color--petrol2;
+						border-left: 0.8em solid transparent;
+						border-right: 0.8em solid transparent;
+						position: absolute;
+						left: 25px;
+						top: 100%;
 						z-index: $mainZindex;
+						transition: .16s 0s;
+						transform-origin: top center;
+						transform: scaleY(0);
 					}
+
+					&:hover {
+						@extend %menu-hoverState;
+					}
+				}
+			}
+
+			.item.hover,
+			.item.active {
+				> a {
+					@extend %menu-hoverState;
 				}
 			}
 		}
 	}
+
 	.subs-wrapper {
 		display: none;
-		position: fixed;
-		left: 0px;
-		width: 100%;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top:$headerHeight - 27;
 
-		height:inherit;
-		opacity: 0;
+		height: inherit;
+		opacity: .5;
 		z-index:($mainZindex - 1);
+		transform-origin: center top;
+		animation: ani-mainnav .16s ease-out;
 
 		background-color: $color--petrol;
 
+		.colwrap {
+			@extend %flex-row;
+			max-width: $max-site-width;
+			margin: 0 auto;
+			padding: ($item-padding-vert * 2) $item-padding-hor;
+			padding-left: 60px;
+		}
+
 		&.hover,
-		&:hover,
 		&.active {
 			opacity: 1;
+			display: block;
 
 			&.subs-wrapper{
-				@extend %flex-row;
-				padding:$item-padding-hor;
-
 				&.cols-2 {
 					.col {
-						flex-basis: 50%;
+						//flex-basis: 50%;
+						width: 50%;
 					}
 				}
 			}
 		}
 
 		.col {
-			h6 {
-				margin:0 0 $submenuMimicLineheight 0;
+			//flex-basis: 32%;
+			width: 33%;
 
-				color:$submenuHeadingColor;
-				text-transform:uppercase;
+			h5,
+			h6 {
+
+				&:first-child {
+		      margin-top: 0;
+		    }
+
+				a {
+					color:$submenuHeadingColor;
+					text-decoration: none;
+
+					&:hover {
+							color:darken($submenuHeadingColor, 25%);
+					}
+				}
 			}
 			.item {
-				margin:0 0 ($submenuMimicLineheight/2.5) 0;
+				margin:0 0 ($submenuMimicLineheight/1.5) 0;
+				line-height: 1.3;
 
 				a {
 					font-size:$submenuLinkFontsize;
@@ -125,16 +180,5 @@
 			}
 		}
 	}
-	.bg-mask {
-		position: fixed;
-		z-index: ($mainZindex - 2);
 
-		width: 100%;
-		height: 100%;
-
-		top:0;
-		left:0;
-
-		background-color:$bgMaskColor;
-	}
 }

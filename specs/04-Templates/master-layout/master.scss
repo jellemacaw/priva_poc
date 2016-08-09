@@ -1,24 +1,15 @@
 //All JS and CSS are global scope!
 @import '../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom';
 
-.container-fluid {
-	section {
-		max-width: 100%;
-		margin: 0 auto;
+.boxed {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 
-		.row {
-			div[class*='col-md'] {
-				padding:5px;
-			}
-		}
-		&.container-fluid {
-			.row {
-
-			}
-		}
-
-		&.boxed {
-			max-width:$screen-lg;
-		}
+	> .row {
+		max-width: $max-site-width;
+		width: 100%;
 	}
 }

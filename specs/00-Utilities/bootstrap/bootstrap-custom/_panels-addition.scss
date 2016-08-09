@@ -1,0 +1,56 @@
+@import "../../mixins/variants/mixins";
+
+.panel {
+  display: block;
+}
+
+a.panel {
+  color: inherit;
+  position: relative;
+
+  @include icon-arrowhead() {
+    top: 50%;
+    right: 15px;
+    margin-top: -.75em;
+    font-size: 1.3em;
+    color: $color--pacific-blue;
+    transition: .2s;
+  }
+
+  h1, .h1,
+  h2, .h2,
+  h3, .h3,
+  h4, .h4,
+  h5, .h5 {
+    transition: .2s;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+
+    h1, .h1,
+    h2, .h2,
+    h3, .h3,
+    h4, .h4,
+    h5, .h5 {
+      color: $color--pacific-blue;
+    }
+
+    &::after {
+      color: $brand-primary;
+    }
+  }
+}
+
+.panel-body {
+  padding: $padding-base/2 $padding-base*1.5 $padding-base/2 $padding-base;
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}

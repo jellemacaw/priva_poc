@@ -1,0 +1,78 @@
+//All JS and CSS are global scope!
+@import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+@import '../../../00-Utilities/animations/variants/default';
+
+@media screen and (max-width: $screen-xs-max) {
+
+  .media-item--main {
+
+    &+& {
+      margin-top: $padding-base;
+    }
+
+    &::after {
+      left: 33.333%;
+      transform: translate(-50%,-50%) scale(.35) rotate(180deg);
+    }
+
+    .media-item__img {
+      //flex-basis: 33.333%;
+      width: 33.333%;
+
+      &::before {
+        padding-bottom: 75%; // 4:3
+      }
+    }
+
+    .media-item__text {
+      //flex-basis: 66.666%;
+      width: 66.666%;
+      padding: 0 $padding-base;
+
+      p, .btn, small {
+        display: none;
+      }
+
+      .item-title {
+        margin-bottom: 0;
+        font-size: $font-size-small;
+      }
+    }
+  }
+
+  a.media-item--main {
+    &:active,
+    &:hover,
+    &:focus {
+      &::after {
+        transform: translate(-50%,-50%) scale(.42) rotate(180deg);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $screen-sm) {
+
+  .media-item--main {
+
+    // switcherooooo!
+    &:nth-child(even) {
+
+      &::after {
+        transform: translate(-50%,-50%) scale(.5) rotate(0deg);
+      }
+
+      .media-item__img { order: 2; }
+      .media-item__text { order: 1; }
+
+      @at-root a#{&} {
+        &:hover,
+        &:focus {
+          &::after {
+            transform: translate(-50%,-50%) scale(.6) rotate(0deg);
+          }
+        }
+      }
+    }
+  }
+}

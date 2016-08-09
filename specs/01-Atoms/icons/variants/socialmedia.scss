@@ -1,0 +1,54 @@
+//All JS and CSS are global scope!
+@import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+@import '../../../00-Utilities/colors/color-names';
+@import '../../../00-Utilities/animations/variants/default';
+
+.icon-sm {
+  $icon-sm-size: 50px;
+
+  position: relative;
+  display: inline-block;
+  width: $icon-sm-size;
+  height: $icon-sm-size;
+  border-radius: 50%;
+  overflow: hidden;
+
+  img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .3s .1s $ani-flutter-timing;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: calc(#{$icon-sm-size} - 16%);
+    height: calc(#{$icon-sm-size} - 16%);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
+    transition: .3s .1s $ani-flutter-timing;
+    background: #fff;
+    opacity: .4;
+  }
+
+  &:hover, &:focus {
+
+    img {
+      transform: scale(1.24);
+      animation: flutter .3s .12s $ani-flutter-timing;
+    }
+
+    &::after {
+      opacity: .8;
+      transform: translate(-50%, -50%) scale(1.12);
+      transition-delay: .2s;
+    }
+  }
+}

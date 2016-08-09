@@ -1,0 +1,76 @@
+<div class="navigation navigation-handheld">
+	<div class="menu-icon-wrapper" onClick="layerHandler(event)" data-layer-id="hetidisdit" >
+		<i class="fa fa-search" ></i> |
+		<i class="fa fa-bars"></i> Menu
+	</div>
+	<nav class="layer layer--inline handheld-nav-wrapper" id="hetidisdit">
+		<div class="layer__inner layer--navigation">
+			<div class="row search">
+				<script>$(".search").load("/specs/01-Atoms/form-elements/variants/search.html");</script>
+			</div>
+			<div class="row menu">
+				<div class="col-md-12 col">
+					<h6 class="col-header"><a href="#">Discover Priva</a></h6>
+					<div class="item"><a href="#">We are Priva</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item" data-item-id="item-0003"><a href="#">Sub item 3 cols</a></div>
+				</div>
+				<div class="col-md-12 col">
+					<h6 class="col-header">Optional column title</h6>
+					<h5 class="col-header-sub"><a href="#">Test level 3</a></h5>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+				</div>
+				<div class="col-md-12 col">
+					<h6 class="col-header">Optional column title</h6>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+				</div>
+				<div class="col-md-12 col">
+					<h6 class="col-header">Optional column title</h6>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+				</div>
+			</div>
+			<div class="row contact-info taupe">
+				<div class="row">
+					<a href="mailto:#">
+						<img src="/specs/02-Molecules/navigation/img/envelope-lightblue.png" class="icon-img" alt="">
+						contact.priva@priva.nl
+					</a>
+				</div>
+				<div class="row">
+					<a href="tel:#">
+						<img src="/specs/02-Molecules/navigation/img/phone-lightblue.png" class="icon-img" alt="">
+						+31 (0)174522600
+					</a>
+				</div>
+			</div>
+			<div class="row country-selector select-overlay taupe">
+				<script>
+					$(".country-selector.taupe")
+						.load("/specs/02-Molecules/navigation/variants/select-overlay.html", function() {
+							// change ids, there can be only one!!!!
+							$(".country-selector.taupe")
+								.find("#country")
+									.attr("id","country-mobile")
+									.end()
+								.find("[data-layer-id]")
+									.attr("data-layer-id","country-mobile");
+						});
+				</script>
+			</div>
+
+			<button class="close-layer" data-layer-id="hetidisdit" onClick="layerHandler(event)"></button>
+		</div>
+	</nav>
+</div>

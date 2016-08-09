@@ -40,7 +40,10 @@ The following color palette is defined for this site.
     <span>$color--black--overlay<br></span>
   </div>
   <div class="sourcejs-color-gradient--hero">
-    <span>$color--gradient--hero *<br></span>
+    <span>$gradient--hero *<br></span>
+  </div>
+  <div class="sourcejs-color-gradient--hero--inv">
+    <span>$gradient--hero--inv *<br></span>
   </div>
 </div>
 <small>* can only be set as a background</small>

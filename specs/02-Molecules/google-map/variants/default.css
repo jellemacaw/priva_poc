@@ -1,0 +1,140 @@
+#map {
+	width: 100%;
+  height: 360px;
+}
+
+#map h3,
+#map h4,
+#map h5,
+#map h6,
+#map p {
+	font-family: "Open Sans","Gill Sans","Gill Sans MT",Calibri,sans-serif;
+	color: #f0f0f0;
+	text-transform: uppercase;
+	margin-top: 10px;
+	padding-right: 5px;
+}
+
+.macaw-gmap-outer {
+	background-color: #464646;
+	transform-origin: bottom;
+	animation: sweep .16s ease-in;
+}
+
+.macaw-gmap-outer > div:nth-child(1) {
+	display: none;
+}
+
+/* triangle */
+.macaw-gmap-outer::after {
+	content: "";
+	width: 0;
+	height: 0;
+	border: 15px solid transparent;
+	border-bottom-width: 0;
+	border-top: 20px solid #464646;
+	position: absolute;
+	bottom: -19px;
+	left: 50%;
+	transform: translateX(-50%) scaleY(1);
+	transform-origin: center top;
+	animation: swoop .36s ease-out;
+}
+
+.macaw-gmap-outer p {
+	font-size: 11px;
+	margin-bottom: 10px;
+}
+
+.macaw-gmap-outer .map-to-list {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	color: #00b5ce;
+}
+
+.macaw-gmap-outer .map-to-list:hover {
+	text-decoration: none;
+	color: #4edaed;
+}
+
+/* specificity and such... */
+#map .macaw-gmap-outer .map-to-list:hover ~ * {
+	color: #fff;
+}
+
+/* ">" */
+.macaw-gmap-outer .map-to-list::before {
+	content: "\f105";
+	font: normal normal normal 36px/1 FontAwesome;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: .2s;
+}
+
+.macaw-gmap-outer .map-to-list:hover::before {
+	transform: translateY(-50%) translateX(1px);
+}
+
+.macaw-gmap-outer .map-link {
+	display: inline-block;
+	width: 100%;
+	background-color: #00b5ce;
+	color: white;
+	padding:2px 4px;
+	text-align: center;
+	text-decoration: none;
+	transition: .2s .1s;
+}
+
+.macaw-gmap-outer .map-link:hover {
+	text-decoration: none;
+	background-color: white;
+	color:#00b5ce;
+}
+
+.macaw-gmap-outer > div:last-of-type {
+	top: 6px !important;
+	right: 6px !important;
+	border-radius: 50%;
+	width: 18px !important;
+	height: 18px !important;
+	transition: .2s;
+	background: #999;
+	overflow: hidden;
+	text-align: center;
+	font-size: 24px;
+   line-height: 14px;
+	font-weight: 300;
+}
+.macaw-gmap-outer > div:last-of-type:hover {
+	background: #f0f0f0;
+}
+
+.macaw-gmap-outer > div:last-of-type::before {
+	content: "\00d7";
+}
+
+.macaw-gmap-outer > div:last-of-type img {
+	 display: none;
+ }
+
+@keyframes sweep {
+	from {
+		transform: scaleY(.5);
+		opacity: .5;
+	}
+}
+
+@keyframes swoop {
+	from {
+		transform: translateX(-50%) scaleY(0);
+	}
+	75% {
+		transform: translateX(-50%) scaleY(0);
+	}
+}

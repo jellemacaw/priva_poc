@@ -1,4 +1,3 @@
-@import '../../../00-Utilities/colors/color-names';
 @import '../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom';
 
 .link-dark {
@@ -13,4 +12,78 @@
 .component-title {
   text-transform: uppercase;
   font-size: 20px;
+  color: inherit;
+  font-weight: 300;
+  line-height: $headings-h1-line-height;
+  letter-spacing: .1em;
+  transform: translateY(-.6em);
+}
+
+.item-title, .teaser-title {
+  display: block;
+  font-size: $font-size-medium;
+  text-transform: uppercase;
+  line-height: 1.35;
+  letter-spacing: $headings-letter-spacing;
+}
+
+.item-title {
+  color: $brand-primary;
+  font-weight: 600;
+}
+
+.teaser-title {
+  font-weight: 300;
+}
+
+@element ".teaser"  and (min-width: #{$screen-md}) {
+  .teaser .teaser-title {
+    font-size: 22px;
+  }
+}
+
+.item-title--large {
+  @extend .item-title;
+  font-size: 22px;
+}
+
+// made for job list
+.item-label {
+  font-size: $font-size-small - 1;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: -.75em;
+  line-height: 1.4;
+  letter-spacing: .1em;
+}
+
+.category-name {
+  font-size: $font-size-small - 1;
+  font-family: $font-family-serif;
+  font-style: italic;
+  color: $brand-primary;
+  transition: .2s;
+
+  a:hover &,
+  a:focus & {
+    color: inherit;
+  }
+
+  @at-root a#{&} {
+    &:hover,
+    &:focus {
+      color: inherit;
+    }
+  }
+
+  + h2,
+  + .h2,
+  + h3,
+  + .h3,
+  + h4,
+  + .h4,
+  + h5,
+  + .h5 {
+    margin-top: 5px;
+  }
 }

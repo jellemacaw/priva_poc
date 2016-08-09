@@ -8,12 +8,12 @@
 		$sm-bg:lighten($md-bg, 10%);
 
 		.row {
-			div[class*='col-md'] {
-				border:1px solid darken($md-bg, 10%);
+			> [class*='col-md'] {
+				outline: 1px solid darken($md-bg, 10%);
 				background-color: $md-bg;
 			}
-			div[class*='col-sm'] {
-				border:1px solid darken($sm-bg, 10%);
+			> [class*='col-sm'] {
+				outline: 1px solid darken($sm-bg, 10%);
 				background-color: $sm-bg;
 			}
 		}

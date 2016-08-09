@@ -1,0 +1,105 @@
+//All JS and CSS are global scope!
+@import '../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom';
+
+
+.layer__inner.layer--navigation {
+  background: $color--petrol;
+  padding: 0;
+  color: #fff;
+  max-width: none;
+
+  @media screen and (min-width: $max-site-width) {
+    padding: 0 calc( 50% - #{$max-site-width/2} );
+  }
+
+  .close-layer {
+    color: #fff;
+
+    @media screen and (max-width: $screen-xs) {
+      margin-right: 7px;
+    }
+
+    @media screen and (max-width: $screen-md) and (min-width: $screen-xs) {
+      margin-right: -28px;
+    }
+
+    &:hover,
+    &:active {
+      color: $brand-primary;
+      background-color: #fff;
+    }
+  }
+
+  .component-title {
+    color:darken(white, 10%);
+    margin-bottom: 25px;
+  }
+
+  > .row {
+    padding: $padding-base-vertical $padding-base-horizontal 0;
+
+    + .row {
+      padding-top: 0;
+    }
+
+    &:last-of-type {
+      padding-bottom: $padding-base-vertical;
+    }
+
+    @media screen and (min-width: $screen-md) {
+      padding: $padding-base-vertical $padding-large-horizontal 0;
+    }
+
+    // &:last-of-type {
+    //   padding-bottom:10% !important;
+    // }
+  }
+  .col {
+    margin-bottom: 25px;
+
+    > :first-child {
+      margin-top: 0;
+    }
+
+    .item {
+      margin-bottom: 14px;
+      margin-right: $padding-base;
+      letter-spacing: .05em;
+
+      a {
+        color: white;
+
+        &:hover {
+          color:$color--pacific-blue;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.col-header,
+.col-header-sub {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  margin-bottom: 14px;
+  margin-right: $padding-base;
+
+  a {
+    color: #fff;
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+      color: $color--pacific-blue;
+    }
+  }
+}
+
+.col-header-sub {
+  font-size: 14px;
+  font-weight: 600;
+}

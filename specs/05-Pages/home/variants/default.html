@@ -1,0 +1,50 @@
+<section class="demo-header">
+	<script>$(".demo-header").load("/specs/04-Templates/header/variants/default.html");</script>
+</section>
+<section class="demo-carousel">
+	<script>$(".demo-carousel").load("/specs/03-Modules/carousel/variants/default.html");</script>
+</section>
+<section>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="media-item-spec1"></div>
+			<script>
+				var target = ".media-item-spec1";
+				var block = "/specs/02-Molecules/media-item/variants/main.html";
+				$(target).parent().load(block);
+				$(target).remove();
+			</script>
+		</div>
+	</div>
+</section>
+<section class="demo-carousel-small">
+	<script>$(".demo-carousel-small").load("/specs/03-Modules/carousel/variants/small.html");</script>
+</section>
+<section class="boxed">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="teaser-demo-div-1"></div>
+			<script>
+				var target = ".teaser-demo-div-1";
+				$(target).parent().load('/specs/03-Modules/teaser/variants/default.html');
+				$(target).remove();
+			</script>
+		</div>
+		<div class="col-md-6">
+			<div class="teaser-demo-div-2"></div>
+			<script>
+				var target = ".teaser-demo-div-2";
+				$(target).parent().load('/specs/03-Modules/teaser/variants/iconlist.html');
+				$(target).remove();
+			</script>
+		</div>
+	</div>
+</section>
+<section class="theme-taupe boxed">
+	<div class="row demo-key-content">
+		<script>$(".demo-key-content").load("/specs/03-Modules/key-content/variants/default.html");</script>
+	</div>
+</section>
+<section class="demo-footer">
+	<script>$(".demo-footer").load("/specs/04-Templates/footer/variants/default.html");</script>
+</section>

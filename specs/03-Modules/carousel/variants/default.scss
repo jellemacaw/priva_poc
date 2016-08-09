@@ -1,0 +1,267 @@
+//All JS and CSS are global scope!
+@import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+
+.carousel {
+	$width: 100%;
+	$max-width: 100%;
+
+	$height: 650px;
+	$xsHeight: $height / 3;
+	$mdHeight: $height / 1.5;
+
+	$SliderBallsSize: 9px;
+	$numBallsBottomOffset: 10px;
+	$numBallsContainerHeight: 15px;
+
+	$contentOffsetVert: ($SliderBallsSize * 6);
+	$contentOffsetHor: 4%;
+	$contentConainterBottomOffset: 30px;
+
+	$fontColor: $color--pacific-blue;
+
+	$baseZindex: 1;
+
+	overflow: hidden;
+	position: relative;
+
+	.video {
+		&::before {
+			content:"\f01d";
+			font-family: FontAwesome;
+			font-size: 10rem;
+			line-height: 1;
+			color: #fff;
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 10;
+			top:0;
+			left:0;
+			right:0;
+			bottom: 0;
+			opacity: 0.6;
+			transition: .3s;
+			text-shadow: 0 0 12px rgba(0,0,0,.1);
+		}
+
+		&:hover {
+			cursor: pointer;
+			&:before {
+				opacity: 1;
+			}
+		}
+	}
+
+
+	.carousel-nav {
+		position: absolute;
+		width: 30px;
+		height: 38px;
+		z-index: 10;
+		border: 0;
+		background: transparent;
+		padding: 0;
+		text-align: center;
+		line-height: 40px;
+		display: none;
+		color: $fontColor;
+		bottom: $numBallsBottomOffset;
+		cursor: pointer;
+		z-index:$baseZindex + 4;
+		transition: .2s ease;
+		opacity: 0;
+		font-size: 1.5em;
+
+		&.next {
+			right: $padding-base-horizontal;
+		}
+		&.prev {
+			left: $padding-base-horizontal;
+		}
+
+		&.slick-disabled,
+		&.slick-disabled:hover {
+			color: darken($color--light-taupe, 5%);
+			cursor: default;
+		}
+
+		@media screen and (min-width: $screen-xs) {
+			&.next {
+				right: $padding-large-horizontal;
+			}
+			&.prev {
+				left: $padding-large-horizontal;
+			}
+		}
+
+		@media screen and (min-width: $max-site-width) {
+			&.next {
+				right: calc( 50% - #{$max-site-width/2 - $padding-large-horizontal} );
+			}
+			&.prev {
+				left: calc( 50% - #{$max-site-width/2 - $padding-large-horizontal} );
+			}
+		}
+
+		@media screen and (min-width: $screen-md) {
+			opacity: 1;
+			display: inline-block;
+		}
+
+		&:hover {
+			color: $brand-primary;
+		}
+	}
+	// &:hover {
+	// 	.carousel-nav {
+	// 		opacity: 1;
+	// 	}
+	// }
+
+	.numSlides {
+		position: absolute;
+		padding-left: 0;
+		bottom: $numBallsBottomOffset + 10px;
+		width: 100%;
+		height: $numBallsContainerHeight;
+		z-index:$baseZindex + 3;
+		text-align: center;
+		margin-bottom: 0;
+
+		li {
+			display: inline-block;
+			height: $numBallsContainerHeight;
+			width:$SliderBallsSize + 6px;
+			text-align: center;
+			line-height: $SliderBallsSize;
+			font-size: $SliderBallsSize;
+			vertical-align: top;
+
+			&:before {
+				display: none;
+			}
+
+			button {
+				width:$SliderBallsSize;
+				height: $SliderBallsSize;
+				border-radius: 50%;
+				background-color: darken($color--light-taupe, 5%);
+				display: inline-block;
+				transition: .3s .06s;
+				text-indent: -99em;
+				font-size: 0;
+				overflow: hidden;
+				border:none;
+				padding: 0;
+				transform: translateY(-2px);
+
+				&:hover,
+				&:focus,
+				&:active {
+					background-color: $brand-primary;
+				}
+			}
+
+			&.slick-active {
+				button {
+
+					background-color: $color--pacific-blue;
+					width:$SliderBallsSize;
+					height: $SliderBallsSize;
+					animation: currentSlide .1s linear;
+
+					@keyframes currentSlide {
+				    from {
+							background-color: darken($color--light-taupe, 5%);
+							// width:0;
+							// height: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+// homepage carousel:
+.carousel--big {
+	.video::before {
+		font-size: 8rem;
+		bottom: 52%;
+
+		@media screen and (min-width: $screen-xs) {
+			bottom: 40%;
+		}
+
+		@media screen and (min-width: $screen-sm) {
+			font-size: 10rem;
+			bottom: 35%;
+		}
+
+		@media screen and (min-width: $screen-md) {
+			font-size: 14rem;
+			bottom: 30%;
+		}
+
+		@media screen and (min-width: $screen-lg) {
+			font-size: 16rem;
+			//bottom: 30%;
+		}
+	}
+
+	.carousel-nav {
+		color: #fff;
+
+		&:hover,
+		&:active {
+			color: $color--pacific-blue;
+		}
+	}
+
+	// to make loading look better:
+	max-height: 250px;
+	overflow-y: hidden;
+	opacity: .5;
+	transition: opacity .3s;
+	@media screen and (min-width: $screen-xs) { max-height: 300px; }
+	@media screen and (min-width: $screen-sm) { max-height: 376px; }
+	@media screen and (min-width: $screen-md) { max-height: 500px; }
+	@media screen and (min-width: $max-site-width) { max-height: $max-site-width/2; }
+
+	&.slick-initialized {
+		max-height: none;
+		opacity: 1;
+	}
+
+	.media-item {
+		@media screen and (min-width: $max-site-width) { height: $max-site-width/2; overflow-y: hidden;}
+	}
+}
+// Testimonial carousel:
+.carousel--testimonial {
+	.carousel-nav {
+		color: #fff;
+
+		&:hover,
+		&:active {
+			color: $color--pacific-blue;
+		}
+	}
+
+	// to make loading look better:
+	max-height: 250px;
+	overflow-y: hidden;
+	opacity: .5;
+	transition: opacity .3s;
+	@media screen and (min-width: $screen-xs) { max-height: 300px; }
+	@media screen and (min-width: $screen-sm) { max-height: 376px; }
+	@media screen and (min-width: $screen-md) { max-height: 500px; }
+	@media screen and (min-width: $max-site-width) { max-height: $max-site-width/2; }
+
+	&.slick-initialized {
+		max-height: none;
+		opacity: 1;
+	}
+}

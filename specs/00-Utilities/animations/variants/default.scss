@@ -1,0 +1,30 @@
+//All JS and CSS are global scope!
+@import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+@import '../../../00-Utilities/colors/color-names';
+
+$ani-flutter-timing: cubic-bezier(.45,.99,.45,1);
+
+@keyframes flutter {
+  25% {
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(75%);
+  }
+  51% {
+    transform: translateX(-75%);
+  }
+  60% {
+    opacity: 0;
+  }
+}
+
+
+@keyframes item-flutter {
+  50% {
+    background-position: 200% center;
+  }
+  51% {
+    background-position: -200% center;
+  }
+}

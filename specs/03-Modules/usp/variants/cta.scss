@@ -1,39 +1,28 @@
 @import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
-@import "../../../02-Molecules/content-block/variants/default";
+@import "default";
 
-footer [data-usp="cta"] {
-  position: relative;
-  display: inline-block;
-
-  &::before {
-    content: "";
-    display: block;
-    background: $color--taupe;
-    opacity: .1;
-    position: absolute;
-    top: 0;
-    left: $padding-base-horizontal;
-    right: $padding-base-horizontal;
-    height: 1px;
-    overflow: hidden;
-  }
+.usp-item.usp-item--light {
+  font-weight: $font-weight-base;
 }
 
-@media screen and (min-width: $screen-xs) {
-  footer [data-usp="cta"]::before {
-    left: $padding-large-horizontal;
-    right: $padding-large-horizontal;
+.usp-cta {
+  .btn {
+    margin-top: 1.5em;
+    padding-left: 0;
+    padding-right: 0;
+
+    @media screen and (min-width: $screen-xs) {
+      padding-left: $padding-base-horizontal;
+      padding-right: $padding-base-horizontal;
+      margin-left: 36px;
+      display: inline-block;
+      width: auto;
+    }
   }
-}
 
-@media screen and (min-width: $screen-md) {
-
-  footer [data-usp="cta"]::before {
-    top: $padding-base-vertical;
-    bottom: $padding-base-vertical;
-    left: 0;
-    right: auto;
-    width: 1px;
-    height: auto;
+  @media screen and (min-width: $screen-sm) {
+    .content-block__inner {
+      padding-top: 2.25em;
+    }
   }
 }

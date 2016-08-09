@@ -1,0 +1,48 @@
+//All JS and CSS are global scope!
+@import '../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom';
+
+.layer.video {
+	.layer__inner {
+
+    // this rules:
+    $videomargin: 50px;
+		// width: calc( 177.78vh - #{$videomargin*2} ); // <-- 16/9 x height
+    // height: calc( 56.25vw - #{$videomargin*2} ); // <-- 9/16 x width
+		width: calc( (100vh - #{$videomargin*2.34}) * 1.7778 ); // <-- 16/9
+    height: calc( (100vw - #{$videomargin*2}) * 0.5625 ); // <-- 9/16
+    max-width: calc( 100vw - #{$videomargin*2.34} );
+    max-height: calc( 100vh - #{$videomargin*2} );
+
+    top: $videomargin;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: 0 auto;
+    background: #000;
+		box-shadow: 0 0 85px -15px rgba(0,0,0,0.75);
+
+		.close-layer {
+			right: 0;
+			top: -40px;
+			color: $brand-primary;
+			background: #fff;
+
+			&:hover,
+			&:focus,
+			&:active {
+				color: #fff;
+				background: $brand-primary;
+			}
+		}
+
+    // responsive iframe
+		iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+			width: 100%;
+			height: 100%;
+			border:none;
+		}
+	}
+}

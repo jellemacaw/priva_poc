@@ -1,0 +1,152 @@
+//All JS and CSS are global scope!
+@import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+
+.carousel {
+	&.carousel--assets {
+		$btnColor: $color--pacific-blue;
+		padding-bottom: 50px;
+		border-bottom:1px solid $color--taupe;
+
+		// to make loading look better:
+		height: 300px;
+		overflow-y: hidden;
+		opacity: .5;
+		transition: opacity .3s;
+		&.slick-initialized {
+			height: auto;
+			opacity: 1;
+		}
+
+		.slide {
+			height: auto;
+			color: $color--taupe;
+
+			// video needs to be centered on image only so...
+			&.video {
+				&::before { display: none; }
+
+				.media-item__img::after {
+					content:"\f01d";
+					font-family: FontAwesome;
+					overflow: hidden;
+					position: absolute;
+					display: flex;
+					flex-direction: column;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					justify-content: center;
+					z-index: 5;
+					text-align: center;
+					font-size: 7rem;
+					border: 0;
+					opacity: .6;
+					color: #fff;
+					text-shadow: 0 0 12px rgba(0,0,0,.1);
+
+					@media screen and (min-width: $screen-xs) {
+						font-size: 8rem;
+					}
+
+					@media screen and (min-width: $screen-sm) {
+						font-size: 12rem;
+					}
+
+					@media screen and (min-width: $screen-md) {
+						font-size: 12rem;
+					}
+				}
+			}
+
+			&:hover,
+			&:focus,
+			&:active {
+				//text-decoration: none;
+				//color: $color--pacific-blue;
+
+				&.video {
+					text-decoration: none;
+					color: $color--pacific-blue;
+
+					.media-item__img::after {
+						opacity: 1;
+						transform: none;
+					}
+				}
+			}
+
+			&::before {
+				z-index: 5;
+				color: #fff;
+			}
+
+			&.slick-current {
+				p {
+					opacity: 1;
+
+					@keyframes slideUpTxt {
+						0% {
+							opacity: 0;
+						}
+					}
+					animation: slideUpTxt 1s;
+				}
+			}
+		}
+
+		.numSlides {
+			bottom: 19px;
+			margin-bottom: 0;
+		}
+
+		.carousel-nav {
+			color: $btnColor;
+			transition: .2s;
+			bottom: 9px;
+
+			&:hover,
+			&:active,
+			&:focus {
+				color: $color--petrol;
+			}
+
+			&.next {
+				right: -3px;
+			}
+			&.prev {
+				left: -3px;
+			}
+		}
+
+		@media screen and (min-width: $screen-sm) {
+			height: 410px;
+
+			&.slick-initialized {
+				height: auto;
+			}
+
+			.nav {
+				opacity: 1;
+			}
+		}
+
+		@media screen and (min-width: $screen-md){
+
+			height: 570px;
+
+			&.slick-initialized {
+				height: auto;
+			}
+		}
+
+		@media screen and (min-width: $screen-lg) {
+
+			height: 620px;
+
+			&.slick-initialized {
+				height: auto;
+			}
+		}
+	}
+}

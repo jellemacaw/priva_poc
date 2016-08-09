@@ -2,6 +2,66 @@
 
 Some basic list types for constructing components. Intended to be used with HTML unordered lists and list-items but can be used with any container and children.
 
+## Clear
+Works like a normal list but shows no bullets and has no padding.
+
+```code
+<ul class="list-clear">
+	<li>
+		[content]
+	</li>
+</ul>
+```
+### Clear Example
+```example
+<div class="list-spec-clear"></div>
+<script>
+	var target = ".list-spec-clear";
+	var block = "variants/clear.html";
+	$(target).load(block);
+</script>
+```
+
+## Spacious
+Like Clear but with some opinions about whitespace between and after the list. Used in Address and Contact components.
+
+```code
+<ul class="list-spacious">
+	<li>
+		[content]
+	</li>
+</ul>
+```
+### Spacious Example
+```example
+<div class="list-spec-spacious"></div>
+<script>
+	var target = ".list-spec-spacious";
+	var block = "variants/spacious.html";
+	$(target).load(block);
+</script>
+```
+
+## Inline
+Displays items horizontally as text elements. Small adaptation of Bootstrap default to compensate for project styling of a normal list and remove any spacing between list-items.
+
+```code
+<ul class="list-inline">
+	<li>
+		[content]
+	</li>
+</ul>
+```
+### Inline Example
+```example
+<div class="list-spec-inline"></div>
+<script>
+	var target = ".list-spec-inline";
+	var block = "variants/inline.html";
+	$(target).load(block);
+</script>
+```
+
 ## Vertical
 A clean, vertical list
 
@@ -12,7 +72,7 @@ A clean, vertical list
 	</li>
 </ul>
 ```
-### Example
+### Vertical Example
 ```example
 <div class="list-spec"></div>
 <script>
@@ -32,7 +92,7 @@ A clean, horizontal list which items will wrap but content will not. Uses elemen
 	</li>
 </ul>
 ```
-### Example
+### Horizontal Example
 ```example
 <div class="list-spec-hor"></div>
 <script>
@@ -52,7 +112,7 @@ Adding the class .list--txtcenter to either list type will center text when disp
 	</li>
 </ul>
 ```
-### Example
+### Text center Example
 ```example
 <div class="list-spec-hor-txt"></div>
 <script>

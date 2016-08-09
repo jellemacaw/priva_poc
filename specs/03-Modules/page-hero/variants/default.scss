@@ -1,0 +1,131 @@
+@import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+@import "../../body-content/variants/default";
+
+.hero-title {
+  overflow: hidden;
+
+  &:last-child {
+
+    .hero-title__inner {
+      //margin-bottom: $padding-base-vertical;
+      margin-bottom: $padding-base;
+
+      // @media screen and (min-width: $screen-xs) {
+      //   margin-bottom: $padding-large-vertical;
+      // }
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: (0 - $padding-base-vertical);
+
+    @media screen and (min-width: $screen-xs) {
+      margin-bottom: (0 - $padding-large-vertical);
+    }
+  }
+}
+
+.hero-title__inner,
+.hero .body-content {
+  max-width: $max-site-width;
+  margin: auto;
+  position: relative;
+}
+
+.hero-title__inner {
+  padding: $padding-base-vertical $padding-base-horizontal 0;
+  box-sizing: border-box;
+  display: table;
+  width: 100%;
+  z-index: 3;
+  /* Without this height fix, the table doesn't expand correctly in firefox */
+  height: 100px;
+
+  h1, h1:last-child {
+    max-width: (40em/1.625); // equivalent aan 40em body-text gedeeld door grootte h1
+    margin-bottom: 1em;
+  }
+
+  @media screen and (min-width: $screen-xs) {
+    padding: $padding-large-vertical $padding-large-horizontal 0;
+  }
+
+  @media screen and (min-width: $screen-md) {
+    padding-top: $padding-large-vertical + $padding-base;
+  }
+}
+
+.hero-title--img, .hero-title--alt-img {
+  width: 100%;
+
+  &, .hero-title__inner {
+    position: relative;
+    min-height: 144px;
+
+    @media screen and (min-width: $screen-xs) {
+      min-height: 164px;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  h1 {
+    z-index: 3;
+    color: #fff;
+    display: table-cell;
+    vertical-align: bottom;
+
+    &::after {
+      /* fix to create margin on table-cell */
+      height: 1em;
+      content: "";
+      display: block;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media screen and (max-width: $screen-sm) {
+      margin-right: $padding-large-horizontal;
+    }
+
+    @media screen and (max-width: $screen-xs) {
+      margin-right: $padding-base-horizontal;
+    }
+  }
+
+  img {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%,-50%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 25%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: transparent $gradient--hero 0 0 no-repeat;
+    background-size: cover;
+    z-index: 2;
+  }
+}
+
+.hero-title--alt-img {
+  h1 {
+    color: $text-color;
+  }
+
+  &::after {
+    background-image: $gradient--hero--inv;
+  }
+}

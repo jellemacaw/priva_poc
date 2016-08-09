@@ -2,6 +2,9 @@
 // Buttons
 // --------------------------------------------------
 
+// mixin needed
+@import "../../../00-Utilities/mixins/variants/mixins";
+
 
 // Base styles
 // --------------------------------------------------
@@ -25,7 +28,7 @@
   @include button-size(
     .75em,
     $padding-base-horizontal,
-    $font-size-base,
+    inherit,
     1,
     $btn-border-radius-base
   );
@@ -78,6 +81,7 @@ a.btn {
 .btn-primary,
 .theme-white .btn-primary,
 .theme-light-taupe .btn-primary,
+.theme-gray .btn-primary,
 .theme-light-blue .btn-primary {
   @include button-variant(
     $btn-primary-color,
@@ -91,6 +95,7 @@ a.btn {
 .btn-primary2,
 .theme-white .btn-primary2,
 .theme-light-taupe .btn-primary2,
+.theme-gray .btn-primary2,
 .theme-petrol .btn-primary,
 .theme-petrol .btn-primary2 {
   @include button-variant(
@@ -104,6 +109,7 @@ a.btn {
 }
 .btn-primary3,
 .theme-white .btn-primary3,
+.theme-gray .btn-primary3,
 .theme-light-taupe .btn-primary3 {
   @include button-variant(
     $btn-primary-3-color,
@@ -116,6 +122,7 @@ a.btn {
 }
 .btn-primary4,
 .theme-white .btn-primary4,
+.theme-gray .btn-primary4,
 .theme-light-taupe .btn-primary4,
 .theme-taupe .btn-primary {
   @include button-variant(
@@ -129,6 +136,7 @@ a.btn {
 }
 .btn-cta,
 .theme-white .btn-cta,
+.theme-gray .btn-cta,
 .theme-light-taupe .btn-cta {
   @include button-variant(
     $btn-cta-color,
@@ -142,6 +150,7 @@ a.btn {
 .btn-cta-alt,
 .theme-white .btn-cta-alt,
 .theme-light-taupe .btn-cta-alt,
+.theme-gray .btn-cta-alt,
 .theme-petrol .btn-cta,
 .theme-petrol .btn-cta-alt,
 .theme-light-blue .btn-cta,
@@ -222,6 +231,13 @@ a.btn {
   color: $link-color;
   font-weight: normal;
   border-radius: 0;
+  text-transform: none;
+  font-weight: 400;
+
+  @include icon-arrowhead(static) {
+    float: right;
+    margin-left: .75em;
+  }
 
   &,
   &:active,
@@ -239,16 +255,40 @@ a.btn {
   }
   &:hover,
   &:focus {
-    color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
+    color: $brand-primary;
+    text-decoration: none;
     background-color: transparent;
   }
   &[disabled],
   fieldset[disabled] & {
+    &,
     &:hover,
     &:focus {
       color: $btn-link-disabled-color;
       text-decoration: none;
+    }
+  }
+
+  // theming
+  .theme-white & {
+    color: $link-color;
+    &:hover,
+    &:focus {
+      color: $brand-primary;
+    }
+  }
+  .theme-taupe & {
+    color: $link-color;
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+  }
+  .theme-light-blue &,
+  .theme-petrol & {
+    &:hover,
+    &:focus {
+      color: #fff;
     }
   }
 }

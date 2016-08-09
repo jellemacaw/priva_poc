@@ -3,25 +3,24 @@
 A list of unique selling points.
 
 
-## Basic usage
-TODO: usp-item, usp-item--light
 
-### Default
+## Default
 ```example
-<div class="usp-spec"></div>
+<div class="example-usp-spec"></div>
 <script>
-	var target = ".usp-spec";
+	var target = ".example-usp-spec";
 	var block = "variants/default.html";
 	$(target).load(block);
 </script>
 ```
 
-### CTA
-Variant for use in footer
+## CTA
+Variant for use in footer with a CTA button
+
 ```example
-<div class="usp-spec-cta"></div>
+<div class="example-usp-spec-cta"></div>
 <script>
-	var target = ".usp-spec-cta";
+	var target = ".example-usp-spec-cta";
 	var block = "variants/cta.html";
 	$(target).load(block);
 </script>

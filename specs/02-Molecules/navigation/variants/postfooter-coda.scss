@@ -2,9 +2,29 @@
 @import '../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom';
 
 .postfooter-coda {
-  font-size: 13px;
+  font-size: .875em;
   margin-top: 10px;
   margin-bottom: 20px;
+
+  @media screen and (min-width: $screen-xs) {
+
+    &.list-hor > * {
+      margin-left: .75em;
+      margin-right: .75em;
+
+      &::before {
+        content: "\2022";
+        color: rgba(255,255,255,.35);
+        position: absolute;
+        display: block;
+        transform: translateX(-.25em);
+      }
+
+      &:first-child::before {
+        display: none;
+      }
+    }
+  }
 
   a {
     display: inline-block;
@@ -29,6 +49,6 @@
 @media screen and (min-width: $screen-md) {
   .postfooter-coda {
     margin-top: 10px;
-    font-size: 22px;
+    //font-size: 22px;
   }
 }

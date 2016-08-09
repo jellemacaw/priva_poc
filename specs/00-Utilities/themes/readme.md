@@ -1,7 +1,8 @@
 ﻿# Theme Spec
 
-Sections and select components can be given one of the following themes:<br>
-<small>(content is scale back and only used for referencing theme coloring)</small>
+Sections and select components can be given one of the following themes:
+
+Note: theme styling for buttons is handled in the custom bootstrap css since it uses a mixin (specs/00-Utilities/bootstrap/bootstrap-custom/_buttons-custom.scss)
 
 ## White
 Default theme or no theme applied.
@@ -34,6 +35,24 @@ Uses the classname:
 </div>
 <script>
 	var target = "#example-2";
+	var block = "variants/example.html";
+	$(target).load(block);
+</script>
+```
+
+## Gray
+
+Uses the classname:
+```
+.theme-gray
+```
+
+```example
+<div class="sourcejs-themes-minified">
+  <section id="example-2a" class="theme-gray"></section>
+</div>
+<script>
+	var target = "#example-2a";
 	var block = "variants/example.html";
 	$(target).load(block);
 </script>

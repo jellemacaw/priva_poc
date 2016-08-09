@@ -33,10 +33,42 @@ Also removes max-width limitation.
 </div>
 ```
 ```example
-<div class="content-block-centered-spec theme-light-taupe"></div>
+<div class="example-content-block-centered-spec theme-light-taupe"></div>
 <script>
-	var target = ".content-block-centered-spec.theme-light-taupe";
+	var target = ".example-content-block-centered-spec.theme-light-taupe";
 	var block = "variants/centered.html";
+	$(target).load(block);
+</script>
+```
+### Variant with tighter vertical spacing
+```code
+<div class="content-block content-block--slim">
+	<div class="content-block__inner">
+		[content]
+	</div>
+</div>
+```
+```example
+<div class="example-content-block-slim-spec theme-light-taupe"></div>
+<script>
+	var target = ".example-content-block-slim-spec";
+	var block = "variants/slim.html";
+	$(target).load(block);
+</script>
+```
+### Variant with tighter vertical spacing on top
+```code
+<div class="content-block content-block--slimtop">
+	<div class="content-block__inner">
+		[content]
+	</div>
+</div>
+```
+```example
+<div class="example-content-block-slimtop-spec theme-light-taupe"></div>
+<script>
+	var target = ".example-content-block-slimtop-spec";
+	var block = "variants/slimtop.html";
 	$(target).load(block);
 </script>
 ```

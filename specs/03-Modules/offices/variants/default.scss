@@ -1,0 +1,23 @@
+//All JS and CSS are global scope!
+@import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+
+.office-map {
+  min-height: 360px;
+  background: $color--light-taupe;
+  margin-bottom: $padding-large-vertical;
+
+  @media screen and (max-width: $screen-sm) {
+    display: none;
+  }
+}
+
+.office-list {
+  > li {
+    margin-bottom: $padding-base;
+    max-width: 40em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

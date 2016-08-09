@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= title %></title>
+
+    <script src="/source/assets/js/require.bundle.js" data-source="core"></script>
+
+    <%- headCssLinks %>
+    <%- headCssStyles %>
+
+    <% if(!nojs) { %>
+        <%- headScripts %>
+    <% } %>
+</head>
+<body class="source_clarify __clear">
+    <div class="source_clarify_content">
+        <% for(var i = 0; i < sections.length; i++) { %>
+            <% for(var j = 0; j < sections[i].html.length; j++) { %>
+                <%- sections[i].html[j] %>
+            <% } %>
+        <% } %>
+    </div>
+
+    <%- bodyCssLinks %>
+    <%- bodyCssStyles %>
+
+    <% if(!nojs) { %>
+        <%- bodyScripts %>
+    <% } %>
+</body>
+</html>

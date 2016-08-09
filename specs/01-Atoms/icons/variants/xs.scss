@@ -1,0 +1,59 @@
+//All JS and CSS are global scope!
+@import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+@import '../../../00-Utilities/animations/variants/default';
+
+.icon-xs {
+  $icon-xs-size: (30px);
+  $txt-padding: (1em * $line-height-base)/2;
+
+  position: relative;
+  display: inline-block;
+  //line-height: $icon-xs-size;
+  padding-left: calc( #{$icon-xs-size} + .5em );
+  padding-top: calc(#{$icon-xs-size}/2 - #{$txt-padding});
+  padding-bottom: calc(#{$icon-xs-size}/2 - #{$txt-padding});
+
+  img {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    z-index: 1;
+    display: inline-block;
+    width: $icon-xs-size;
+    height: $icon-xs-size;
+    transition: .3s;
+    //margin-right: .25em;
+    margin-top: -1px;
+    transform-origin: center center;
+    will-change: transform;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: $icon-xs-size;
+    height: $icon-xs-size;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transform-origin: center center;
+    transition: .3s;
+    background: $brand-primary;
+  }
+
+  &:hover, &:focus, &:active {
+    text-decoration: none;
+
+    img {
+      transform: scale(1.08);
+      //animation: flutter .3s .12s $ani-flutter-timing;
+    }
+
+    &::before {
+      background: $color--pacific-blue;
+      //transform: scale(0.95);
+      //transition-delay: .2s;
+    }
+  }
+}

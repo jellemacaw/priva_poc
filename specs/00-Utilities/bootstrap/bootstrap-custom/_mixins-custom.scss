@@ -24,7 +24,8 @@
 @import "../assets/stylesheets/bootstrap/mixins/pagination";
 @import "../assets/stylesheets/bootstrap/mixins/list-group";
 @import "../assets/stylesheets/bootstrap/mixins/nav-divider";
-@import "../assets/stylesheets/bootstrap/mixins/forms";
+//@import "../assets/stylesheets/bootstrap/mixins/forms";
+  @import "mixins/forms-custom";
 @import "../assets/stylesheets/bootstrap/mixins/progress-bar";
 @import "../assets/stylesheets/bootstrap/mixins/table-row";
 
@@ -37,5 +38,7 @@
 @import "../assets/stylesheets/bootstrap/mixins/clearfix";
 @import "../assets/stylesheets/bootstrap/mixins/center-block";
 @import "../assets/stylesheets/bootstrap/mixins/nav-vertical-align";
-@import "../assets/stylesheets/bootstrap/mixins/grid-framework";
-@import "../assets/stylesheets/bootstrap/mixins/grid";
+//@import "../assets/stylesheets/bootstrap/mixins/grid-framework";
+  @import "mixins/grid-framework-custom";
+//@import "../assets/stylesheets/bootstrap/mixins/grid";
+  @import "mixins/grid-custom";

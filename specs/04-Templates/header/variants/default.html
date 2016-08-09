@@ -1,28 +1,46 @@
 <header class="header col-md-12">
 	<div class="header__inner">
-		<div class="row">
-			<div class="logo col-md-2"><img src="images/priva-global-logo.png" alt="Priva Duurzame oplossingen voor procesautomatisering en klimaatbeheersing"/></div>
-			<div class="col-md-10">
-				<div class="row">
-					<div class="col-md-4 pull-right quicklinks"></div>
-					<div class="col-md-2 pull-right country-selector"></div>
+		<div class="row first hidden-sm hidden-xs desktop">
+			<div class="logo col-md-2">
+				<a href="#">
+				<img src="/specs/04-Templates/header/images/priva-global-logo.png" alt="Priva Duurzame oplossingen voor procesautomatisering en klimaatbeheersing"/>
+				</a>
+			</div>
+			<div class="col-md-10 navs-wrapper">
+				<div class="quick-links-wrapper">
+					<div class="col-xs-12 pull-right">
+						<div class="quicklinks">
+							<script>$(".quicklinks").load("/specs/02-Molecules/navigation/variants/quicklinks-header.html");</script>
+						</div>
+						<div class="select-overlay-item country">
+							<script>$(".country").load("/specs/02-Molecules/navigation/variants/select-overlay.html");</script>
+						</div>
+						<!-- <div class="select-overlay-item language">
+							<script>$(".language").load("/specs/02-Molecules/navigation/variants/select-overlay.html");</script>
+						</div> -->
+					</div>
 				</div>
-				<div class="row">
-					<div class="topnav col-md-8">
-						<script>
-							var scripts = document.getElementsByTagName( 'script' );
-							var me = scripts[ scripts.length - 1 ];
-							console.log(me.parentNode);
-						</script></div>
-					<div class="search col-md-2">Search</div>
+				<div class="row nav-wrapper">
+					<div class="topnav col-md-10">
+						<script>$(".topnav").load("/specs/02-Molecules/navigation/variants/default.html");</script>
+					</div>
+					<div class="search col-md-2 pull-right">
+						<script>$(".search").load("/specs/01-Atoms/form-elements/variants/search.html");</script>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row hidden-md hidden-lg handheld">
+			<div class="logo col-sm-2 col-xs-2">
+				<a href="#">
+					<img src="/specs/04-Templates/header/images/priva-global-logo.png" alt="Priva Duurzame oplossingen voor procesautomatisering en klimaatbeheersing"/>
+				</a>
+			</div>
+			<div class="col-sm-10 col-xs-10 navs-wrapper">
+				<div class="topnav-handheld col-md-8">
+					<script>$(".topnav-handheld").load("/specs/02-Molecules/navigation/variants/handheld.html");</script>
 				</div>
 			</div>
 		</div>
 	</div>
 </header>
-
-<script>
-	$(".topnav").load("/specs/02-Molecules/navigation/variants/default.html");
-	$(".quicklinks").load("/specs/02-Molecules/navigation/variants/quicklinks.html");
-	$(".country-selector").load("/specs/02-Molecules/navigation/variants/select-overlay.html");
-</script>

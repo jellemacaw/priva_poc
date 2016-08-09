@@ -1,0 +1,10 @@
+.button-list {
+		padding:0;
+		margin: 0;
+		background: #ccc;
+		li {
+			&:before {
+				display: none;
+			}
+		}
+}

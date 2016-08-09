@@ -1,0 +1,112 @@
+@import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+
+.address-block,
+.office {
+  overflow: hidden;
+  padding-bottom: $padding-base;
+  margin-bottom: 0;
+
+  .pull-left {
+    min-width: 294px;
+    padding-bottom: $padding-base;
+
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.office {
+  position: relative;
+  padding: $padding-base;
+  border: 1px solid $gray-light;
+  border-radius: 2px;
+
+  @media screen and (max-width: $screen-sm) {
+    padding-right: $padding-base*2;
+  }
+
+  .item-title--large {
+    margin-top: 0;
+
+    @media screen and (max-width: $screen-xs) {
+      font-size: 1em;
+    }
+  }
+
+  .collapsed ~ .office__country {
+    @media screen and (max-width: $screen-sm) {
+      margin-bottom: 0;
+    }
+  }
+
+  h5 {
+    color: inherit;
+  }
+
+  .pull-left {
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.office__country {
+  margin-top: -1.125em;
+  margin-bottom: 2.25em;
+}
+
+.office__toggle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding-right: 16px;
+  padding-top: 16px;
+  border: 0;
+  text-align: right;
+  background: transparent;
+	font: normal normal normal 36px/1 FontAwesome;
+  color: $color--pacific-blue;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 44px;
+    padding-right: 17px;
+    padding-top: 17px;
+  }
+
+  @media screen and (min-width: $screen-sm) {
+    display: none;
+  }
+
+  &::before {
+  	content: "\f105";
+    float: right;
+    transform-origin: center;
+    transform: rotate(-90deg);
+    transition: .3s ease;
+  }
+
+  &.collapsed::before {
+    transform: rotate(90deg);
+  }
+}
+
+.office__info {
+
+  @media screen and (min-width: $screen-sm) {
+    &.collapse {
+      display: block !important;
+      height: auto !important;
+    }
+  }
+}

@@ -1,0 +1,155 @@
+//All JS and CSS are global scope!
+@import '../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom';
+
+
+.navigation-handheld {
+
+		.menu-icon-wrapper {
+			float: right;
+			color: white;
+			text-transform: uppercase;
+			font-size: .86em;
+			font-weight: 600;
+			letter-spacing: .1em;
+			line-height: 14px;
+			transition: .2s 0s color;
+
+			.fa {
+				margin: 0 .2em;
+				transition: .2s 0s color;
+			}
+
+			&:active,
+			&:hover {
+				color: $color--pacific-blue;
+				transition: .2s 0s color;
+				cursor: pointer;
+			}
+		}
+
+
+		.layer {
+			padding-top:0 !important;
+		}
+
+		.layer__inner.layer--navigation {
+			max-width: 320px;
+			width: 100%;
+			float: right;
+  		margin: 0;
+			padding-bottom: 0;
+
+			.row {
+				&:first-child {
+					margin: $padding-base 0;
+				}
+
+				&.search {
+
+					.search-box {
+						margin-bottom: 1em;
+
+						button {
+							top: 17%;
+						}
+					}
+				}
+				&.taupe {
+					background: $color--taupe;
+
+					.row {
+						margin-bottom: 0;
+
+						&:first-child {
+							margin-top: 0;
+						}
+					}
+
+					a {
+						&:hover {
+							text-decoration: none;
+							transition:100ms all ease;
+							color:white;
+
+							i {
+								transform: rotate(-12deg);
+							}
+						}
+					}
+
+					&.contact-info { //TODO Set this to first of type... Doesnt seem to work
+						$thisPadding: $padding-base;
+
+						border-top: 2px dotted lighten($color--taupe, 25%);
+						padding-bottom: 36px;
+						padding-top: $thisPadding;
+
+						> .row {
+							padding:0 0 16px 0;
+						}
+
+						a {
+							.icon-img { will-change: auto; }
+							&:hover, &:focus, &:active {
+								.icon-img {
+									-webkit-filter: grayscale(100%) brightness(500%);
+									filter: grayscale(100%) brightness(500%);
+								}
+							}
+						}
+					}
+
+					&.country-selector {
+						padding: 0;
+					}
+				}
+
+				&.menu {
+					padding-bottom: 10px;
+					margin-bottom: 0;
+
+					.col-header-sub,
+					.item {
+						a {
+							font-weight: 400;
+							font-size: $font-size-base;
+							text-transform: none;
+							color: #fff;
+
+							&:hover,
+							&:focus,
+							&:active {
+								color: $color--pacific-blue;
+								text-decoration: none;
+							}
+						}
+					}
+					// that will stop them from showing up:
+					// .col-header-sub {
+					// 	display: none; // maybe not...
+					// }
+  			}
+			}
+		}
+
+		.select-overlay {
+			padding-bottom: 2px !important;
+		}
+}
+
+// fixed position menu on mobile
+.scroll {
+	.navigation {
+		&.navigation-handheld {
+			.menu-icon-wrapper {
+				position: fixed;
+				right: 10px;
+		    top: 10px;
+		    z-index: 10;
+				background: $color--petrol;
+		    margin: 0;
+		    padding: 15px 15px;
+			}
+		}
+	}
+}

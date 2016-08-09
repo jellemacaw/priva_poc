@@ -30,7 +30,7 @@
   align-items: center;
   width: 90px;
   height: 90px;
-  border: 1px solid rgba(0,0,0,.05);
+  border: 1px solid rgba(0,0,0,.08);
   border-radius: 50%;
   margin: 1em 1.85em 4em;
 
@@ -76,6 +76,7 @@
 .sourcejs-color-armadillo--overlay {  background: $color--armadillo--overlay; span::after { content: " #{$color--armadillo--overlay}"; } }
 .sourcejs-color-black--overlay {      background: $color--black--overlay; span::after { content: " #{$color--black--overlay}"; } }
 .sourcejs-color-gradient--hero {      background: $gradient--hero; span::after { content: " #{$gradient--hero}"; } }
+.sourcejs-color-gradient--hero--inv { background: $gradient--hero--inv; span::after { content: " #{$gradient--hero--inv}"; } }
 
 .sourcejs-color-lima1 {               background: $color--lima1; span::after { content: " #{$color--lima1}"; } }
 .sourcejs-color-genoa {               background: $color--genoa; span::after { content: " #{$color--genoa}"; } }

@@ -2,29 +2,78 @@
 		<script src="/specs/02-Molecules/navigation/variants/default.js"></script>
 </head>
 <body>
-	<div class="navigation navigation-main">
-	<div class="wrapper">
-		<div class="item" data-item-id="item-0001"><a href="#">Discover Priva</a></div>
-		<div class="item" data-item-id="item-0002"><a href="#">Sustainable solutions</a></div>
-		<div class="item" data-item-id="item-0003"><a href="#">Working at Priva</a></div>
-	</div>
-	<div class="subs-wrapper cols-3">
-		<div class="col">
-			<h6 class="col-header">Optional column title</h6>
-			<div class="item"><a href="#">Sub item 3 cols</a></div>
-			<div class="item"><a href="#">Sub item 3 cols</a></div>
-			<div class="item" data-item-id="item-0003"><a href="#">Sub item 3 cols</a></div>
+	<nav class="navigation navigation-main">
+		<div class="wrapper">
+			<div class="item" data-item-id="item-0001"><a href="#">Discover Priva</a></div>
+			<div class="item" data-item-id="item-0002"><a href="#">Sustainable solutions</a></div>
+			<div class="item" data-item-id="item-0003"><a href="#">Working at Priva</a></div>
 		</div>
-		<div class="col">
-			<div class="item"><a href="#">Sub item 3 cols</a></div>
-			<div class="item"><a href="#">Sub item 3 cols</a></div>
-			<div class="item"><a href="#">Sub item 3 cols</a></div>
+		<div class="subs-wrapper" data-item-id="item-0001">
+			<div class="colwrap cols-3">
+				<div class="col">
+					<h5 class="col-header">This is the dropdown of the first menuitem</h5>
+					<h6 class="col-header-sub hidden-sm hidden-xs">This is a subheader not shown on mobile</h6>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item" data-item-id="item-0003"><a href="#">Sub item 3 cols</a></div>
+				</div>
+				<div class="col">
+					<h5 class="col-header">
+						<a href="#">header with a link</a>
+						</h5>
+					<h6 class="col-header-sub  hidden-sm hidden-xs">
+						<a href="#">This is a subheader not shown on mobile with a link</a>
+					</h6>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+				</div>
+				<div class="col">
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+				</div>
+			</div>
 		</div>
-		<div class="col">
-			<div class="item"><a href="#">Sub item 3 cols</a></div>
-			<div class="item"><a href="#">Sub item 3 cols</a></div>
-			<div class="item"><a href="#">Sub item 3 cols</a></div>
+		<div class="subs-wrapper cols-3" data-item-id="item-0002">
+			<div class="colwrap cols-3">
+				<div class="col">
+					<h6 class="col-header">This is the dropdown of the second menuitem</h6>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item" data-item-id="item-0003"><a href="#">Sub item 3 cols</a></div>
+				</div>
+				<div class="col">
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+				</div>
+				<div class="col">
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+				</div>
+			</div>
 		</div>
-	</div>
-</div>
+		<div class="subs-wrapper cols-3" data-item-id="item-0003">
+			<div class="colwrap cols-3">
+				<div class="col">
+					<h6 class="col-header">This is the dropdown of the third menuitem</h6>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item" data-item-id="item-0003"><a href="#">Sub item 3 cols</a></div>
+				</div>
+				<div class="col">
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+				</div>
+				<div class="col">
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+					<div class="item"><a href="#">Sub item 3 cols</a></div>
+				</div>
+			</div>
+		</div>
+	</nav>
 </body>

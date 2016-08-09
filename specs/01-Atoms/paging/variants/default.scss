@@ -1,0 +1,28 @@
+//All JS and CSS are global scope!
+
+// variables needed
+@import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+
+.paging {
+
+  a {
+    color: inherit;
+    transition: .2s;
+  }
+
+  li {
+    margin: 0 .75em;
+  }
+
+  [aria-label="Previous"],
+  [aria-label="Next"] {
+    &:hover {
+      color: $link-color;
+    }
+
+    .fa {
+      font-size: 24px;
+      transform: translateY(.1em);
+    }
+  }
+}
