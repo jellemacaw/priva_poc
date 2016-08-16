@@ -70,7 +70,7 @@
 	content: "\f105";
 	font: normal normal normal 36px/1 FontAwesome;
 	position: absolute;
-	right: 0;
+	right: -6px;
 	top: 50%;
 	transform: translateY(-50%);
 	transition: .2s;
@@ -117,10 +117,20 @@
 
 .macaw-gmap-outer > div:last-of-type::before {
 	content: "\00d7";
+    top: 1px;
+    left: 4px;
+    position: absolute;
+    font-size: 19px;
+    
 }
 
 .macaw-gmap-outer > div:last-of-type img {
 	 display: none;
+ }
+
+
+.macaw-gmap-outer .gm-style-iw {
+	 overflow: visible;
  }
 
 @keyframes sweep {

@@ -39,6 +39,7 @@
   background-color: $color--light-taupe;
   height: 1.35em; // line height in item-title
   box-sizing: content-box;
+  position: relative;
 
   @include icon-arrowhead() {
     top: 50%;
@@ -62,7 +63,7 @@
   }
 
   @media screen and (min-width: $screen-sm) {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -104,6 +105,10 @@
 
 .filter-results {
   padding: $padding-base $padding-base 0 $padding-base;
+
+  &.no-filters {
+    padding-left:$padding-large-horizontal;
+  }
 
   @media screen and (min-width: $screen-xs) {
     padding: $padding-base $padding-base 0 $padding-base;

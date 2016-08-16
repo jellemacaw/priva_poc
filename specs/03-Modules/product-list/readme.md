@@ -1,6 +1,7 @@
 ﻿# Product list Spec
 
 This component will display a list of proucts.
+Can also be used for a four-column presentation of blog posts.
 
 ## Default
 The front-end styling of the list items uses the [product variant](../../02-Molecules/media-item#product) of the Media item component. Special feature is the mobile appearance (2 columns) on desktop when placed in a .col-md-3 or .col-md-4 wide pagelayout column.

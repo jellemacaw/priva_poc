@@ -26,7 +26,7 @@ function mainNav() {
     }, mouseOutTimeoutDuration);
   });
 
-  $('.subs-wrapper').each(function (index) {
+  $('.subs-wrapper').each(function () {
     $(this).remove().clone().appendTo('body');
   });
 

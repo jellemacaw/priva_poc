@@ -8,30 +8,6 @@ var layerHandler = function(event) {
   var layerId = '#' + dataId;
   var parentLayer = $(layerId).parents(".layer");
 
-  var itemHeight = $(dataLayerId).outerHeight() + 10;
-  var layerHasIframe = false; // $(layerId + " " + "iframe").length > 0;
-  var iframeHeight = $(layerId).find('iframe').prop("height");
-  var iframeWidth = $(layerId).find('iframe').prop("width");
-
-  // what?
-  if(layerHasIframe) {
-    const iframe = $(layerId).find('iframe');
-    const iframeSrc = iframe.prop('src');
-    const iframeSrcClone = iframeSrc + "__stop";
-
-    if ($(layerId).is(':visible')) {
-      iframe.prop('src', iframeSrcClone);
-      iframe.prop('src', iframeSrc);
-
-    } else {
-      $(layerId).remove().clone().appendTo('body');
-      $(layerId).find('.layer__inner').css({
-        "height": iframeHeight,
-        "width":iframeWidth
-      });
-    }
-  }
-
   // hide a popup
   if ($(layerId).is(':visible')) {
     $(layerId).hide().removeClass('is-shown').addClass('is-hidden');

@@ -36,6 +36,10 @@
       .item-title {
         margin-bottom: 0;
         font-size: $font-size-small;
+
+        + .category-name {
+          transform: none;
+        }
       }
     }
   }

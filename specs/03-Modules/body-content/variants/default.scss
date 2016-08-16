@@ -28,9 +28,18 @@
 
 // only images and videos will touch the sides on mobile:
 @media screen and (max-width: $screen-xs) {
-  .body-content__inner > *:not(figure) {
-    margin-left: $padding-base-horizontal;
-    margin-right: $padding-base-horizontal;
+  .body-content__inner {
+    > *:not(figure){
+      margin-left: $padding-base-horizontal;
+      margin-right: $padding-base-horizontal;
+    }
+
+    img,
+    figure {
+      margin-left:0;
+      margin-right:0;
+      max-width: 100%
+    }
   }
 }
 

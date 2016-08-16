@@ -2,29 +2,39 @@
   <figure class="media-item__img">
     <picture>
       <source
-        media="(max-width: 480px)"
-        srcset="/specs/02-Molecules/media-item/img/test-real-940x400.jpg 400w,
-        /specs/02-Molecules/media-item/img/test-real-940x400.jpg?w=800&h=600 2x">
+        media="(max-width: 400px)"
+        srcset="/specs/02-Molecules/media-item/img/photo-4-3.png?w=300&h=225,
+        /specs/02-Molecules/media-item/img/photo-4-3.png?w=600&h=450 2x">
       <source
-        media="(min-width: 480px) and (max-width: 768px)"
-        srcset="/specs/02-Molecules/media-item/img/test-real-940x400.jpg?w=800,
-        /specs/02-Molecules/media-item/img/test-real-940x400.jpg?w=800 2x">
+        media="(min-width: 400px) and (max-width: 630px)"
+        srcset="/specs/02-Molecules/media-item/img/photo-4-3.png?w=600&h=450,
+        /specs/02-Molecules/media-item/img/photo-4-3.png?w=1200&h=900 2x">
       <source
-        media="(min-width: 768px) and (max-width: 1100px)"
-        srcset="/specs/02-Molecules/media-item/img/test-real-940x400.jpg?w=1024,
-        /specs/02-Molecules/media-item/img/test-real-940x400.jpg?w=2048 2x">
+        media="(min-width: 630px) and (max-width: 790px)"
+        srcset="/specs/02-Molecules/media-item/img/photo-2-1.png?w=750&h=375,
+        /specs/02-Molecules/media-item/img/photo-2-1.png?w=1500&h=750 2x">
+      <source
+        media="(min-width: 790px) and (max-width: 1100px)"
+        srcset="/specs/02-Molecules/media-item/img/photo-2-1.png?w=1000&h=500,
+        /specs/02-Molecules/media-item/img/photo-2-1.png?w=2000&h=1000 2x">
       <source
         media="(min-width: 1100px)"
-        srcset="/specs/02-Molecules/media-item/img/test-real-940x400.jpgg?w=1250,
-        /specs/02-Molecules/media-item/img/test-real-940x400.jpg?w=2500 2x">
-      <img src="/specs/02-Molecules/media-item/img/test-real-940x400.jpg?w=1024" alt="alt text here">
+        srcset="/specs/02-Molecules/media-item/img/photo-2-1.png?w=1200&h=600,
+        /specs/02-Molecules/media-item/img/photo-2-1.png?w=2400&h=1200 2x">
+      <img src="/specs/02-Molecules/media-item/img/photo-2-1.jpg?w=1000&h=500" alt="alt text here">
     </picture>
   </figure>
   <div class="media-item__text">
     <div class="media-item__text__inner">
-      <h2 class="h1">Lorem Ipsum is simply dummy text of the printinn book...</h2>
+      <h2 class="h1">
+        <span>Lorem Ipsum is simply dummy text of the printinn book...</span>
+      </h2>
 			<div class="user-info">
-				<img class="avatar rows" src="http://placehold.it/40x40" />
+				<img
+          class="avatar rows"
+          src="/specs/03-Modules/contact/img/person.png"
+          srcset="/specs/03-Modules/contact/img/person.png?w=40&h=40, /specs/03-Modules/contact/img/person.png?w=80&h=80 2x"
+          alt="Bradley Whitford" />
 				<div class="title rows">Bradley Whitford</div>
 				<div class="subtitle rows">End user in horticulture</div>
 				<a href="#" class="btn txt-arrow right">Read more</a>

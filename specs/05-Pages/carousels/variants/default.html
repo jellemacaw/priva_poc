@@ -2,12 +2,38 @@
 	<script>$(".demo-header").load("/specs/04-Templates/header/variants/default.html");</script>
 </section>
 
-<section>
+<section class="boxed">
 	<div class="row">
 		<div class=" col-xs-12">
 			<div class="demo-carousel"></div>
-			<script>$(".demo-carousel").load("/specs/03-Modules/carousel/variants/default.html");</script>
+			<script>$(".demo-carousel").load("/specs/03-Modules/carousel/variants/teaserTestimonial.html");</script>
 		</div>
+	</div>
+</section>
+
+<section class="boxed">
+	<div class="row">
+		<div class=" col-md-6">
+			<div class="demo-carousel2"></div>
+			<script>
+				$(".demo-carousel2")
+					.load("/specs/03-Modules/carousel/variants/teaserTestimonial.html",function(){
+						$(".demo-carousel2 #slider_default_3").attr("id","toet");
+					});
+			</script>
+		</div>
+			<div class=" col-md-2">
+				toet
+			</div>
+				<div class=" col-md-4">
+					<div class="demo-carousel4"></div>
+					<script>
+						$(".demo-carousel4")
+							.load("/specs/03-Modules/carousel/variants/teaserTestimonial.html",function(){
+								$(".demo-carousel4 #slider_default_3").attr("id","peop");
+							});
+					</script>
+				</div>
 	</div>
 </section>
 <section class="theme-light-taupe boxed">

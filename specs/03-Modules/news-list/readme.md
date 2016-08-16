@@ -1,9 +1,11 @@
-﻿# News/stories list Spec
+﻿# News/stories/blog list Spec
 
-This component will display a list of news items.
+This component will display a list of news, story or blog items.
+
+Note: for a four-column version use the [product list spec](/specs/03-Modules/product-list/)
 
 ## Default
-For placement of news and stories.
+For placement of news, stories and blogs.
 The front-end styling of the list items uses the [article variant](../../02-Molecules/media-item#main) of the Media item component.
 
 ### Default example
@@ -29,8 +31,9 @@ The front-end styling of the list items uses the [article variant](../../02-Mole
 ```
 
 ## Home
-For placement of news and stories on the homepage.
-The front-end styling of the list items uses the [main variant](../../02-Molecules/media-item#main) of the Media item component.
+For placement of news, stories and blogs in a 1 column layout (like on the homepage).
+The front-end styling of the list items uses the [main variant](../../02-Molecules/media-item#main) of the Media item component.<br>
+Contrary to the previous version, items can have a publication date displayed under the title.
 
 ### Home example
 ```example

@@ -1,5 +1,6 @@
 //All JS and CSS are global scope!
 @import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+@import "../../../00-Utilities/mixins/variants/functions";
 
 .media-item.media-item--carouselTestimonial {
   $max-car-width:   $max-site-width;
@@ -8,7 +9,7 @@
 	$mainTxtColor: white;
 
   flex-direction: column;
-  max-height: $max-site-width * .5;
+  //max-height: $max-site-width * .5;
 
   &::after {
     display: none;
@@ -29,10 +30,40 @@
       max-height: 100%;
       width: auto;
 
-      @media screen and (min-width: $screen-lg) {
-        max-width: 100%;
-        max-height: none;
+      @media screen and (min-width: 790px) {
         height: auto;
+        width: auto;
+        max-height: 150%;
+        max-width: 150%;
+        min-height: 100%;
+        min-width: 100%;
+      }
+
+      :not(.boxed) .col-sm-12 &,
+      :not(.boxed) .col-md-12 &,
+      :not(.boxed) .col-xs-12 & {
+        @media screen and (min-width: $screen-lg) {
+          max-width: 100%;
+          max-height: none;
+        }
+      }
+
+      .col-sm-3 &,
+      .col-sm-4 &,
+      .col-sm-6 & {
+        @media screen and (min-width: $screen-sm) {
+          max-width: none;
+          max-height: 100%;
+        }
+      }
+
+      .col-md-3 &,
+      .col-md-4 &,
+      .col-md-6 & {
+        @media screen and (min-width: $screen-md) {
+          max-width: none;
+          max-height: 100%;
+        }
       }
     }
   }
@@ -44,33 +75,8 @@
     color: $mainTxtColor;
     text-align: center;
     padding: ($padding-base * 2) $padding-base-horizontal ($padding-base * 1.85);
-		background: rgba(81,76,65,0.55);
-
-
-    .media-item__text__inner {
-      margin: 0 auto;
-      max-width: 90%;
-      min-height: 4.63em;
-
-      @media screen and (min-width: $screen-xs) {
-        min-height: 5.1em;
-      }
-
-      @media screen and (min-width: $screen-sm) {
-        max-width: 40em;
-        min-height: 5.6em;
-      }
-
-      @media screen and (min-width: $screen-md) {
-        max-width: 34em;
-        min-height: 5.9em;
-      }
-
-      @media screen and (min-width: $screen-lg) {
-        max-width: 40em;
-        min-height: 7.1em;
-      }
-    }
+		background: transparentize($color--taupe,.45);
+    overflow: visible;
 
     .h1 {
       color: inherit;
@@ -82,41 +88,44 @@
 			font-weight: 300;
 			letter-spacing: 0.009em;
 			line-height: 1.3em;
-			overflow: hidden;
-			height: 212px;
+			//overflow: hidden;
+			min-height: 212px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-			&:before,
-			&:after {
-				content:'"';
-				position: relative;
+			& span::before {
+				content:'\201C';
+				margin-right: .1em;
+			}
+			& span::after {
+				content:'\201D';
+				margin-left: .1em;
+			}
+			& span::before,
+			& span::after {
 				color: white;
-				font-style:italic;
-			}
-			&:before {
-				margin:0 0.1em 0 0;
-			}
-			&:after {
-				margin-left: -0.15em;
+        font-weight: normal;
 			}
 
       @media screen and (min-width: $screen-xs) {
         font-size: 1.25em;
-				height: 180px;
+				min-height: 180px;
       }
 
       @media screen and (min-width: $screen-sm) {
         font-size: 1.25em;
-				height: 128px;
+				min-height: 128px;
       }
 
-      @media screen and (min-width: $screen-md) {
+      @media screen and (min-width: em(920px)) {
         font-size: 1.625em;
-				height: 227px;
+				min-height: 227px;
       }
 
       @media screen and (min-width: $screen-lg) {
         font-size: 1.8em;
-				height: 220px;
+				min-height: 220px;
       }
     }
 
@@ -128,15 +137,21 @@
 			font-weight: 300;
 			height: 142px;
 
+      .carousel--testimonial & {
+        margin-bottom: 0;
+      }
+
 			.avatar {
 				border-radius: 50%;
+        width: 40px;
+        height: 40px;
 				display: inline-block;
 			}
 
 			.title,
 			.subtitle,
 			.txt-arrow {
-				font-size:0.8em;
+				font-size: em(13px);
 			}
 
 			.title {
@@ -148,9 +163,9 @@
 		}
 
     .txt-arrow {
-      font-size: .875em;
       margin-top: 1.5em;
 			font-family: $font-family-sans-serif;
+      color: #fff;
 
       &::after {
         top: .8em;
@@ -164,6 +179,30 @@
     }
   }
 
+  .media-item__text__inner {
+    margin: 0 auto;
+    max-width: 90%;
+    min-height: 4.63em;
+
+    @media screen and (min-width: $screen-xs) {
+      //min-height: 5.1em;
+    }
+
+    @media screen and (min-width: $screen-sm) {
+      max-width: 40em;
+      //min-height: 5.6em;
+    }
+
+    @media screen and (min-width: $screen-md) {
+      max-width: 34em;
+      //min-height: 5.9em;
+    }
+
+    @media screen and (min-width: $screen-lg) {
+      max-width: 40em;
+      //min-height: 7.1em;
+    }
+  }
 }
 
 //Styling on bootstrap classes to simulate container queries

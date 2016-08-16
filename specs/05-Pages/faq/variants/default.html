@@ -1,0 +1,58 @@
+<section class="demo-header">
+	<script>$(".demo-header").load("/specs/04-Templates/header/variants/default.html");</script>
+</section>
+<section class="demo-carousel-small">
+	<script>$(".demo-carousel-small").load("/specs/03-Modules/carousel/variants/small.html");</script>
+</section>
+
+<section class="boxed">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="demo--faq-div-extended"></div>
+		</div>
+	</div>
+</section>
+
+<section class="boxed">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="demo--faq-div-extended"></div>
+		</div>
+		<div class="col-md-6">
+			<div class="demo--faq-div"></div>
+		</div>
+	</div>
+</section>
+
+<section class="boxed">
+	<div class="row">
+		<div class="col-md-4">
+			<div class="demo--faq-div"></div>
+		</div>
+		<div class="col-md-4">
+			<div class="demo--faq-div-extended"></div>
+		</div>
+		<div class="col-md-4">
+			<div class="demo--faq-div"></div>
+		</div>
+	</div>
+</section>
+
+<script>
+	var target = ".demo--faq-div";
+	$(target).parent().load('/specs/03-Modules/accordion/variants/default.html');
+	$(target).remove();
+
+	var targetExtended = ".demo--faq-div-extended";
+	$(targetExtended).parent().load('/specs/03-Modules/accordion/variants/extended.html');
+	$(targetExtended).remove();
+</script>
+
+<section class="theme-taupe boxed">
+	<div class="row demo-key-content">
+		<script>$(".demo-key-content").load("/specs/03-Modules/key-content/variants/default.html");</script>
+	</div>
+</section>
+<section class="demo-footer">
+	<script>$(".demo-footer").load("/specs/04-Templates/footer/variants/default.html");</script>
+</section>

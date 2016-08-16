@@ -1,0 +1,21 @@
+<ul id="accordion_id" class="list-vert mw_accordion">
+  <li class="panel">
+     <button data-toggle="collapse" data-target="#item1" class="mw_accordion__toggle collapsed"></button>
+     <h3 class="item-title--large">Item title 1</h3>
+      <p class="item-label">Abstract</p>
+      <div id="item1" class="collapse content"></div>
+  </li>
+  <li class="panel">
+     <button data-toggle="collapse" data-target="#item2" class="mw_accordion__toggle collapsed"></button>
+     <h3 class="item-title--large">Item title without abstract</h3>
+      <div id="item2" class="collapse content"></div>
+  </li>
+  <li class="panel">
+     <button data-toggle="collapse" data-target="#item3" class="mw_accordion__toggle collapsed"></button>
+     <h3 class="item-title--large">This item has an extremely long title. This would never happen in real life, right?</h3>
+      <p class="item-label">Abstract</p>
+      <div id="item3" class="collapse content"></div>
+  </li>
+</ul>
+
+<script>$(".mw_accordion li .content").load("/specs/03-Modules/body-content/variants/default.html");</script>

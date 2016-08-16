@@ -21,7 +21,7 @@ As used in the footer. An img-tag is used to facilitate easy expansion.
 ```
 
 ## Extra small icons
-Like small icons but even smaller and with a colored circle background, and some text at the end (if affects line-height, though). The image needs to be 30x30px with enough transparent whitespace.
+Like small icons but even smaller and with a colored circle background, and some text at the end (it will affects line-height, though). The image needs to be 60x60px with enough transparent whitespace. The actual display of the circle is 30x30px.
 
 ```code
 <a href="#" class="icon-xs">
@@ -32,10 +32,47 @@ Like small icons but even smaller and with a colored circle background, and some
 
 ### Example
 ```example
+<ul class="list-spacious">
+  <li>
+    <a href="#" class="icon-xs">
+    	<img src="img/envelope-xs.png" alt="">
+    	Interesting text with an icon in front
+    </a>
+  </li>
+  <li>
+    <a href="#" class="icon-xs">
+    	<img src="img/phone-xs.png" alt="">
+    	Interesting text with an icon in front
+    </a>
+  </li>
+  <li>
+    <a href="#" class="icon-xs">
+    	<img src="img/down-xs.png" alt="">
+    	Interesting text with an icon in front
+    </a>
+  </li>
+</ul>
+```
+
+It is also possible to use a Font Awesome icon in stead of an image:
+
+```code
 <a href="#" class="icon-xs">
-	<img src="img/envelope-xs.png" alt="">
-	Interesting text with an icon in front
+	<i class="fa fa-arrow-circle-down"></i>
+	Interesting text with a Font Awesome icon in front
 </a>
+```
+
+### Example
+```example
+<ul class="list-spacious">
+  <li>
+    <a href="#" class="icon-xs">
+    	<i class="fa fa-arrow-circle-down"></i>
+    	Interesting text with a Font Awesome icon in front
+    </a>
+  </li>
+</ul>
 ```
 
 ## V-shape

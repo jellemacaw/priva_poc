@@ -5,6 +5,9 @@ Displays for every selected item the ListTitle + JobType + Location and Country 
 
 ## Basic usage
 
+Provide the class `no-filters` to the div `filter-results` to change the padding-left. This will make sure the alignment is correct for pages with no filters in the left column.  
+  
+Example: `<div class="filter-results no-filters">`
 
 ### Example
 ```example

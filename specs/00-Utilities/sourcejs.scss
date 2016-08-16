@@ -1,0 +1,10 @@
+.source_header,
+.source_main_nav,
+.source_info,
+ {
+	li {
+		&:before {
+			visibility: hidden;
+		}
+	}
+}

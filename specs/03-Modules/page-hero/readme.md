@@ -7,7 +7,7 @@ This component can have a theme applied, default should be <code>theme-light-tau
 ## Basic usage
 
 ### Default
-Compleet example with image, abstract and date. This image variant uses the modifier class <code>hero-title--img</code> next to <code>hero-title</code>.
+Complete example with image, abstract and date + author. This image variant uses the modifier class <code>hero-title--img</code> next to <code>hero-title</code>.
 ```example
 <div class="example--header-content theme-light-taupe"></div>
 <script>
