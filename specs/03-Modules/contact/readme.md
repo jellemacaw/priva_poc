@@ -22,6 +22,8 @@ This component will display 1 or more Contact items. Details to display per Cont
 
 ## Basic usage
 
+**!! Added an extra class to the `body-content` div called `secondary` because `item-title` styling is different.**
+
 ### Contact example
 This example shows two contacts with the second being the variant with no image.
 ```example

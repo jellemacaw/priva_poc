@@ -3,16 +3,18 @@
 
 
 .navigation-handheld {
-
 		.menu-icon-wrapper {
-			float: right;
+			position: fixed;
 			color: white;
 			text-transform: uppercase;
 			font-size: .86em;
 			font-weight: 600;
 			letter-spacing: .1em;
 			line-height: 14px;
-			transition: .2s 0s color;
+			transition: 150ms all ease;
+			padding: 15px 15px;
+			right: 43px;
+    		top: 16px;
 
 			.fa {
 				margin: 0 .2em;
@@ -25,6 +27,18 @@
 				transition: .2s 0s color;
 				cursor: pointer;
 			}
+
+			@media screen and (max-width: $screen-xs) {
+				right:10px;
+		    }
+
+		    @media screen and (min-width: $screen-xs) and (max-width: $screen-sm) {
+		    	top:30px;
+		    }
+
+		    @media screen and (min-width: $screen-sm) and (max-width: $screen-lg) {
+		    	top:30px;
+		    }
 		}
 
 
@@ -142,13 +156,12 @@
 	.navigation {
 		&.navigation-handheld {
 			.menu-icon-wrapper {
-				position: fixed;
 				right: 10px;
-		    top: 10px;
-		    z-index: 10;
+			    top: 10px;
+			    z-index: 10;
 				background: $color--petrol;
-		    margin: 0;
-		    padding: 15px 15px;
+			    margin: 0;
+			    transition: 150ms all ease;
 			}
 		}
 	}

@@ -1,5 +1,6 @@
 //All JS and CSS are global scope!
 @import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+@import "../../../00-Utilities/bootstrap/bootstrap-custom";
 
 .btn {
 	&.txt-arrow {
@@ -60,5 +61,18 @@
 				color: #fff;
 			}
 		}
+	}
+}
+
+.btn-tagcloud {
+	@extend .btn-primary;
+	@extend .btn-sm;
+
+	white-space: normal;
+	text-align: left;
+
+	@media screen and (max-width: $screen-xs) {
+		width: 100%;
+		display: block;
 	}
 }

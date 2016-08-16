@@ -1,13 +1,3 @@
-$('document').ready(function () {
-  setTimeout(function () {
-
-    $('.carousel').each(function (index) {
-		carouselHandler($(this).attr('id'));
-    });
-
-  }, 500);
-});
-
 var carouselHandler = function (carouselId) {
 
   var carouselItemId = $('#' + carouselId);
@@ -71,6 +61,7 @@ var carouselHandler = function (carouselId) {
         infinite: true,
         autoplay: true,
         autoplaySpeed:6000,
+        adaptiveHeight: true,
         dots:true,
         dotsClass:'numSlides',
         fade:true,
@@ -84,3 +75,13 @@ var carouselHandler = function (carouselId) {
       });
   }
 };
+
+$('document').ready(function () {
+  setTimeout(function () {
+
+    $('.carousel').each(function () {
+      carouselHandler($(this).attr('id'));
+    });
+
+  }, 500);
+});

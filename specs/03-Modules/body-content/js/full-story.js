@@ -6,7 +6,7 @@ function fullStory() {
 
     storyContainer.css('height', storyHeight);
 
-    var fullStoryEnd = setTimeout(function () {
+    setTimeout(function () {
       fullstoryContainer.removeClass('is-collapsed');
       storyContainer.css('height', 'auto');
     }, 350);

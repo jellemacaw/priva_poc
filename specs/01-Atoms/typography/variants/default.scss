@@ -25,11 +25,21 @@
   text-transform: uppercase;
   line-height: 1.35;
   letter-spacing: $headings-letter-spacing;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
 }
 
 .item-title {
   color: $brand-primary;
   font-weight: 600;
+}
+
+.item-subtitle {
+  font-weight: normal;
 }
 
 .teaser-title {
@@ -85,5 +95,14 @@
   + h5,
   + .h5 {
     margin-top: 5px;
+  }
+}
+
+
+.body-content {
+  &.secondary {
+    h2,h3,h4,h5,h6 {
+      color:$color--taupe;
+    }
   }
 }

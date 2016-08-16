@@ -6,8 +6,8 @@
 @media screen and (max-width: $screen-xs-max) {
 
   .media-item--teaser {
-    margin-top: $padding-base;
-    margin-bottom: $padding-base;
+    margin-top: $padding-base/2;
+    margin-bottom: $padding-base/2;
 
     // &+& {
     //   margin-top: $padding-base;

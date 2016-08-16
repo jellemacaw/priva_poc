@@ -26,8 +26,12 @@
   .theme-petrol &,
   .theme-gray &,
   .theme-light-blue & {
-    opacity: .25;
+    opacity: .2;
   }
+
+	.theme-light-taupe &{
+		opacity: .4;
+	}
 
   // makes white image light gray on very modern browsers only...
   .theme-white & {

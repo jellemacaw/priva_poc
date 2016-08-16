@@ -73,11 +73,12 @@
 
   padding-bottom: .25em;
 
-  li {
+  > li {
     margin-bottom: 1em;
 
     &:last-child {
-      margin-bottom: $padding-base/2;
+      //margin-bottom: $padding-base/2;
+      margin-bottom: 0;
     }
   }
 }
@@ -86,5 +87,27 @@
 .list-group {
   > li::before {
     display: none;
+  }
+}
+
+// used in anchor list - button variant
+.list-tagcloud {
+  @extend .list-hor;
+
+  $tagcloud-padding: $padding-base/2;
+
+  padding: $padding-base-vertical ($padding-base-horizontal - $tagcloud-padding/2) ($padding-base-vertical - $tagcloud-padding);
+
+  @media screen and (min-width: $screen-xs) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: $padding-large-vertical ($padding-large-horizontal - $tagcloud-padding/2) ($padding-large-vertical - $tagcloud-padding);
+  }
+
+  > li {
+    margin-left: $tagcloud-padding/2;
+    margin-right: $tagcloud-padding/2;
+    margin-bottom: $tagcloud-padding;
   }
 }

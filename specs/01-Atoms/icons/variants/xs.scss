@@ -13,17 +13,22 @@
   padding-top: calc(#{$icon-xs-size}/2 - #{$txt-padding});
   padding-bottom: calc(#{$icon-xs-size}/2 - #{$txt-padding});
 
-  img {
+  img, .fa {
     position: absolute;
     top: 1px;
     left: 0;
     z-index: 1;
     display: inline-block;
+    font-size: 1.225em;
+    font-weight: normal;
+    color: #fff;
+    line-height: $icon-xs-size;
     width: $icon-xs-size;
     height: $icon-xs-size;
+    text-align: center;
     transition: .3s;
     //margin-right: .25em;
-    margin-top: -1px;
+    //margin-top: -1px;
     transform-origin: center center;
     will-change: transform;
   }
@@ -35,7 +40,7 @@
     width: $icon-xs-size;
     height: $icon-xs-size;
     border-radius: 50%;
-    top: 0;
+    top: 1px;
     left: 0;
     transform-origin: center center;
     transition: .3s;
@@ -45,8 +50,8 @@
   &:hover, &:focus, &:active {
     text-decoration: none;
 
-    img {
-      transform: scale(1.08);
+    img, .fa {
+      transform: scale(1.12);
       //animation: flutter .3s .12s $ani-flutter-timing;
     }
 

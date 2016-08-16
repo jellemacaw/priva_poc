@@ -134,6 +134,11 @@
   p, .item-title {
     transition: .3s;
   }
+
+  .item-title + .category-name {
+    display: inline-block;
+    transform: translateY(-.75em);
+  }
 }
 
 .media-item__text__inner {
@@ -141,14 +146,14 @@
   > :last-child { margin-bottom: 0; }
 }
 
-@element ".media-item__text" and (min-width: 650px) {
-  .media-item__text .item-title {
+@element ".media-item__text .item-title" and (min-width: 650px) {
+  eq_this {
     font-size: 1.4em;
   }
 }
 
-@element ".media-item__text" and (min-width: 850px) {
-  .media-item__text .item-title {
+@element ".media-item__text .item-title" and (min-width: 850px) {
+  eq_this {
     font-size: 2em;
   }
 }

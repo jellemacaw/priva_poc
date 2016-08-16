@@ -1,0 +1,58 @@
+@import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+@import "../../../00-Utilities/mixins/variants/mixins";
+@import "../../../00-Utilities/animations/variants/default";
+
+.search-result__count {
+  @media screen and (max-width: $screen-sm) {
+    display: none;
+  }
+
+  p {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+.search-result__form.content-block {
+
+  @media screen and (max-width: $screen-sm) {
+    padding: $padding-large-vertical $padding-base $padding-base;
+  }
+
+  @media screen and (min-width: $screen-md) {
+    padding: $padding-large-vertical ($padding-large-horizontal + $padding-base);
+  }
+
+  .form-group {
+    position: relative;
+  }
+
+  .form-control {
+    padding-right: $padding-base*2;
+  }
+
+  .btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+.search-result {
+  .panel-body {
+
+    h4 {
+      margin-bottom: 5px;
+    }
+
+    p {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.search-result__snippet {
+  font-style: inherit;
+  background-color: transparentize($color--pacific-blue,.9);
+}

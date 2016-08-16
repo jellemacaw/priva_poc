@@ -1,8 +1,10 @@
 .button-list {
 		padding:0;
 		margin: 0;
-		background: #ccc;
+		background: #f0f0f0;
 		li {
+			padding: .5em 1em;
+
 			&:before {
 				display: none;
 			}

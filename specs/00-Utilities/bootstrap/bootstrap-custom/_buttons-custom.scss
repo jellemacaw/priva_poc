@@ -234,7 +234,7 @@ a.btn {
   text-transform: none;
   font-weight: 400;
 
-  @include icon-arrowhead(static) {
+  @include icon-arrowhead() {
     float: right;
     margin-left: .75em;
   }

@@ -1,0 +1,20 @@
+@import "../../../00-Utilities/bootstrap/bootstrap-custom/bootstrap-variables-custom";
+.search-form-component {
+
+	@media screen and (min-width: $screen-md) {
+		&.content-block {
+    	padding: $padding-large-vertical $padding-large-horizontal !important;
+		}
+  }
+	@media screen and (min-width: $screen-sm) {
+		&.content-block {
+    	max-width: 47em;
+		}
+  }
+
+	.theme-taupe &,
+	.theme-petrol &,
+	.theme-gray &,
+	.theme-light-blue & {
+	}
+}

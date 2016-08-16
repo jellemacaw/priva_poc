@@ -3,7 +3,7 @@
 This is a demo view of the job opportunities page
 
 
-## Default header
+## Example
 ```example
 <div class="jobs-demo"></div>
 <script>

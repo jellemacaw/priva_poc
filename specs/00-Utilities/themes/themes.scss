@@ -89,20 +89,20 @@
   color: #fff;
   background-color: $color--taupe;
 
-  .category-name,
+  .category-name, .item-title,
   h1, h2, h3, h4, h5, h6,
   .h1, .h2, .h3, .h4, .h5, .h6 {
     color: inherit;
   }
 
-  // a {
-  //   color: $link-color;
-  //
-  //   &:hover,
-  //   &:focus {
-  //     color: $link-hover-color;
-  //   }
-  // }
+  a {
+    color: $link-color;
+
+    &:hover,
+    &:focus {
+      color: $link-hover-color;
+    }
+  }
 }
 
 .theme-light-blue {
